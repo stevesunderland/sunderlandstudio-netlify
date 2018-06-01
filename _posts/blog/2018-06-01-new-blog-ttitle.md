@@ -1,4 +1,5 @@
 ---
+tags: Tag 1
 layout: blog
 title: New Blog Ttitle
 date: '2018-06-01T10:56:15-07:00'
