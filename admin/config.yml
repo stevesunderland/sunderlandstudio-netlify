@@ -22,6 +22,13 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
+      - label: "Post Tags"
+        name: "tags"
+        widget: "relation"
+        collection: "tags"
+        searchFields: ["title"]
+        valueField: "title"
+        displayFields: ["title"]
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
