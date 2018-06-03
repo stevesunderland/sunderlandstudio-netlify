@@ -1,4 +1,6 @@
 ---
-  title: "wordpress"
-  description: " "
-  date: " "
+title: "wordpress"
+description: ""
+date: ""
+featured: false
+---

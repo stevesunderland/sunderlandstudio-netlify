@@ -1,4 +1,6 @@
 ---
-  title: "shopify"
-  description: " "
-  date: " "
+title: "shopify"
+description: ""
+date: ""
+featured: false
+---

@@ -1,7 +1,8 @@
 ---
 title: "Community At Work"
-description: " "
+description: ""
 date: "2016-07-01T22:00:00-07:00"
+featured: false
 gallery: 
   - 
     url: "/assets/images/community-at-work-splash.jpg"

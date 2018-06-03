@@ -1,4 +1,6 @@
 ---
-  title: "cms"
-  description: " "
-  date: " "
+title: "cms"
+description: ""
+date: ""
+featured: false
+---

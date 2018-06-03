@@ -39,7 +39,7 @@ var PATHS = {
   ],
   assets: [
     'src/assets/**/*',
-    '!src/assets/{img,js,scss}/**/*'
+    '!src/assets/{img,javascript,scss}/**/*'
   ],
   sass: [
     'node_modules/foundation-sites/scss',
@@ -52,8 +52,10 @@ var PATHS = {
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.js',
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.autoload.js',
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.bg.js',
-    'node_modules/wowjs/dist/wow.js',
-    'src/assets/js/app.js'
+    'node_modules/rellax/rellax.js',
+    // 'node_modules/wowjs/dist/wow.js',
+    'src/assets/javascript/three.js',
+    'src/assets/javascript/app.js'
   ]
 };
 
@@ -77,9 +79,60 @@ gulp.task('admin', function() {
 
 
 
+function orderByDate(arr, dateProp) {
+  return arr.slice().sort(function (a, b) {
+    return a[dateProp] < b[dateProp] ? -1 : 1;
+  });
+}
 
 
-gulp.task('portfolio', function(){
+var tags = []
+
+gulp.task('tags', function(){
+  tags = []
+  return gulp.src('./src/tags/*.md')
+  .pipe(frontMatter({
+    property: 'metadata',
+    remove: true,
+  }))
+  .pipe(layout(function(file){
+    console.log(file.metadata.title)
+    var isFeatured = file.metadata.featured
+    if (isFeatured) {
+      tags.push(file.metadata.title)
+    }
+  }))
+
+})
+
+
+var testimonials = []
+
+gulp.task('testimonials', function(done){
+  testimonials = []
+
+  return gulp.src('./src/testimonials/*.md')
+    .pipe(frontMatter({
+      property: 'metadata',
+      remove: true,
+    }))
+    .pipe(layout(function(file){
+      console.log('file.metadata.title: '+file.metadata.title)
+      console.log('file.metadata.quote: '+file.metadata.quote)
+      var _testimonial = {
+        'title': file.metadata.title,
+        'quote': file.metadata.quote,
+      }
+
+      testimonials.push(_testimonial)
+    }))
+
+})
+
+
+var articles = []
+
+gulp.task('portfolio', ['tags'], function(){
   articles = [];
 
   return gulp.src('./src/portfolio/*.md')
@@ -100,6 +153,11 @@ gulp.task('portfolio', function(){
       'slug': basename,
       'date': file.metadata.date,
       'gallery': file.metadata.gallery,
+      'testimonial': file.metadata.testimonial,
+      'featured': file.metadata.featured,
+      'tags': file.metadata.tags,
+      'showcase': file.metadata.showcase,
+      'website': file.metadata.website,
       // 'pretty_date': moment(file.metadata.date).format("L"),
       // 'category': file.metadata.category,
       // 'link': file.metadata.link,
@@ -112,6 +170,8 @@ gulp.task('portfolio', function(){
       pretty: true,
       layout: 'src/templates/_portfolio.pug',
       data: article_data,
+      articles: orderByDate(articles, 'date').reverse(),
+      testimonials: testimonials,
       // file: homepage,
       // books: orderByDate(books, 'date'),
       // articles: orderByDate(articles, 'date'),
@@ -125,75 +185,27 @@ gulp.task('portfolio', function(){
     path.basename = '' + basename
     path.extname = '.html'
   }))
+  .on('error', onError)
   .pipe(gulp.dest('dist/portfolio'))
 })
 
 
 
-// var homepage = {}
 
-// gulp.task('homepage', ['portfolio'], function(){
-//   return gulp.src('./src/homepage.md')
-//   .pipe(frontMatter({
-//     property: 'metadata',
-//     remove: true
-//   }))
-//   .pipe(marked())
-//   .pipe(layout(function(file){
-//     basename = 'homepage'
-
-
-//     homepage = {
-//       'headline': file.metadata.headline,
-//       'text': file.metadata.text,
-//       'slug': basename
-//     }
-
-//     return {
-//       pretty: true,
-//       layout: 'src/templates/_homepage.pug',
-//       // file: homepage,
-//       // books: orderByDate(books, 'date'),
-//       // articles: orderByDate(articles, 'date'),
-//       // videos: orderByDate(videos, 'date'),
-//       // podcast: podcast
-
-//       // markdown: require('gulp-marked')
-//     }
-//   }))
-//   .pipe(rename(function(path){
-//     path.basename = 'index'
-//     path.extname = '.html'
-//   }))
-//   .pipe(gulp.dest('dist'))
-// })
-
-
-
-
-gulp.task('templates', ['portfolio'], function() {
+gulp.task('templates', ['portfolio', 'testimonials'], function() {
   gulp.src(['src/templates/*.pug', '!src/templates/_*.pug'])
-  .pipe(data( function(file) {
-    // delete require.cache[require.resolve('./src/data.json')]
-    // var data = require('./src/data.json');
-
-    return {
-      // 'data': data,
-      // 'pages':pages,
-      // 'bloomberg': bloomberg,
-      // 'books': orderByDate(books, 'date'),
-      // 'articles': orderByDate(articles, 'date'),
-      // 'videos': orderByDate(videos, 'date'),
-      // 'podcast': podcast
-    };
-  } ))
   .pipe(pug({
     data: {
+      'articles': orderByDate(articles, 'date').reverse(),
+      'testimonials': testimonials,
+      'tags': tags,
       'foo': 'bar',
+      // 'foo': 'bar',
       // 'videos': orderByDate(videos, 'date'),
       // 'pages': pages
     }
   }))
+  .on('error', onError)
   .pipe(gulp.dest('./dist/'))
   .on('finish', browser.reload)
 });
@@ -228,6 +240,7 @@ gulp.task('javascript', function() {
     .pipe($.sourcemaps.init())
     .pipe($.concat('app.js'))
     .pipe($.if(!isProduction, $.sourcemaps.write()))
+    .on('error', onError)
     .pipe(gulp.dest('dist/assets/js'))
     .on('finish', browser.reload);
 });
@@ -258,9 +271,21 @@ gulp.task('build', function(done) {
 gulp.task('server', ['build'], function() {
   // livereload.listen();
   browser.init({
-    server: 'dist', port: PORT
+    server: {
+      baseDir: './dist',
+      serveStaticOptions: {
+        extensions: ['html']
+      }
+    },
+    port: PORT,
   });
 });
+
+
+function onError(err) {
+  console.log(err);
+  this.emit('end');
+}
 
 
 // Build the site, run the server, and watch for file changes
@@ -270,7 +295,8 @@ gulp.task('default', ['build', 'server'], function() {
   gulp.watch(['src/**/*.pug'], ['templates']);
   // gulp.watch(['src/{layouts,partials,helpers,data}/**/*'], ['pages:reset']);
   gulp.watch(['src/assets/scss/**/{*.scss, *.sass}'], ['sass']);
-  gulp.watch(['src/assets/js/**/*.js'], ['javascript']);
+  gulp.watch(['src/assets/javascript/**/*.js'], ['javascript']);
   gulp.watch(['src/assets/img/**/*'], ['images']);
+  gulp.watch(['src/admin/**/*'], ['admin']);
   gulp.watch(['src/data.json'], ['build']);
 });

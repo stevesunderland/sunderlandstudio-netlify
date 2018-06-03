@@ -1,4 +1,61 @@
 extends _base
 
+
 block content
-	h1 Hello World
+	section#hero
+		.row
+			.column
+				h2 Creative websites for unique companies.
+				p.lead
+					| We create hand-crafted websites and brand identities that will help you stand out from the competition.
+
+	section#showcase.bg-gray.fade-in.delay-2
+		for item in articles
+			if item.showcase
+				include _showcase-item
+
+	section.row.expanded.column.text-center.bg-black(style='padding: 5em 0 0;')
+		a.button.hollow(href='/portfolio/') All Projects &rarr;
+
+	section#services.bg-black
+		.row.medium-up-3.text-center
+			.column
+				#canvas1
+				.animateme(data-when='enter' data-from='1' data-to='0' data-opacity='1' data-translatey='500')
+					h3 Design
+					p
+						| From brand identities to printed marketing materials, I can give your company a fresh look that stands out from the crowd.
+			.column
+				#canvas2
+				.animateme(data-when='enter' data-from='1' data-to='0' data-opacity='1' data-translatey='500')
+					h3 Websites
+					p
+						| I custom-build all of my websites using a variety of open-source frameworks and CMS platforms. No cookie-cutter Wordpress themes!
+			.column
+				#canvas3
+				.animateme(data-when='enter' data-from='1' data-to='0' data-opacity='1' data-translatey='500')
+					h3 Strategy
+					p
+						| I can help you make sense of the latest web technologies and services and put them to work for your company.
+
+	section#testimonials.bg-gray
+		.carousel
+			for item in testimonials
+				.slide
+					.row.expanded.align-center
+						.column.medium-8.medium-centered.large-6
+							blockquote
+								p.lead= item.quote
+								cite= item.title
+								//- a(href='{{ url(item.client) }}') {{ item.name }}
+
+	section#background
+		.row.expanded
+			.column.large-6.scrollme
+				.animateme(data-when='enter' data-from='1' data-to='0' data-opacity='1' data-translatey='500' data-easing='linear')
+					img(data-src='{{ cms.homepage.portrait|imageCrop(750,500) }}' alt='Steve Sunderland portrait' style='width: 100%;')
+			.column.large-5.large-offset-1
+				h3 Steve Sunderland
+				| {{ cms.homepage.biography|markdown }}
+				a.button.hollow(href='{{ cms.homepage.resume.url }}' style='border-bottom: none;')
+						| View my Resume &rarr;

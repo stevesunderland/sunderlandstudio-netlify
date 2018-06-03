@@ -2,6 +2,7 @@
 title: "Jason Gringler"
 description: "Jason Gringler is an incredibly talented contemporary artist based in Brooklyn, NY. This project involved the design and development of a new website, in addition to a monograph of his work which was funded and produced by Galerie Stephan Roepke in Germany."
 date: "2016-05-30T18:06:00-07:00"
+featured: false
 gallery: 
   - 
     url: "/assets/images/untitled.png"

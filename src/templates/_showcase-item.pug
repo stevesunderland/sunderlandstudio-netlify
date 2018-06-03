@@ -1,0 +1,10 @@
+section.showcase(style='background-color:'+item.showcase.color)
+  .row.expanded.align-middle
+    .column.large-6
+      img.parallax(data-src=item.showcase.image, alt='')
+    .column.large-6
+      h2= item.showcase.title
+      for tag in item.tags.split(',')
+        span.label= tag
+      br
+      a.button(href='/portfolio/'+item.slug+'.html') Explore &rarr;

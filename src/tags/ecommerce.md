@@ -1,4 +1,6 @@
 ---
-  title: "ecommerce"
-  description: " "
-  date: " "
+title: "ecommerce"
+description: ""
+date: ""
+featured: false
+---

@@ -2,6 +2,8 @@
 title: "LeadGenius"
 description: "When LeadGenius needed to update their marketing site, they turned to us to create a static website, landing pages and email template. This is a static website that uses an API for dynamic job postings. The website was designed by LeadGenius's in-house design team.  "
 date: "2016-10-03T15:33:00-07:00"
+website: "https://www.leadgenius.com/"
+featured: false
 gallery: 
   - 
     url: "/assets/images/leadgenius-cover.jpg"

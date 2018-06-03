@@ -1,7 +1,8 @@
 ---
 title: "O'Rourke Hospitality Marketing"
-description: " "
-date: " "
+description: ""
+date: ""
+featured: false
 gallery: 
 - 
   url: "/assets/images/orourke-splash.jpg"

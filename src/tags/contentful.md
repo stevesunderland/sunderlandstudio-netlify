@@ -1,4 +1,6 @@
 ---
-  title: "contentful"
-  description: " "
-  date: " "
+title: "contentful"
+description: ""
+date: ""
+featured: false
+---

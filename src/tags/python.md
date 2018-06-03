@@ -1,4 +1,6 @@
 ---
-  title: "python"
-  description: " "
-  date: " "
+title: "python"
+description: ""
+date: ""
+featured: false
+---

@@ -1,7 +1,8 @@
 ---
 title: "Destination Chelsea"
-description: " "
+description: ""
 date: "2016-05-29T12:49:00-07:00"
+featured: false
 gallery: 
 - 
   url: "/assets/images/ccp-logo.jpg"

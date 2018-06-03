@@ -1,4 +1,6 @@
 ---
-  title: "website"
-  description: " "
-  date: " "
+title: "website"
+description: ""
+date: ""
+featured: false
+---

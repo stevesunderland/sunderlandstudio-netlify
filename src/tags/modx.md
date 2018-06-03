@@ -1,4 +1,6 @@
 ---
-  title: "modx"
-  description: " "
-  date: " "
+title: "modx"
+description: ""
+date: ""
+featured: false
+---

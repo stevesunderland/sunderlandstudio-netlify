@@ -2,6 +2,7 @@
 title: "drchrono"
 description: "- web app design for an industry-leading EHR app\n- front-end web development using Django, jQuery and Bootstrap\n- iOS design\n- marketing design\n- trade show displays"
 date: "2016-05-30T18:14:00-07:00"
+featured: false
 gallery: 
   - 
     url: "/assets/images/onpatient-2.jpg"

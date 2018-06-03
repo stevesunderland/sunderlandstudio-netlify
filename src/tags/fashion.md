@@ -1,4 +1,6 @@
 ---
-  title: "fashion"
-  description: " "
-  date: " "
+title: "fashion"
+description: ""
+date: ""
+featured: false
+---

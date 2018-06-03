@@ -1,4 +1,6 @@
 ---
-  title: "illustration"
-  description: " "
-  date: " "
+title: "illustration"
+description: ""
+date: ""
+featured: false
+---

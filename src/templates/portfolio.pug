@@ -1,0 +1,34 @@
+extends _base
+
+block content 
+  section#hero
+    .row
+      .column
+        h2.float-left Portfolio 
+        a.button.hollow.portfolio-filters-toggle.float-right(href='#')
+          span.up &uarr; Filter
+          span.down &darr; Filter
+    .row
+      .column
+        ul.menu.portfolio-filters(style='margin-bottom: 1em;')
+          li
+            a(href='#', data-filter='*')
+              | #all 
+              sup articles.length
+          //- |         {% for item in cms.tags|where('featured', true)|sort('name', false) %}
+          for item in tags
+            li
+              a(href='#', data-filter='.#{item}')
+                | #{item} 
+                //- sup {{ item.portfolio_tags|size }}
+  section#portfolio.bg-gray
+    .row.collapse.expanded.small-up-1.medium-up-2.large-up-3.text-center.portfolio-grid
+      for item in articles
+        if item.gallery 
+          //- pre= item.slug
+          include _portfolio-item
+        //- else
+        //-   .column
+        //-     .item
+        //-       h6 {{ item.name }}
+          

@@ -1,4 +1,6 @@
 ---
-  title: "stripe"
-  description: " "
-  date: " "
+title: "stripe"
+description: ""
+date: ""
+featured: false
+---

@@ -2,6 +2,7 @@
 title: "ZeroCater"
 description: "While working at ZeroCater, I designed internal tools and customer-facing web products, did front-end web development using Django, jQuery, Angular and Bootstrap and back-end web development using Python and Django REST Framework. I was also responsible for the design and production of marketing materials including billboards, bus ads, web banners, event graphics and sales presentations."
 date: "2016-05-30T18:16:00-07:00"
+featured: false
 gallery: 
   - 
     url: "/assets/images/zerocater-website.png"

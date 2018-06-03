@@ -1,4 +1,6 @@
 ---
-  title: "smart tv"
-  description: " "
-  date: " "
+title: "smart tv"
+description: ""
+date: ""
+featured: false
+---

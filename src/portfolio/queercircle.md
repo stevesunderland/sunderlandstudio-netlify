@@ -1,7 +1,9 @@
 ---
 title: "QueerCircle"
-description: " "
-date: " "
+description: ""
+date: ""
+website: "http://queercircle.com"
+featured: false
 gallery: 
 - 
   url: "/assets/images/queercircle-logo.jpg"

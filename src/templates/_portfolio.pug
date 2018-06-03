@@ -1,15 +1,79 @@
 extends _base
 
 block content
-	h1 Portfolio
-	h3= data.title
-	p!= data.description
-	pre!= JSON.stringify(data, null, 10)
+	//- h1 Portfolio
+	//- h3= data.title
+	//- p!= data.description
+	//- pre!= JSON.stringify(data, null, 10)
 
-	hr
+	//- hr
 
-	for item in data.gallery || 0
-		h6 Gallery item
-		img(src=item.url)
-		p.caption= item.caption
-		pre= JSON.stringify(item, null, 10)
+	//- for item in data.gallery || 0
+	//- 	h6 Gallery item
+	//- 	img(src=item.url)
+	//- 	p.caption= item.caption
+	//- 	pre= JSON.stringify(item, null, 10)
+
+	.portfolio-content
+		.row
+			.column
+				h2= data.title
+	.row
+		.column.large-8
+			// ul.menu(style="margin-bottom: 1em;")
+			// 	| {% for relation in item.tags %}
+			// 	li(style="display: inline-block;")
+			// 		a(href="/portfolio/#{{ relation.name }}", style="margin-left: 0;") #{{ relation.name }}
+
+			p.lead!= data.description
+		.column.large-4
+			if data.testimonial
+				blockquote
+					p= data.testimonial.quote
+					cite= data.testimonial.title
+
+	.row.column
+		if data.website
+			a.button.large.hollow(href=data.website target="_blank") Visit the website &rarr;
+
+	.row
+		.column
+			if data.gallery
+				for image in data.gallery
+
+					.portfolio-item-image
+						.bg-gray.loader
+							img(src=image.url)
+						if image.caption
+							p.caption &uarr; #{ image.caption }
+
+
+			if data.website
+				a.button.large.hollow(href="{{ item.website }}" target="_blank" style="margin-bottom: 8em;") Visit the website →
+
+
+
+	//- pre!= JSON.stringify(articles, null, 10)
+
+	//- |   {% set prev = prevItem(item, 'publish_date', true) %}
+	//- |   {% set next = nextItem(item, 'publish_date', true) %}
+	
+	- var prev = articles[-1]
+	- var next = articles[0]
+	
+	.row
+		.column.small-4
+
+			if prev 
+				a(href="{{ url(prev) }}")
+					button.button.hollow.small(style="border-bottom-color: transparent;") ← Previous Project
+					br
+
+		.column.small-4.text-center
+			a.button.hollow(href="/portfolio/") &larr; Back to portfolio
+			
+		.column.small-4.text-right
+			if next 
+				a(href="{{ url(next) }}")
+					button.button.hollow.small(style="border-bottom-color: transparent;") Next Project →
+					br

@@ -1,7 +1,8 @@
 ---
 title: "Nomad Editing Company"
-description: " "
-date: " "
+description: ""
+date: ""
+featured: false
 gallery: 
 - 
   url: "/assets/images/nomad.png"

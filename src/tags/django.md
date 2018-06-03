@@ -1,4 +1,6 @@
 ---
-  title: "django"
-  description: " "
-  date: " "
+title: "django"
+description: ""
+date: ""
+featured: false
+---
