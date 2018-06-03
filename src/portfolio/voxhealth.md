@@ -25,4 +25,5 @@ showcase:
   image: "/assets/images/showcase-voxhealth.jpg"
   title: "A data-driven medial reference"
   color: "#37a89b"
+  order: 300
 ---

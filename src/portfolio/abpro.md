@@ -26,6 +26,7 @@ gallery:
 tags: "medical,static,responsive,logo"
 showcase:
   image: "/assets/images/showcase-abpro.jpg"
-  title: "A biochemical technology company"
+  title: "A biotech research startup"
   color: "#520001"
+  order: 30
 ---

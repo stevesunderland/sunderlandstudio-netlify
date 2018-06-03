@@ -26,5 +26,6 @@ tags: "logo,development,static,responsive"
 showcase:
   image: "/assets/images/showcase-visidraft.jpg"
   title: "An augmented reality app"
-  color: "blue"
+  color: "#002d6c"
+  order: 800
 ---

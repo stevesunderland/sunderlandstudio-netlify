@@ -28,4 +28,5 @@ showcase:
   image: "/assets/images/showcase-awakened-alchemy.jpg"
   title: "A nootropic supplement company"
   color: "#191222"
+  order: 20
 ---

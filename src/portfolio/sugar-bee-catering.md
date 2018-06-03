@@ -19,4 +19,5 @@ showcase:
   image: "/assets/images/showcase-sugarbee.jpg"
   title: "A five-star catering company"
   color: "#fbb03b"
+  order: 400
 ---

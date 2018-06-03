@@ -7,10 +7,11 @@ block content
 			.column
 				h2 Creative websites for unique companies.
 				p.lead
-					| We create hand-crafted websites and brand identities that will help you stand out from the competition.
+					| I create hand-crafted websites and brand identities that will help you stand out from the competition.
 
 	section#showcase.bg-gray.fade-in.delay-2
-		for item in articles
+		- var showcase = sortShowcase(articles)
+		for item in showcase
 			if item.showcase
 				include _showcase-item
 
@@ -50,12 +51,12 @@ block content
 								//- a(href='{{ url(item.client) }}') {{ item.name }}
 
 	section#background
-		.row.expanded
+		.row.expanded.align-middle
 			.column.large-6.scrollme
-				.animateme(data-when='enter' data-from='1' data-to='0' data-opacity='1' data-translatey='500' data-easing='linear')
-					img(data-src='{{ cms.homepage.portrait|imageCrop(750,500) }}' alt='Steve Sunderland portrait' style='width: 100%;')
+					//- .parallax
+					img.parallax(data-src='/assets/images/sunderland-portrait.jpg' alt='Steve Sunderland portrait' style='width: 100%;')
 			.column.large-5.large-offset-1
 				h3 Steve Sunderland
-				| {{ cms.homepage.biography|markdown }}
+				p Steve is a Graphic Designer and Web Developer currently living in Los Angeles. He graduated from the Fashion Institute of Technology in New York City with a degree in Communication Design. Over the past decade, Steve has developed design solutions for a variety of companies including artists, startups, agencies and non-profit organizations.
 				a.button.hollow(href='{{ cms.homepage.resume.url }}' style='border-bottom: none;')
 						| View my Resume &rarr;

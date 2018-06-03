@@ -22,4 +22,5 @@ showcase:
   image: "/assets/images/showcase-simonwatsonarts.jpg"
   title: "An international art advisor"
   color: "#555555"
+  order: 70
 ---

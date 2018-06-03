@@ -16,4 +16,5 @@ showcase:
   image: "/assets/images/showcase-wso.jpg"
   title: "A water loss prevention agency"
   color: "#096979"
+  order: 200
 ---

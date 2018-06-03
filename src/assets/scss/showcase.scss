@@ -3,6 +3,7 @@ section.showcase {
     color: #fff;
     // margin-top: 3em;
     max-width: 10em;
+    font-size: 4em;
   }
   p {
     color: #fff;
@@ -23,6 +24,30 @@ section.showcase {
     position: relative;
     z-index: 999;
   }
+  .button {
+    /*display: block;*/
+    clear: both;
+    background-color: transparent;
+    color: #fff;
+    border-bottom-color: inherit;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 2em;
+    letter-spacing: .2em;
+    &:hover {
+      /*display: block;*/
+      clear: both;
+      background-color: transparent;
+      color: #fff;
+      border-bottom-color: inherit;
+      text-align: left;
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 2em;
+      letter-spacing: .2em;
+    }
+  }
 }
 
 span.label {
@@ -38,30 +63,6 @@ span.label {
   letter-spacing: .2em;
 }
 
-section.showcase .button {
-  /*display: block;*/
-  clear: both;
-  background-color: transparent;
-  color: #fff;
-  border-bottom-color: inherit;
-  text-align: left;
-  padding-left: 0;
-  padding-right: 0;
-  margin-top: 2em;
-  letter-spacing: .2em;
-  &:hover {
-    /*display: block;*/
-    clear: both;
-    background-color: transparent;
-    color: #fff;
-    border-bottom-color: inherit;
-    text-align: left;
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: 2em;
-    letter-spacing: .2em;
-  }
-}
 
 // textarea {
 //   width: 100%;

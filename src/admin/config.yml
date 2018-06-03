@@ -45,7 +45,7 @@ collections:
     fields:
       - label: "Title"
         name: "title"
-        widget: "text"
+        widget: "string"
       - label: "Featured"
         name: "featured"
         widget: "boolean"
@@ -56,9 +56,9 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - label: "Name"
-        name: "name"
-        widget: "text"
+      - label: "Title"
+        name: "title"
+        widget: "string"
       - label: "Quote"
         name: "quote"
         widget: "textarea"

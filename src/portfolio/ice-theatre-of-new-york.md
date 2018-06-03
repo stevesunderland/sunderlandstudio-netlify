@@ -22,4 +22,5 @@ showcase:
   image: "/assets/images/showcase-icetheatre.jpg"
   title: "A figure skating company"
   color: "#61aed8"
+  order: 500
 ---

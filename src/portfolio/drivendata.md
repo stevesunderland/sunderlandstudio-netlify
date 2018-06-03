@@ -31,4 +31,5 @@ showcase:
   image: "/assets/images/showcase-drivendata.jpg"
   title: "A data science non-profit"
   color: "#17344a"
+  order: 40
 ---

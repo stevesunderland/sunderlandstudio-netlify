@@ -25,4 +25,5 @@ showcase:
   image: "/assets/images/showcase-futurist-1.jpg"
   title: "An online learning platform"
   color: "#10234b"
+  order: 10
 ---

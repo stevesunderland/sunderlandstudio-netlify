@@ -22,4 +22,5 @@ showcase:
   image: "/assets/images/showcase-drivendatalabs.jpg"
   title: "A data science consulting group"
   color: "#1b5e88"
+  order: 100
 ---

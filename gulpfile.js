@@ -4,6 +4,7 @@ var gulp     = require('gulp');
 var rimraf   = require('rimraf');
 var sequence = require('run-sequence');
 
+var fs          = require('fs')
 var slug        = require('slug')
 var data        = require('gulp-data');
 var pug         = require('gulp-pug');
@@ -13,14 +14,6 @@ var cleanCSS    = require('gulp-clean-css');
 var frontMatter = require('gulp-front-matter');
 var marked      = require('gulp-marked');
 var layout      = require('gulp-layout');
-
-
-// var md = require('jstransformer')(require('jstransformer-markdown-it'));
-
-// var scraperjs   = require('scraperjs');
-var fs          = require('fs')
-// var moment      = require('moment')
-// var oembed      = require('oembed')
 
 
 // Check for --production flag
@@ -43,7 +36,6 @@ var PATHS = {
   ],
   sass: [
     'node_modules/foundation-sites/scss',
-    // 'node_modules/motion-ui/src/'
   ],
   javascript: [
     'node_modules/jquery/dist/jquery.js',
@@ -85,6 +77,19 @@ function orderByDate(arr, dateProp) {
   });
 }
 
+function sortShowcase(array) {
+
+  var filtered_array = array.filter(function(element){
+    return element.showcase !== undefined
+  })
+
+  var new_array = filtered_array.sort(function(a, b) {
+    return a.showcase.order < b.showcase.order ? -1 : 1
+  })
+
+  return new_array
+}
+
 
 var tags = []
 
@@ -117,8 +122,7 @@ gulp.task('testimonials', function(done){
       remove: true,
     }))
     .pipe(layout(function(file){
-      console.log('file.metadata.title: '+file.metadata.title)
-      console.log('file.metadata.quote: '+file.metadata.quote)
+
       var _testimonial = {
         'title': file.metadata.title,
         'quote': file.metadata.quote,
@@ -142,10 +146,7 @@ gulp.task('portfolio', ['tags'], function(){
   }))
   .pipe(marked())
   .pipe(layout(function(file){
-    // console.log('file metadata: '+JSON.stringify(file.metadata))
     basename = slug(file.metadata.title || 'none', {lower: true })
-    // var embed = getOembed(file.metadata.link);
-    // console.info('embed: '+embed)
 
     article_data = {
       'title': file.metadata.title,
@@ -158,11 +159,6 @@ gulp.task('portfolio', ['tags'], function(){
       'tags': file.metadata.tags,
       'showcase': file.metadata.showcase,
       'website': file.metadata.website,
-      // 'pretty_date': moment(file.metadata.date).format("L"),
-      // 'category': file.metadata.category,
-      // 'link': file.metadata.link,
-      // 'contents': md.render(file.metadata.text + '').body,
-      // 'oembed': embed
     }
     articles.push(article_data)
 
@@ -172,13 +168,6 @@ gulp.task('portfolio', ['tags'], function(){
       data: article_data,
       articles: orderByDate(articles, 'date').reverse(),
       testimonials: testimonials,
-      // file: homepage,
-      // books: orderByDate(books, 'date'),
-      // articles: orderByDate(articles, 'date'),
-      // videos: orderByDate(videos, 'date'),
-      // podcast: podcast
-
-      // markdown: require('gulp-marked')
     }
   }))
   .pipe(rename(function(path){
@@ -200,9 +189,7 @@ gulp.task('templates', ['portfolio', 'testimonials'], function() {
       'testimonials': testimonials,
       'tags': tags,
       'foo': 'bar',
-      // 'foo': 'bar',
-      // 'videos': orderByDate(videos, 'date'),
-      // 'pages': pages
+      sortShowcase: sortShowcase,
     }
   }))
   .on('error', onError)

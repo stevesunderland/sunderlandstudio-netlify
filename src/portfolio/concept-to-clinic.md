@@ -22,4 +22,5 @@ showcase:
   image: "/assets/images/showcase-concepttoclinic.jpg"
   title: "AI-powered cancer detection software"
   color: "#464fb9"
+  order: 50
 ---

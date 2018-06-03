@@ -5,7 +5,7 @@ var Site = {
 		// Site.portfolio();
 		// Site.menu();
 		Site.smoothscroll();
-		Site.animation();
+		// Site.animation();
     // Site.showcase();
 	},
   showcase: function(){

@@ -16,4 +16,5 @@ showcase:
   image: "/assets/images/showcase-mindcurv.jpg"
   title: "An enterprise e-commerce platform"
   color: "#4d5868"
+  order: 80
 ---
