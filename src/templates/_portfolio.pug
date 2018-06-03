@@ -1,0 +1,15 @@
+extends _base
+
+block content
+	h1 Portfolio
+	h3= data.title
+	p!= data.description
+	pre!= JSON.stringify(data, null, 10)
+
+	hr
+
+	for item in data.gallery || 0
+		h6 Gallery item
+		img(src=item.url)
+		p.caption= item.caption
+		pre= JSON.stringify(item, null, 10)

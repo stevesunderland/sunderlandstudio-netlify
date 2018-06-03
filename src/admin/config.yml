@@ -1,0 +1,87 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: "src/assets/images" # Media files will be stored in the repo under images/uploads
+public_folder: "/assets/images"
+
+collections:
+  - name: "Portfolio"
+    label: "portfolio"
+    folder: "src/portfolio"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Name"
+        name: "name"
+        widget: "textfield"
+      - label: "Featured"
+        name: "featured"
+        widget: "boolean"
+      - label: "Website"
+        name: "website"
+        widget: "url"
+      - label: "Description"
+        name: "description"
+        widget: "markdown"
+      - label: "Gallery"
+        name: "gallery"
+        widget: "list"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Caption", name: "caption", widget: "string" }
+      - label: "Tags"
+        name: "tags"
+        widget: "relation"
+      - label: "testimonial"
+        name: "testimonial"
+        widget: "relation"
+
+  - name: "Tags"
+    label: "tags"
+    folder: "src/tags"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Name"
+        name: "name"
+        widget: "textfield"
+      - label: "Featured"
+        name: "featured"
+        widget: "boolean"
+
+  - name: "Testimonials"
+    label: "testimonials"
+    folder: "src/testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Name"
+        name: "name"
+        widget: "textfield"
+      - label: "Quote"
+        name: "quote"
+        widget: "textarea"
+
+pages:
+  - name: "Homepage"
+    label: "homepage"
+    folder: "src/homepage"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Name"
+        name: "name"
+        widget: "textfield"
+      - label: "Background"
+        name: "background"
+        widget: "markdown"
+      - label: "Biography"
+        name: "biography"
+        widget: "markdown"
+      - label: "Portrait"
+        name: "portrait"
+        widget: "image"
+      - label: "Resume"
+        name: "resume"
+        widget: "file"
