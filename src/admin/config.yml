@@ -12,9 +12,9 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - label: "Name"
-        name: "name"
-        widget: "textfield"
+      - label: "Title"
+        name: "title"
+        widget: "string"
       - label: "Featured"
         name: "featured"
         widget: "boolean"
