@@ -7,22 +7,22 @@ featured: true
 gallery:
   -
     url: "/assets/images/portfolio-drivendata-cover-2.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-drivendata-mockup-1.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-drivendata-illustrations.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-drivendata-competitions-large.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-drivendata-profile-large.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-drivendata-competition-large.jpg"
-    caption: " "
+    caption: null
 tags: "development,startup"
 testimonial:
   title: "Isaac Slavitt, DrivenData"

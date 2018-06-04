@@ -6,9 +6,9 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/R.png"
-  caption: " "
+  caption: null
 - 
   url: "/assets/images/r.scott-logo-2.jpg"
-  caption: " "
+  caption: null
 tags: "development,art"
 ---

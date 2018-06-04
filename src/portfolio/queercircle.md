@@ -7,6 +7,6 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/queercircle-logo.jpg"
-  caption: " "
+  caption: null
 tags: "responsive,logo"
 ---

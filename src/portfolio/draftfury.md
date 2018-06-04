@@ -7,15 +7,15 @@ featured: false
 gallery:
   -
     url: "/assets/images/draftfury-1.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/draftfury-2.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/draftfury-3.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/draftfury-4.jpg"
-    caption: " "
+    caption: null
 tags: "logo,app,startup,responsive"
 ---

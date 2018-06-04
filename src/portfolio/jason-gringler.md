@@ -6,24 +6,24 @@ featured: false
 gallery: 
   - 
     url: "/assets/images/untitled.png"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/gringler-2.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/gringler-book-concepts-1-optimized-1.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/gringler-book-concepts-1-optimized-2.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/gringler-book-concepts-1-optimized-3.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/gringler-book-concepts-1-optimized.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/Screen%20shot%202011-07-12%20at%202.48.49%20PM.png"
-    caption: " "
+    caption: null
 tags: "print,art"
 ---

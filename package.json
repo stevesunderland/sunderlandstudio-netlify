@@ -47,6 +47,9 @@
   },
   "private": true,
   "dependencies": {
+    "gulp-markdown": "^2.0.1",
+    "isotope-layout": "^3.0.6",
+    "jstransformer-markdown-it": "^2.1.0",
     "rellax": "^1.6.2",
     "slick-carousel": "^1.8.1"
   }

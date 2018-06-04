@@ -7,10 +7,10 @@ featured: true
 gallery:
 -
   url: "/assets/images/wso-splash.jpg"
-  caption: " "
+  caption: null
 -
   url: "/assets/images/wso-posters-2-mockup.jpg"
-  caption: " "
+  caption: null
 tags: "responsive,print,static"
 showcase:
   image: "/assets/images/showcase-wso.jpg"

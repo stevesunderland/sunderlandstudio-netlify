@@ -7,6 +7,6 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/louisefishman.png"
-  caption: " "
+  caption: null
 tags: "art"
 ---

@@ -7,13 +7,13 @@ featured: false
 gallery:
   -
     url: "/assets/images/ice-splash.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/itny-2.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/itny-1.jpg"
-    caption: " "
+    caption: null
 tags: "development,nonprofit,responsive"
 testimonial:
   title: "Jirina Ribbens, Ice Theatre of New York"

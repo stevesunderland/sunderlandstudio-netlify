@@ -7,22 +7,22 @@ featured: true
 gallery:
   -
     url: "/assets/images/portfolio-awakened-alchemy-logo-final-01-01.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-awakened-alchemy-mockup-1.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-awakened-alchemy-mockup-2B.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-awakened-alchemy-icons-2.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-awakened-alchemy-icons-1.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-aa-bcard-card-mockup.jpg"
-    caption: " "
+    caption: null
 tags: "development,logo"
 showcase:
   image: "/assets/images/showcase-awakened-alchemy.jpg"

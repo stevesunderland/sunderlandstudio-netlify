@@ -7,9 +7,9 @@ featured: true
 gallery: 
 - 
   url: "/assets/images/swoon-logo.jpg"
-  caption: " "
+  caption: null
 - 
   url: "/assets/images/swoon-comp.jpg"
-  caption: " "
+  caption: null
 tags: "development,art,responsive"
 ---

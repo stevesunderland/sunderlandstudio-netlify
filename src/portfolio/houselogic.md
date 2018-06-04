@@ -6,6 +6,6 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/houselogic-logo.jpg"
-  caption: " "
+  caption: null
 tags: "print,logo"
 ---

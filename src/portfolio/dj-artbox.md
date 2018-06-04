@@ -6,8 +6,8 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/djartbox.png"
-  caption: " "
+  caption: null
 - 
   url: "/assets/images/djartbox-1.jpg"
-  caption: " "
+  caption: null
 ---

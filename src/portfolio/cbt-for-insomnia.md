@@ -6,15 +6,15 @@ featured: false
 gallery: 
   - 
     url: "/assets/images/cbt-logo.png"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/cbt-mock-1.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/cbt-mock-2.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/cbt-mock-3.jpg"
-    caption: " "
+    caption: null
 tags: "app,logo"
 ---

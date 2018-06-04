@@ -7,10 +7,10 @@ featured: true
 gallery:
 -
   url: "/assets/images/mindcurv-splash.jpg"
-  caption: " "
+  caption: null
 -
   url: "/assets/images/mindcurv-1.jpg"
-  caption: " "
+  caption: null
 tags: "static,responsive,development"
 showcase:
   image: "/assets/images/showcase-mindcurv.jpg"

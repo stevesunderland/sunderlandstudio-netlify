@@ -6,12 +6,12 @@ featured: true
 gallery: 
 - 
   url: "/assets/images/denisemilan.png"
-  caption: " "
+  caption: null
 - 
   url: "/assets/images/denisemilan-logo.jpg"
-  caption: " "
+  caption: null
 - 
   url: "/assets/images/denise-email.jpg"
-  caption: " "
+  caption: null
 tags: "development,logo,print,art"
 ---

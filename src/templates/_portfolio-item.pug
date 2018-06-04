@@ -1,4 +1,4 @@
-.column.portfolio-item(class="" data-bg=item.gallery[0].url)
+.column.portfolio-item(class=(item.tags ? item.tags.split(',').join(' ') : ''), data-bg=item.gallery[0].url)
 	a(href='/portfolio/'+item.slug+'.html')
 		.item
 			.item-inner
@@ -6,5 +6,4 @@
 				p.tags
 					if item.tags
 						for tag in item.tags.split(',')
-							//- span.label= '#'+tag
 							span.label= tag

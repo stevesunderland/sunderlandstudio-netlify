@@ -7,10 +7,10 @@ featured: false
 gallery:
 -
   url: "/assets/images/sugarbee.jpg"
-  caption: " "
+  caption: null
 -
   url: "/assets/images/sugarbee-logo.jpg"
-  caption: " "
+  caption: null
 tags: "development,logo"
 testimonial:
   title: "Brett Settles, Sugar Bee Catering"

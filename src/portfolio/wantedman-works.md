@@ -6,10 +6,10 @@ featured: false
 gallery:
 -
   url: "/assets/images/wantedman.png"
-  caption: " "
+  caption: null
 -
   url: "/assets/images/wantedman-iphone.jpg"
-  caption: " "
+  caption: null
 tags: "development"
 testimonial:
   title: "Emmett Aiello, WantedMan Works"

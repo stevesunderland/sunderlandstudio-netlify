@@ -6,6 +6,6 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/les-ballets-trockadero.jpg"
-  caption: " "
+  caption: null
 tags: "art,nonprofit"
 ---

@@ -6,15 +6,15 @@ featured: false
 gallery: 
   - 
     url: "/assets/images/community-at-work-splash.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/community-at-work-1.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/community-at-work-2.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/community-at-work-splash-2.jpg"
-    caption: " "
+    caption: null
 tags: "static,responsive,logo"
 ---

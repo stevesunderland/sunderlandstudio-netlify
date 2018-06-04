@@ -6,12 +6,12 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/lincoln-center-3.jpg"
-  caption: " "
+  caption: null
 - 
   url: "/assets/images/lincoln-center-2.jpg"
-  caption: " "
+  caption: null
 - 
   url: "/assets/images/lincoln-center-1.jpg"
-  caption: " "
+  caption: null
 tags: "print"
 ---

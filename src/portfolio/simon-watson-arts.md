@@ -7,16 +7,16 @@ featured: true
 gallery:
   -
     url: "/assets/images/simon-watson-arts-website.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-simon-comp.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/simonwatson-logo-3.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/simon-bcard-3.jpg"
-    caption: " "
+    caption: null
 tags: "development,static,responsive,logo,art"
 showcase:
   image: "/assets/images/showcase-simonwatsonarts.jpg"

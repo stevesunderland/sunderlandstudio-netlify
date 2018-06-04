@@ -7,6 +7,6 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/richard-ellis.jpg"
-  caption: " "
+  caption: null
 tags: "development,art"
 ---

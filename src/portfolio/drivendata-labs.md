@@ -7,16 +7,16 @@ featured: true
 gallery:
   -
     url: "/assets/images/drivendata-splash-2.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/drivendata-1.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/drivendata-2.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/drivendata-logos.jpg"
-    caption: " "
+    caption: null
 tags: "development,startup,static,responsive"
 showcase:
   image: "/assets/images/showcase-drivendatalabs.jpg"

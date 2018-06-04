@@ -13,20 +13,17 @@ html.no-js(lang="en")
 		meta(name="description" content="")
 		block head
 	body
-		block header
-			include _header
+		include _header
 
 		block content
 
-		block footer
-			include _footer
+		include _footer
 
-		script(src='assets/js/app.js')
-
+		script(src='/assets/js/app.js')
 
 		block script
+			
 		script(src="https://identity.netlify.com/v1/netlify-identity-widget.js")
-		//- Global site tag (gtag.js) - Google Analytics
 		script(async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-XX")
 		script.
 			window.dataLayer = window.dataLayer || [];

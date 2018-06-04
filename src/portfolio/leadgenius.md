@@ -7,16 +7,16 @@ featured: false
 gallery: 
   - 
     url: "/assets/images/leadgenius-cover.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/leadgenius-1.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/leadgenius-5.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/leadgenius-2.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/leadgenius-3.jpg"
     caption: "Custom HubSpot landing pages"

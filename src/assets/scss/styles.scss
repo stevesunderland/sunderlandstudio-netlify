@@ -473,3 +473,32 @@ p.caption {
 	position: relative;
 	z-index: 999;
 }
+
+.popover {
+	opacity: 0;
+	position: fixed;
+	width: 300px;
+	background-color: #fff;
+	z-index: 999;
+	display: block;
+	padding: 1em;
+	pointer-events: none;
+	transition: opacity 0.25s;
+
+	img {
+		margin-bottom: 1em;;
+	}
+
+	h6 {
+		color: $black;
+		font-size: .8em;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+
+
+	a:hover & {
+		opacity: 1;
+	}
+}

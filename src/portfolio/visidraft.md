@@ -6,10 +6,10 @@ featured: false
 gallery:
   -
     url: "/assets/images/visidraft-logo_Artboard%2047%20copy%205.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfoio-visidraft-1.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/visidraft-trio.jpg"
     caption: "The website uses bold colors to differentiate between different target markets."
@@ -18,10 +18,10 @@ gallery:
     caption: "This hand-drawn logo reflects the transformation from 2D to 3D while providing a creative optical illusion."
   -
     url: "/assets/images/visidraft-mockup-2-lowres.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/visidraft-bcards-mockup.jpg"
-    caption: " "
+    caption: null
 tags: "logo,development,static,responsive"
 showcase:
   image: "/assets/images/showcase-visidraft.jpg"

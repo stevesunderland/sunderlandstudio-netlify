@@ -6,6 +6,6 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/ccp-logo.jpg"
-  caption: " "
+  caption: null
 tags: "logo,nonprofit"
 ---

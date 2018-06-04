@@ -7,9 +7,9 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/portfolio-dougargue-2.jpg"
-  caption: " "
+  caption: null
 - 
   url: "/assets/images/portfolio-dougargue-1.jpg"
-  caption: " "
+  caption: null
 tags: "development,art,responsive"
 ---

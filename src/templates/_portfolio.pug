@@ -1,18 +1,7 @@
 extends _base
 
 block content
-	//- h1 Portfolio
-	//- h3= data.title
-	//- p!= data.description
-	//- pre!= JSON.stringify(data, null, 10)
 
-	//- hr
-
-	//- for item in data.gallery || 0
-	//- 	h6 Gallery item
-	//- 	img(src=item.url)
-	//- 	p.caption= item.caption
-	//- 	pre= JSON.stringify(item, null, 10)
 
 	.portfolio-content
 		.row
@@ -25,7 +14,8 @@ block content
 			// 	li(style="display: inline-block;")
 			// 		a(href="/portfolio/#{{ relation.name }}", style="margin-left: 0;") #{{ relation.name }}
 
-			p.lead!= data.description
+			p.lead!= data.description.replace('<p>', '<p class="lead">')
+			//- pre!= JSON.stringify(data.description, null, 10)
 		.column.large-4
 			if data.testimonial
 				blockquote
@@ -51,29 +41,33 @@ block content
 			if data.website
 				a.button.large.hollow(href="{{ item.website }}" target="_blank" style="margin-bottom: 8em;") Visit the website →
 
-
-
-	//- pre!= JSON.stringify(articles, null, 10)
-
-	//- |   {% set prev = prevItem(item, 'publish_date', true) %}
-	//- |   {% set next = nextItem(item, 'publish_date', true) %}
 	
-	- var prev = articles[-1]
-	- var next = articles[0]
+	- var prev = getPreviousArticle(data)
+	- var next = getNextArticle(data)
 	
+	mixin popover(item)
+		.popover
+			if item.gallery
+				img(src=item.gallery[0].url)
+			h6= item.title
+		
 	.row
 		.column.small-4
 
 			if prev 
-				a(href="{{ url(prev) }}")
+				a(href='/portfolio/'+prev.slug+'.html')
+					//- pre= JSON.stringify(prev, null, 10)
 					button.button.hollow.small(style="border-bottom-color: transparent;") ← Previous Project
 					br
+					+popover(prev)
 
 		.column.small-4.text-center
 			a.button.hollow(href="/portfolio/") &larr; Back to portfolio
 			
 		.column.small-4.text-right
 			if next 
-				a(href="{{ url(next) }}")
+				//- pre= next.title
+				a(href='/portfolio/'+next.slug+'.html')
 					button.button.hollow.small(style="border-bottom-color: transparent;") Next Project →
 					br
+					+popover(next)

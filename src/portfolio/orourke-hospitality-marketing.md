@@ -6,6 +6,6 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/orourke-splash.jpg"
-  caption: " "
+  caption: null
 tags: "responsive"
 ---

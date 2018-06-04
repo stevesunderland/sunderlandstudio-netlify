@@ -7,9 +7,9 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/youllmissme-logo.jpg"
-  caption: " "
+  caption: null
 - 
   url: "/assets/images/youllmissme.png"
-  caption: " "
+  caption: null
 tags: "logo"
 ---

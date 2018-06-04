@@ -6,6 +6,6 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/nomad.png"
-  caption: " "
+  caption: null
 tags: ""
 ---

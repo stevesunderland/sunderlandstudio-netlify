@@ -6,15 +6,15 @@ featured: false
 gallery: 
   - 
     url: "/assets/images/onpatient-2.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/onpatient-app.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/onpatient-imac-1.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/onpatient-iphone-1.jpg"
-    caption: " "
+    caption: null
 tags: "development,app,print,medical,startup"
 ---

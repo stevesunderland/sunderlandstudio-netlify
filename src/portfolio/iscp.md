@@ -6,9 +6,9 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/ISCP.jpg"
-  caption: " "
+  caption: null
 - 
   url: "/assets/images/iscp-map-1.png"
-  caption: " "
+  caption: null
 tags: "development,nonprofit,art"
 ---

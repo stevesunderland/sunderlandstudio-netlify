@@ -7,16 +7,16 @@ featured: true
 gallery:
   -
     url: "/assets/images/voxhealth-3.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/voxhealth-1.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/voxhealth-4.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/voxhealth-2.jpg"
-    caption: " "
+    caption: null
 tags: "development,app,responsive,medical"
 testimonial:
   title: "Megan Blewett, VoxHealth"

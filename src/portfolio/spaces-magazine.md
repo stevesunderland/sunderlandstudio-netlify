@@ -6,6 +6,6 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/spaces-1.jpg"
-  caption: " "
+  caption: null
 tags: "print"
 ---

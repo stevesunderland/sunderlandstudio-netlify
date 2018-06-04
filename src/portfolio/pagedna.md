@@ -7,13 +7,13 @@ featured: true
 gallery:
 -
   url: "/assets/images/pagedna-1.jpg"
-  caption: " "
+  caption: null
 -
   url: "/assets/images/pagedna-2.jpg"
-  caption: " "
+  caption: null
 -
   url: "/assets/images/pagedna-3.jpg"
-  caption: " "
+  caption: null
 tags: "development,responsive,static"
 showcase:
   image: "/assets/images/showcase-pagedna.jpg"

@@ -6,25 +6,25 @@ featured: false
 gallery: 
   - 
     url: "/assets/images/zerocater-website.png"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/zerocater-orders-imac.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/zerocater-landing-iphone.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/zerocater-menu-ipad.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/zerocater-vendor-macbook.png"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/zerocater-app-map.png"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/zerocater-bus-ads-mock-2.jpg"
-    caption: " "
+    caption: null
 tags: "development,app,startup,print"
 testimonial: 
   title: "Karen Ko, ZeroCater"

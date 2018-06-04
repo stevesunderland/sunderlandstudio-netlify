@@ -7,6 +7,20 @@ var Site = {
 		Site.smoothscroll();
 		// Site.animation();
     // Site.showcase();
+		Site.tooltip()
+	},
+	tooltip: function() {
+		var popover = $('.popover');
+
+		window.onmousemove = function (e) {
+		    var x = e.clientX,
+		        y = e.clientY,
+					 	height = popover.height(),
+						width = popover.width()
+
+		    popover.css({ top: (y - height/2) + 'px' })
+		    popover.css({ left: (x - width/2) + 'px' })
+		};
 	},
   showcase: function(){
     if ( $('.showcase').length ) {

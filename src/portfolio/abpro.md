@@ -7,22 +7,22 @@ featured: true
 gallery:
   -
     url: "/assets/images/abpro-splash-2.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-abpro-mockup-1.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-abpro-mockup-2.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-abpro-illustration-1.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-abpro-illustration-2.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/abpro-labs-logo-1-selected.png"
-    caption: " "
+    caption: null
 tags: "medical,static,responsive,logo"
 showcase:
   image: "/assets/images/showcase-abpro.jpg"

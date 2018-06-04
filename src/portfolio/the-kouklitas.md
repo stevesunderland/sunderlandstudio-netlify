@@ -7,6 +7,6 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/the-kouklitas.jpg"
-  caption: " "
+  caption: null
 tags: "art"
 ---

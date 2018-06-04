@@ -6,10 +6,10 @@ featured: false
 gallery:
 -
   url: "/assets/images/mano-a-mano.jpg"
-  caption: " "
+  caption: null
 -
   url: "/assets/images/mano-logo.jpg"
-  caption: " "
+  caption: null
 tags: "logo,nonprofit"
 testimonial:
   title: "Emily Socolov, Mano a Mano"

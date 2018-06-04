@@ -13,6 +13,8 @@ var imagemin    = require('gulp-imagemin');
 var cleanCSS    = require('gulp-clean-css');
 var frontMatter = require('gulp-front-matter');
 var marked      = require('gulp-marked');
+var markdown    = require('gulp-markdown');
+var md = require('jstransformer')(require('jstransformer-markdown-it'));
 var layout      = require('gulp-layout');
 
 
@@ -44,9 +46,11 @@ var PATHS = {
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.js',
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.autoload.js',
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.bg.js',
+    'node_modules/isotope-layout/dist/isotope.pkgd.js',
     'node_modules/rellax/rellax.js',
     // 'node_modules/wowjs/dist/wow.js',
-    'src/assets/javascript/three.js',
+    // 'src/assets/javascript/three.js',
+
     'src/assets/javascript/app.js'
   ]
 };
@@ -90,6 +94,33 @@ function sortShowcase(array) {
   return new_array
 }
 
+function getPreviousArticle(article) {
+
+  var articles_sorted = orderByDate(articles, 'date').reverse()
+  var index = articles_sorted.indexOf(article)
+  var previousArticle = articles_sorted[index-1]
+
+  if (previousArticle) {
+    return previousArticle
+  } else {
+    return null
+  }
+}
+
+function getNextArticle(article) {
+
+  var articles_sorted = orderByDate(articles, 'date').reverse()
+  var index = articles_sorted.indexOf(article)
+  var nextArticle = articles_sorted[index+1]
+
+  if (nextArticle) {
+    return nextArticle
+  } else {
+    return null
+  }
+}
+
+
 
 var tags = []
 
@@ -101,7 +132,7 @@ gulp.task('tags', function(){
     remove: true,
   }))
   .pipe(layout(function(file){
-    console.log(file.metadata.title)
+    // console.log(file.metadata.title)
     var isFeatured = file.metadata.featured
     if (isFeatured) {
       tags.push(file.metadata.title)
@@ -150,7 +181,8 @@ gulp.task('portfolio', ['tags'], function(){
 
     article_data = {
       'title': file.metadata.title,
-      'description': file.metadata.description,
+      // 'description': file.metadata.description,
+      'description': md.render(file.metadata.description + '').body,
       'slug': basename,
       'date': file.metadata.date,
       'gallery': file.metadata.gallery,
@@ -168,6 +200,9 @@ gulp.task('portfolio', ['tags'], function(){
       data: article_data,
       articles: orderByDate(articles, 'date').reverse(),
       testimonials: testimonials,
+      getNextArticle: getNextArticle,
+      getPreviousArticle: getPreviousArticle,
+      markdown: markdown,
     }
   }))
   .pipe(rename(function(path){
@@ -249,6 +284,28 @@ gulp.task('images', function() {
   .on('finish', browser.reload);
 });
 
+
+var spawn = require('child_process').spawn;
+
+gulp.task('gulpfile-autoreload', function() {
+  // console.info('are you going to reload?')
+  // Store current process if any
+  var p;
+
+  gulp.watch('gulpfile.js', spawnChildren);
+  // Comment the line below if you start your server by yourslef anywhere else
+  spawnChildren();
+
+  function spawnChildren(callback) {
+    if(p) { p.kill(); }
+    p = spawn('gulp', ['build'], { stdio: 'inherit' });
+
+    if(callback) { callback(); }
+  }
+});
+
+
+
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build', function(done) {
   sequence('clean', ['templates', 'sass', 'javascript', 'images', 'copy', 'admin'], done);
@@ -286,4 +343,5 @@ gulp.task('default', ['build', 'server'], function() {
   gulp.watch(['src/assets/img/**/*'], ['images']);
   gulp.watch(['src/admin/**/*'], ['admin']);
   gulp.watch(['src/data.json'], ['build']);
+  // gulp.watch(['gulpfile.js'], ['gulpfile-autoreload']);
 });

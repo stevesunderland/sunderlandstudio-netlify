@@ -6,10 +6,10 @@ featured: false
 gallery: 
   - 
     url: "/assets/images/eoa.png"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/eoa-grow-studio.png"
-    caption: " "
+    caption: null
 tags: "responsive,print"
 testimonial: 
   title: "Sheena Livingston, EOA"

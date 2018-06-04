@@ -7,16 +7,16 @@ featured: true
 gallery:
   -
     url: "/assets/images/portfolio%20-%20concept%20to%20clinic%20-%20logo%20-%20final-03.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio%20-%20concept%20to%20clinic%20-%20logo%20-%20final_Artboard%20125.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio--concept-to-clinic---Showcase-1.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio%20-%20concept%20to%20clinic%20-%20illustrations_Artboard%202.jpg"
-    caption: " "
+    caption: null
 tags: "development,nonprofit,logo,responsive,medical"
 showcase:
   image: "/assets/images/showcase-concepttoclinic.jpg"

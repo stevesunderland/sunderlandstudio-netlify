@@ -6,7 +6,7 @@ featured: false
 gallery:
 -
   url: "/assets/images/cue-art-foundation.jpg"
-  caption: " "
+  caption: null
 tags: "art,nonprofit"
 testimonial:
   title: "Jeremy Adams, CUE Art Foundation"

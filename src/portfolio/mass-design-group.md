@@ -6,10 +6,10 @@ featured: false
 gallery:
   -
     url: "/assets/images/MASS%20Design%20Group.png"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/mass-1.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/mass-2.jpg"
     caption: "Interactive infographics using HTML Canvas and JavaScript"

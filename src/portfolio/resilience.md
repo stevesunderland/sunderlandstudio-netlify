@@ -7,15 +7,15 @@ featured: false
 gallery: 
   - 
     url: "/assets/images/resilience-1.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/resilience-2.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/resilience-3.jpg"
-    caption: " "
+    caption: null
   - 
     url: "/assets/images/resilience-4.jpg"
-    caption: " "
+    caption: null
 tags: "development,art"
 ---

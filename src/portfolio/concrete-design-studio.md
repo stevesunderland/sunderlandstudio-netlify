@@ -6,6 +6,6 @@ featured: false
 gallery: 
 - 
   url: "/assets/images/cds-logo.jpg"
-  caption: " "
+  caption: null
 tags: "logo"
 ---

@@ -7,12 +7,12 @@ featured: true
 gallery: 
 - 
   url: "/assets/images/gotham-logo.png"
-  caption: " "
+  caption: null
 - 
   url: "/assets/images/gotham-website-iphone.jpg"
-  caption: " "
+  caption: null
 - 
   url: "/assets/images/gotham-website.png"
-  caption: " "
+  caption: null
 tags: "logo,development"
 ---

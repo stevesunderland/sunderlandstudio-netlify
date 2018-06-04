@@ -7,19 +7,19 @@ featured: true
 gallery:
   -
     url: "/assets/images/portfolio-futurist-cover.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-futurist-2.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-futurist-1.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-futurist-icons-1.jpg"
-    caption: " "
+    caption: null
   -
     url: "/assets/images/portfolio-futurist-icons-2.jpg"
-    caption: " "
+    caption: null
 tags: "logo,development"
 showcase:
   image: "/assets/images/showcase-futurist-1.jpg"
