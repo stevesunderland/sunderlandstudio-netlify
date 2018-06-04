@@ -14,7 +14,7 @@ gallery:
 tags: "static,responsive,development"
 showcase:
   image: "/assets/images/showcase-mindcurv.jpg"
-  title: "An enterprise e-commerce platform"
+  title: "An enterprise ecommerce platform"
   color: "#4d5868"
   order: 80
 ---

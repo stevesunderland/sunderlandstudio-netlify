@@ -1,6 +1,6 @@
 ---
 title: "smart tv"
 description: ""
-date: ""
+date: null
 featured: false
 ---

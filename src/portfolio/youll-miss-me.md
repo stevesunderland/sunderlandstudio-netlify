@@ -1,7 +1,7 @@
 ---
 title: "You'll Miss Me"
 description: "A web magazine and blog for an artist collective in London."
-date: ""
+date: null
 website: "http://youllmissme.com/"
 featured: false
 gallery: 

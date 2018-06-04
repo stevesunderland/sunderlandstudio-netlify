@@ -5,7 +5,7 @@ var Site = {
 		// Site.portfolio();
 		// Site.menu();
 		Site.smoothscroll();
-		// Site.animation();
+		Site.animation();
     // Site.showcase();
 		Site.tooltip()
 	},
@@ -194,7 +194,7 @@ var Site = {
 			scene2 = new THREE.Scene(),
 			scene3 = new THREE.Scene();
 
-		var w = 250;
+		var w = 200;
 
 		var camera = new THREE.OrthographicCamera( -5, 5, 5, -5, 1, 1000 );
 
@@ -329,7 +329,7 @@ $.extend($.lazyLoadXT, {
 		// window.dispatchEvent(new Event('resize'));
 		setTimeout(function(){
 			// window.dispatchEvent(new Event('resize'));
-			Site.showcase()
+			// Site.showcase()
 
 		}, 1000)
 	}

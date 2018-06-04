@@ -16,6 +16,7 @@ var marked      = require('gulp-marked');
 var markdown    = require('gulp-markdown');
 var md = require('jstransformer')(require('jstransformer-markdown-it'));
 var layout      = require('gulp-layout');
+var responsive = require('gulp-responsive');
 
 
 // Check for --production flag
@@ -41,16 +42,15 @@ var PATHS = {
   ],
   javascript: [
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/foundation-sites/dist/js/foundation.js',
+    // 'node_modules/foundation-sites/dist/js/foundation.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.js',
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.autoload.js',
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.bg.js',
     'node_modules/isotope-layout/dist/isotope.pkgd.js',
-    'node_modules/rellax/rellax.js',
+    // 'node_modules/rellax/rellax.js',
     // 'node_modules/wowjs/dist/wow.js',
-    // 'src/assets/javascript/three.js',
-
+    'src/assets/javascript/three.js',
     'src/assets/javascript/app.js'
   ]
 };
@@ -179,6 +179,10 @@ gulp.task('portfolio', ['tags'], function(){
   .pipe(layout(function(file){
     basename = slug(file.metadata.title || 'none', {lower: true })
 
+    // if (file.metadata.date == null) {
+    //   return
+    // }
+
     article_data = {
       'title': file.metadata.title,
       // 'description': file.metadata.description,
@@ -269,20 +273,46 @@ gulp.task('javascript', function() {
 
 // Copy images to the "dist" folder
 // In production, the images are compressed
-gulp.task('images', function() {
-  var maybeImagemin = $.if(isProduction, imagemin({
-    progressive: true,
-    svgoPlugins: [
-      {removeViewBox: false},
-      {cleanupIDs: false}
-    ]
-  }));
+// gulp.task('images', function() {
+//   var maybeImagemin = $.if(isProduction, imagemin({
+//     progressive: true,
+//     svgoPlugins: [
+//       {removeViewBox: false},
+//       {cleanupIDs: false}
+//     ]
+//   }));
+//
+//   return gulp.src('src/assets/img/**/*')
+//   // .pipe(maybeImagemin)
+//   .pipe(gulp.dest('dist/assets/img'))
+//   .on('finish', browser.reload);
+// });
 
-  return gulp.src('src/assets/img/**/*')
-  // .pipe(maybeImagemin)
-  .pipe(gulp.dest('dist/assets/img'))
-  .on('finish', browser.reload);
+
+
+gulp.task('resizeImages', function () {
+  return gulp.src('src/assets/images/*')
+    .pipe($.responsive({
+      '*': [{
+        width: 680,
+        rename: { suffix: '-680' },
+      }, {
+        width: 1440,
+        rename: { suffix: '-1440' },
+      }, {
+        rename: { suffix: '-original' },
+      }],
+    }, {
+      quality: 70,
+      progressive: true,
+      withMetadata: false,
+      withoutEnlargement: false,
+    }))
+    .pipe(gulp.dest('dist/images'));
 });
+
+
+
 
 
 var spawn = require('child_process').spawn;
@@ -308,7 +338,7 @@ gulp.task('gulpfile-autoreload', function() {
 
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build', function(done) {
-  sequence('clean', ['templates', 'sass', 'javascript', 'images', 'copy', 'admin'], done);
+  sequence('clean', ['templates', 'sass', 'javascript', 'copy', 'admin'], done);
 });
 
 // Start a server with LiveReload to preview the site in
@@ -340,7 +370,7 @@ gulp.task('default', ['build', 'server'], function() {
   // gulp.watch(['src/{layouts,partials,helpers,data}/**/*'], ['pages:reset']);
   gulp.watch(['src/assets/scss/**/{*.scss, *.sass}'], ['sass']);
   gulp.watch(['src/assets/javascript/**/*.js'], ['javascript']);
-  gulp.watch(['src/assets/img/**/*'], ['images']);
+  // gulp.watch(['src/assets/img/**/*'], ['resizeImages']);
   gulp.watch(['src/admin/**/*'], ['admin']);
   gulp.watch(['src/data.json'], ['build']);
   // gulp.watch(['gulpfile.js'], ['gulpfile-autoreload']);

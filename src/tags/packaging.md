@@ -1,6 +1,6 @@
 ---
 title: "packaging"
 description: ""
-date: ""
+date: null
 featured: false
 ---

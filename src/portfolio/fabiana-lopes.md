@@ -1,7 +1,7 @@
 ---
 title: "Fabiana Lopes"
 description: "A single-page personal portfolio for an independent curator and art critic. "
-date: ""
+date: null
 website: "http://fabianalopes.com/"
 featured: false
 tags: "development,static"

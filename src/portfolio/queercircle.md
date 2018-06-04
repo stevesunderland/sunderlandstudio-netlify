@@ -1,7 +1,7 @@
 ---
 title: "QueerCircle"
 description: ""
-date: ""
+date: null
 website: "http://queercircle.com"
 featured: false
 gallery: 

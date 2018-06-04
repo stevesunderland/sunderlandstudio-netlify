@@ -2,7 +2,7 @@ extends _base
 
 
 block content
-	section#hero
+	section#hero.fade-in.delay-1
 		.row
 			.column
 				h2 Creative websites for unique companies.
@@ -23,21 +23,21 @@ block content
 			.column
 				#canvas1
 				.animateme(data-when='enter' data-from='1' data-to='0' data-opacity='1' data-translatey='500')
-					h3 Design
+					h3 <small>Graphic</small> Design
 					p
 						| From brand identities to printed marketing materials, I can give your company a fresh look that stands out from the crowd.
 			.column
 				#canvas2
 				.animateme(data-when='enter' data-from='1' data-to='0' data-opacity='1' data-translatey='500')
-					h3 Websites
+					h3 <small>Website</small> Development
 					p
 						| I custom-build all of my websites using a variety of open-source frameworks and CMS platforms. No cookie-cutter Wordpress themes!
 			.column
 				#canvas3
 				.animateme(data-when='enter' data-from='1' data-to='0' data-opacity='1' data-translatey='500')
-					h3 Strategy
+					h3 <small>Marketing</small> Strategy
 					p
-						| I can help you make sense of the latest web technologies and services and put them to work for your company.
+						| I can help you make the most of the latest technologies and put them to work for your company.
 
 	section#testimonials.bg-gray
 		.carousel

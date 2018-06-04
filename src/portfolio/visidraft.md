@@ -5,7 +5,7 @@ date: "2016-05-30T18:17:00-07:00"
 featured: false
 gallery:
   -
-    url: "/assets/images/visidraft-logo_Artboard%2047%20copy%205.jpg"
+    url: "/assets/images/visidraft-logo_Artboard47copy5.jpg"
     caption: null
   -
     url: "/assets/images/portfoio-visidraft-1.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "fashion"
 description: ""
-date: ""
+date: null
 featured: false
 ---

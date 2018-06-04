@@ -1,6 +1,6 @@
 ---
 title: "shopify"
 description: ""
-date: ""
+date: null
 featured: false
 ---

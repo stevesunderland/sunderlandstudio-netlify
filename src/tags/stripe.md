@@ -1,6 +1,6 @@
 ---
 title: "stripe"
 description: ""
-date: ""
+date: null
 featured: false
 ---

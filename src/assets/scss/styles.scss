@@ -414,6 +414,18 @@ p.caption {
 
 #services {
 	padding: 2em 2em;
+
+	h3 {
+		small {
+			display: block;
+			font-weight: normal;
+			text-transform: uppercase;
+			font-size: 0.5em;
+			margin-bottom: 1em;
+			letter-spacing: .1em;
+		}
+		border-bottom: 0;
+	}
 }
 
 @media (min-width: 640px) {
@@ -452,17 +464,17 @@ p.caption {
 }
 
 .delay-1 {
-	-webkit-animation-delay: 1s;
+	-webkit-animation-delay: 0.5s;
 	animation-delay: 1s;
 }
 
 .delay-2 {
-	-webkit-animation-delay: 2s;
+	-webkit-animation-delay: 1s;
 	animation-delay: 2s;
 }
 
 .delay-3 {
-	-webkit-animation-delay: 3s;
+	-webkit-animation-delay: 1.5s;
 	animation-delay: 3s;
 }
 

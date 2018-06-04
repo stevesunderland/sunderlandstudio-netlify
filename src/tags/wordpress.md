@@ -1,6 +1,6 @@
 ---
 title: "wordpress"
 description: ""
-date: ""
+date: null
 featured: false
 ---

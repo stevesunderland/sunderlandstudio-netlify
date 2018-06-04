@@ -1,7 +1,7 @@
 ---
 title: "Nomad Editing Company"
 description: ""
-date: ""
+date: null
 featured: false
 gallery: 
 - 

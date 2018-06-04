@@ -7,8 +7,8 @@ block content
 		.row
 			.column
 				h2= data.title
-	.row
-		.column.large-8
+	.row.align-justify
+		.column.large-7
 			// ul.menu(style="margin-bottom: 1em;")
 			// 	| {% for relation in item.tags %}
 			// 	li(style="display: inline-block;")
@@ -16,7 +16,7 @@ block content
 
 			p.lead!= data.description.replace('<p>', '<p class="lead">')
 			//- pre!= JSON.stringify(data.description, null, 10)
-		.column.large-4
+		.column.large-5
 			if data.testimonial
 				blockquote
 					p= data.testimonial.quote

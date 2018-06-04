@@ -1,6 +1,6 @@
 ---
 title: "modx"
 description: ""
-date: ""
+date: null
 featured: false
 ---

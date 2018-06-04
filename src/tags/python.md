@@ -1,6 +1,6 @@
 ---
 title: "python"
 description: ""
-date: ""
+date: null
 featured: false
 ---

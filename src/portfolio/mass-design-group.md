@@ -1,11 +1,11 @@
 ---
 title: "Mass Design Group"
-description: ""
-date: ""
+description: "This project involved creating a marketing site for a non-profit architectural firm."
+date: null
 featured: false
 gallery:
   -
-    url: "/assets/images/MASS%20Design%20Group.png"
+    url: "/assets/images/MASSDesignGroup.png"
     caption: null
   -
     url: "/assets/images/mass-1.jpg"

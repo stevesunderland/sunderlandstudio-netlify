@@ -1,6 +1,6 @@
 ---
 title: "ecommerce"
 description: ""
-date: ""
+date: null
 featured: false
 ---

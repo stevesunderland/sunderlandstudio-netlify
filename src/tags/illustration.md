@@ -1,6 +1,6 @@
 ---
 title: "illustration"
 description: ""
-date: ""
+date: null
 featured: false
 ---

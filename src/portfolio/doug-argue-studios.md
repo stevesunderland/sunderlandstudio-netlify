@@ -1,7 +1,7 @@
 ---
 title: "Doug Argue Studios"
 description: "Website design and development for a fine artist based in New York City."
-date: ""
+date: null
 website: "http://dougargue.com/"
 featured: false
 gallery: 

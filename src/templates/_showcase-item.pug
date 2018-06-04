@@ -1,8 +1,9 @@
-section.showcase(style='background-color:'+item.showcase.color)
+//- section.showcase(style='background-color:'+item.showcase.color)
+section.showcase(style='background-color:'+item.showcase.color, data-bg=item.showcase.image)
   .row.expanded.align-middle
     .column.large-6
-      img.parallax(data-src=item.showcase.image, alt='')
-    .column.large-5
+      //- img.parallax(data-src=item.showcase.image, alt='')
+    .column.large-6
       h2= item.showcase.title
       for tag in item.tags.split(',')
         span.label= tag

@@ -1,6 +1,6 @@
 ---
 title: "design"
 description: ""
-date: ""
+date: null
 featured: false
 ---

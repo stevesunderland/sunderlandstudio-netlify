@@ -6,16 +6,16 @@ website: "https://concepttoclinic.drivendata.org/home/"
 featured: true
 gallery:
   -
-    url: "/assets/images/portfolio%20-%20concept%20to%20clinic%20-%20logo%20-%20final-03.jpg"
+    url: "/assets/images/portfolio-concepttoclinic-logo-final-03.jpg"
     caption: null
   -
-    url: "/assets/images/portfolio%20-%20concept%20to%20clinic%20-%20logo%20-%20final_Artboard%20125.jpg"
+    url: "/assets/images/portfolio-concepttoclinic-logo-final_Artboard125.jpg"
     caption: null
   -
     url: "/assets/images/portfolio--concept-to-clinic---Showcase-1.jpg"
     caption: null
   -
-    url: "/assets/images/portfolio%20-%20concept%20to%20clinic%20-%20illustrations_Artboard%202.jpg"
+    url: "/assets/images/portfolio-concepttoclinic-illustrations_Artboard2.jpg"
     caption: null
 tags: "development,nonprofit,logo,responsive,medical"
 showcase:

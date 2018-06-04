@@ -1,6 +1,6 @@
 ---
 title: "website"
 description: ""
-date: ""
+date: null
 featured: false
 ---
