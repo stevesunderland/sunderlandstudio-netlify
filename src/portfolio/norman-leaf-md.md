@@ -20,4 +20,5 @@ showcase:
   title: "A top plastic surgeon"
   color: "#8daf90"
   order: 60
+  tags: "logo,website design,development,static,cms"
 ---

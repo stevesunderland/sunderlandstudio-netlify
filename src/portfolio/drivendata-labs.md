@@ -23,4 +23,5 @@ showcase:
   title: "A data science consulting group"
   color: "#1b5e88"
   order: 100
+  tags: "website design,illustration,front-end development,static"
 ---

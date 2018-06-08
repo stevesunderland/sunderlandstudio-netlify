@@ -23,4 +23,5 @@ showcase:
   title: "An international art advisor"
   color: "#555555"
   order: 70
+  tags: "logo,website design,developemnt,static,cms"
 ---

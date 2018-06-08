@@ -1,9 +1,8 @@
-var $        = require('gulp-load-plugins')();
-var browser  = require('browser-sync');
-var gulp     = require('gulp');
-var rimraf   = require('rimraf');
-var sequence = require('run-sequence');
-
+var $           = require('gulp-load-plugins')();
+var browser     = require('browser-sync');
+var gulp        = require('gulp');
+var rimraf      = require('rimraf');
+var sequence    = require('run-sequence');
 var fs          = require('fs')
 var slug        = require('slug')
 var data        = require('gulp-data');
@@ -14,7 +13,7 @@ var cleanCSS    = require('gulp-clean-css');
 var frontMatter = require('gulp-front-matter');
 var marked      = require('gulp-marked');
 var markdown    = require('gulp-markdown');
-var md = require('jstransformer')(require('jstransformer-markdown-it'));
+var md          = require('jstransformer')(require('jstransformer-markdown-it'));
 var layout      = require('gulp-layout');
 var responsive = require('gulp-responsive');
 
@@ -120,6 +119,13 @@ function getNextArticle(article) {
   }
 }
 
+function backgroundImage(image) {
+  var split = image.split('.')
+  var string = split[0] + '-680.' + split[1]
+	// return image.replace('.jpg', '-680.jpg')
+	return string
+}
+
 
 
 var tags = []
@@ -179,9 +185,9 @@ gulp.task('portfolio', ['tags'], function(){
   .pipe(layout(function(file){
     basename = slug(file.metadata.title || 'none', {lower: true })
 
-    // if (file.metadata.date == null) {
-    //   return
-    // }
+    if (file.metadata.date == null) {
+      return
+    }
 
     article_data = {
       'title': file.metadata.title,
@@ -229,6 +235,8 @@ gulp.task('templates', ['portfolio', 'testimonials'], function() {
       'tags': tags,
       'foo': 'bar',
       sortShowcase: sortShowcase,
+      backgroundImage: backgroundImage,
+
     }
   }))
   .on('error', onError)
@@ -303,12 +311,13 @@ gulp.task('resizeImages', function () {
         rename: { suffix: '-original' },
       }],
     }, {
-      quality: 70,
+      quality: 80,
       progressive: true,
       withMetadata: false,
       withoutEnlargement: false,
+      format: 'jpeg',
     }))
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('dist/assets/images'));
 });
 
 
@@ -338,7 +347,7 @@ gulp.task('gulpfile-autoreload', function() {
 
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build', function(done) {
-  sequence('clean', ['templates', 'sass', 'javascript', 'copy', 'admin'], done);
+  sequence('clean', ['templates', 'sass', 'javascript', 'copy', 'admin', 'resizeImages'], done);
 });
 
 // Start a server with LiveReload to preview the site in

@@ -23,4 +23,5 @@ showcase:
   title: "AI-powered cancer detection software"
   color: "#464fb9"
   order: 50
+  tags: "logo,website design,illustration,front-end development"
 ---

@@ -23,4 +23,5 @@ showcaseOFF:
   title: "A figure skating company"
   color: "#61aed8"
   order: 500
+  tags: "website design,development,cms"
 ---

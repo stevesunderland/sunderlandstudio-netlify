@@ -32,4 +32,5 @@ showcase:
   title: "A data science non-profit"
   color: "#17344a"
   order: 40
+  tags: "website design,illustration,front-end development"
 ---

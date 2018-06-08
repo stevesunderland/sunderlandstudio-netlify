@@ -20,4 +20,5 @@ showcase:
   title: "A web-to-print automation company"
   color: "#05b5d0"
   order: 90
+  tags: "website design,development,static,cms"
 ---

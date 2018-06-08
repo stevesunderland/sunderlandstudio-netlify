@@ -29,4 +29,5 @@ showcase:
   title: "A biotech research startup"
   color: "#520001"
   order: 30
+  tags: "logo,website design,development,static,cms"
 ---

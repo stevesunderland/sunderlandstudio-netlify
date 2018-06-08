@@ -26,4 +26,5 @@ showcase:
   title: "A data-driven medial reference"
   color: "#37a89b"
   order: 300
+  tags: "website design,development,static,cms"
 ---

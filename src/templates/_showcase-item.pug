@@ -1,11 +1,12 @@
 //- section.showcase(style='background-color:'+item.showcase.color)
 section.showcase(style='background-color:'+item.showcase.color, data-bg=item.showcase.image)
   .row.expanded.align-middle
-    .column.large-6
+    .column.small-12.large-6
       //- img.parallax(data-src=item.showcase.image, alt='')
-    .column.large-6
+    .column.small-12.large-6
+      h6= item.title
       h2= item.showcase.title
-      for tag in item.tags.split(',')
+      for tag in item.showcase.tags.split(',')
         span.label= tag
       br
       a.button(href='/portfolio/'+item.slug+'.html') Explore &rarr;

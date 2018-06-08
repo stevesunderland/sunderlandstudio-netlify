@@ -29,4 +29,5 @@ showcase:
   title: "A nootropic supplement company"
   color: "#191222"
   order: 20
+  tags: "logo,packaging,website,shopify"
 ---

@@ -17,4 +17,5 @@ showcase:
   title: "An enterprise ecommerce platform"
   color: "#4d5868"
   order: 80
+  tags: "front-end development,contentful cms"
 ---

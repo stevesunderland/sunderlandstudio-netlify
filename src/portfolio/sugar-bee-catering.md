@@ -20,4 +20,5 @@ showcase:
   title: "A five-star catering company"
   color: "#fbb03b"
   order: 400
+  tags: "logo,website design,development,cms"
 ---
