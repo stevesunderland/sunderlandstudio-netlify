@@ -1,6 +1,6 @@
 ---
 title: "Community At Work"
-description: ""
+description: "This project involved the design of a new logo, brand identity and website for a group facilitation company. The challenge was to present their unique services in a way that is easy to understand This project is currently in progress."
 date: "2016-07-01T22:00:00-07:00"
 featured: false
 gallery: 

@@ -22,9 +22,11 @@ section.showcase {
     background-position: left center;
     padding: 2em 0;
     min-height: 100vh;
+    min-height: calc(100vh - 4em);
 
     .row {
       min-height: 100vh;
+      min-height: calc(100vh - 4em);
     }
   }
 

@@ -3,7 +3,7 @@ var Site = {
 		Site.carousel();
 		// Site.colorful();
 		Site.portfolio();
-		// Site.menu();
+		Site.menu();
 		Site.smoothscroll();
 		if ($('#canvas1').length) {
 			Site.animation();

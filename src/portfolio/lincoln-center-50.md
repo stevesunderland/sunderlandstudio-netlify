@@ -1,6 +1,6 @@
 ---
 title: "Lincoln Center 50"
-description: "Conceptual design for a poster installation to commemorate Lincoln Center's 50th anniversary.\n\n"
+description: "This was a student project at FIT that envisioned a series of posters and marketing materials to commemorate Lincoln Center's 50th anniversary."
 date: "2016-05-30T18:04:00-07:00"
 featured: false
 gallery: 

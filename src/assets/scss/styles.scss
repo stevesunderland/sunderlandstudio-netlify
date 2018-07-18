@@ -20,6 +20,11 @@ h1 {
 	a {
 		border-bottom: 4px solid black;
 		color: black;
+
+		&:hover, &:active, &:focus {
+			color: black;
+			opacity: 0.5;
+		}
 	}
 }
 
@@ -302,6 +307,8 @@ p.caption {
 	}
 
 
+
+
 	.portfolio-filters-toggle {
 		white-space: nowrap;
 		span {
@@ -332,12 +339,16 @@ p.caption {
 		a {
 			color: #fff;
 			border-bottom-color: #fff;
+
+			&:hover {
+				opacity: 0.5;
+			}
 		}
 		ul {
 			margin-left: 0;
 			font-size: 2.5em;
 			font-weight: bold;
-			line-height: 1.25;
+			line-height: 1.5;
 			margin-top: 1em;
 		}
 		.button {
@@ -521,4 +532,9 @@ p.caption {
 	a:hover & {
 		opacity: 1;
 	}
+}
+
+
+.button.menu-toggle {
+	padding-top: 0.5em;
 }

@@ -1,6 +1,6 @@
 ---
 title: "Abpro"
-description: "Abpro is an industrial biochemistry lab in Massachusetts. This project is currently in progress."
+description: "Abpro is an industrial biochemistry lab in Massachusetts. This project involved the design of a new logo and website for the company, in addition to illustrations, presentations and other marketing materials. I also developed two responsive websites for them."
 date: "2016-07-01T21:59:00-07:00"
 website: "http://www.abpro.com"
 featured: true

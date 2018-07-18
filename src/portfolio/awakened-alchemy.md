@@ -1,6 +1,6 @@
 ---
 title: "Awakened Alchemy"
-description: "This project involved creating a logo, brand identity and packaging design for a unique nutraceutical company. I also designed and built a custom Shopify theme that allows the client to easily expand their product offerings in the future.  "
+description: "This project involved creating a logo, brand identity and packaging design for a unique nutraceutical company. I also designed and built a custom Shopify store that allows the client to easily expand their product offerings in the future.  "
 date: "2017-08-05T13:10:00-07:00"
 website: "http://awakened-alchemy.com"
 featured: true

@@ -1,6 +1,6 @@
 ---
 title: "Simon Says Brazil"
-description: "An online magazine and travel guide focused on Brasil, envisioned by legendary NYC art critic Simon Watson and best-selling author and editor Stephen Greco."
+description: "An online magazine and travel guide focused on Brasil, envisioned by art advisor Simon Watson and best-selling author and editor Stephen Greco."
 date: "2016-05-30T18:05:00-07:00"
 featured: false
 gallery: 
