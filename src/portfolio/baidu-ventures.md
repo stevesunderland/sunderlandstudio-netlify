@@ -1,8 +1,11 @@
 ---
 title: Baidu Ventures
+date: "2018-08-26T13:10:00-07:00"
 description: >-
   Baidu Ventures is an international venture capital firm focused on artificial
   intelligence.
+featured: true
+website: "https://bv.ai"
 gallery:
   - url: >-
       /assets/images/fireshot-capture-1-baidu-ventures-i-bv-http___localhost_8001_en_.png
