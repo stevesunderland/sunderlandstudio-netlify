@@ -6,6 +6,9 @@ description: >-
 gallery:
   - url: >-
       /assets/images/fireshot-capture-1-baidu-ventures-i-bv-http___localhost_8001_en_.png
+  - url: /assets/images/bv-portfolio-2.jpg
+  - url: /assets/images/bv-portfolio-1.jpg
+  - url: /assets/images/portfolio-bv-3.png
 tags: Static
 showcase:
   color: '#333333'
