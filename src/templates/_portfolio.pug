@@ -2,6 +2,9 @@ extends _base
 
 block content
 
+	//- if data.showcase
+		- var item = data
+		include _showcase-item
 
 	.portfolio-content
 		.row
@@ -29,7 +32,8 @@ block content
 	.row
 		.column
 			if data.gallery
-				for image in data.gallery
+				- var start = data.showcase ? 1 : 0
+				for image in data.gallery.slice(start, 999)
 
 					.portfolio-item-image
 						.bg-gray.loader
@@ -41,20 +45,20 @@ block content
 			if data.website
 				a.button.large.hollow(href="{{ item.website }}" target="_blank" style="margin-bottom: 8em;") Visit the website →
 
-	
+
 	- var prev = getPreviousArticle(data)
 	- var next = getNextArticle(data)
-	
+
 	mixin popover(item)
 		.popover
 			if item.gallery
 				img(src=item.gallery[0].url)
 			h6= item.title
-		
+
 	.row
 		.column.small-4
 
-			if prev 
+			if prev
 				a(href='/portfolio/'+prev.slug+'.html')
 					//- pre= JSON.stringify(prev, null, 10)
 					button.button.hollow.small(style="border-bottom-color: transparent;") ← Previous Project
@@ -63,9 +67,9 @@ block content
 
 		.column.small-4.text-center
 			a.button.hollow(href="/portfolio/") &larr; Back to portfolio
-			
+
 		.column.small-4.text-right
-			if next 
+			if next
 				//- pre= next.title
 				a(href='/portfolio/'+next.slug+'.html')
 					button.button.hollow.small(style="border-bottom-color: transparent;") Next Project →
