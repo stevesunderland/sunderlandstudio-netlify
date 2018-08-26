@@ -10,7 +10,7 @@ tags: Static
 showcase:
   color: '#333333'
   image: /assets/images/showcase-portfolio-bv-1.jpg
-  order: '10'
+  order: '1'
   title: An Artificial Intelligence Venture Capital fund
   tags: 'website,design,development,cms,static'
 ---
