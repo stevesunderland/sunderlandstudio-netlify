@@ -17,7 +17,7 @@ block content
 			// 	li(style="display: inline-block;")
 			// 		a(href="/portfolio/#{{ relation.name }}", style="margin-left: 0;") #{{ relation.name }}
 
-			p.lead!= data.description.replace('<p>', '<p class="lead">')
+			p.lead!= data.description
 			//- pre!= JSON.stringify(data.description, null, 10)
 		.column.large-5
 			if data.testimonial
@@ -32,7 +32,8 @@ block content
 	.row
 		.column
 			if data.gallery
-				- var start = data.showcase ? 1 : 0
+				//- - var start = data.showcase ? 1 : 0
+				- var start = 0
 				for image in data.gallery.slice(start, 999)
 
 					.portfolio-item-image
@@ -66,7 +67,7 @@ block content
 					+popover(prev)
 
 		.column.small-4.text-center
-			a.button.hollow(href="/portfolio/") &larr; Back to portfolio
+			a.button(href="/portfolio/") &larr; Back to portfolio
 
 		.column.small-4.text-right
 			if next

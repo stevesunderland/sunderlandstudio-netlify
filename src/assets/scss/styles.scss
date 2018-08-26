@@ -54,6 +54,12 @@ h3 {
 p.lead {
 	font-size: 1.125em;
 	max-width: 880px;
+	margin-bottom: 2em;
+
+	a {
+		color: inherit;
+		text-decoration: underline;
+	}
 }
 
 @include breakpoint(medium up) {
@@ -69,12 +75,13 @@ blockquote {
 	p {
 		color: black;
 		position: relative;
+		line-height: 1.75;
 		&:before {
 			content: "“";
 			font-size: 4em;
 			position: absolute;
 			margin-left: -0.5em;
-			margin-top: -0.35em;
+			margin-top: -0.375em;
 		}
 		&:after {
 			content: "”";
@@ -104,16 +111,28 @@ blockquote {
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: .05em;
-	transition: none;
+	transition: all 0.5s;
 	border-radius: 0;
+	padding: 1em;
+	background-color: black;
+
+	&:hover {
+		background-color: #999;
+	}
+
 	&.hollow {
 		color: black;
-		padding: 1em 0;
-		border: none;
-		border-bottom: 2px solid black;
+		padding: 1em 1em;
+		// border: none;
+		border: 2px solid black;
+		// border-bottom: 2px solid black;
 		&:hover {
 			color: #999;
-			border-bottom-color: #999;
+			border-color: #999;
+		}
+
+		&.small {
+			border: none;
 		}
 	}
 }
@@ -151,12 +170,16 @@ header {
 	background-color: black;
 	.button, * {
 		color: #fff;
-		border-bottom-color: #fff;
+		border-color: #fff;
 	}
 }
 
 .cover {
 	background-size: cover;
+}
+
+header .menu {
+	// margin-top: 0.25em;
 }
 
 .menu li {
@@ -167,6 +190,10 @@ header {
 		margin: 0 1em;
 		// border-bottom: 0px solid transparent;
 		position: relative;
+		// text-transform: uppercase;
+		// font-size: .8em;
+		// font-weight: 600;
+		// letter-spacing: .1em;
 
 		&:after {
 			content: "";
@@ -353,7 +380,7 @@ p.caption {
 		}
 		.button {
 			color: #fff;
-			border-bottom-color: transparent;
+			border-color: transparent;
 		}
 	}
 
@@ -406,6 +433,7 @@ p.caption {
 		margin-bottom: 3em;
 		.button {
 			margin-bottom: 3em;
+			border: none;
 	// float: left;
 
 }

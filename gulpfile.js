@@ -192,7 +192,7 @@ gulp.task('portfolio', ['tags'], function(){
     article_data = {
       'title': file.metadata.title,
       // 'description': file.metadata.description,
-      'description': md.render(file.metadata.description + '').body,
+      'description': md.render(file.metadata.description + '', { inline: true }).body,
       'slug': basename,
       'date': file.metadata.date,
       'gallery': file.metadata.gallery,
