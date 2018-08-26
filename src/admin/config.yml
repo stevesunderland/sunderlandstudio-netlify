@@ -36,7 +36,15 @@ collections:
       # - label: "testimonial"
       #   name: "testimonial"
       #   widget: "relation"
-
+      - label: "Showcase"
+        name: "showcase"
+        widget: "object"
+        fields:
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Headline", name: "title", widget: "string", required: false }
+          - { label: "Color", name: "color", widget: "string", required: false }
+          - { label: "Order", name: "order", widget: "number", required: false }
+          - { label: "Tags", name: "tags", widget: "string", required: false }
   - name: "tags"
     label: "Tags"
     folder: "src/tags"
