@@ -16,8 +16,8 @@ block content
 				include _showcase-item
 	section#portfolio.bg-gray.fade-in.delay-2
 		.row.collapse.expanded.small-up-1.medium-up-2.large-up-3.text-center.portfolio-grid
-			for item in articles.slice(0,9)
-				if item.gallery
+			for item in articles.slice(0,12)
+				if item.gallery && item.featured
 					include _portfolio-item
 
 	section.row.expanded.column.text-center.bg-black(style='padding: 5em 0 0;')
