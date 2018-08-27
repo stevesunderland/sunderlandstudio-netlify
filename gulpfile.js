@@ -185,7 +185,9 @@ gulp.task('portfolio', ['tags'], function(){
   .pipe(layout(function(file){
     basename = slug(file.metadata.title || 'none', {lower: true })
 
+
     if (file.metadata.date == null) {
+      // console.log('****THIS FILE IS NULL: '+basename)
       return
     }
 
@@ -202,6 +204,7 @@ gulp.task('portfolio', ['tags'], function(){
       'showcase': file.metadata.showcase,
       'website': file.metadata.website,
     }
+    console.log('pushing: '+file.metadata.title)
     articles.push(article_data)
 
     return {
@@ -316,6 +319,7 @@ gulp.task('resizeImages', function () {
       withMetadata: false,
       withoutEnlargement: false,
       format: 'jpeg',
+      silent: true,
     }))
     .pipe(gulp.dest('dist/assets/images'));
 });
@@ -366,6 +370,7 @@ gulp.task('server', ['build'], function() {
 
 
 function onError(err) {
+  console.log('ERROR')
   console.log(err);
   this.emit('end');
 }

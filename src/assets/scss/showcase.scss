@@ -1,5 +1,4 @@
 section.showcase {
-
   background-repeat: no-repeat;
   background-size: 100% auto;
   // background-attachment: fixed;
@@ -28,6 +27,11 @@ section.showcase {
       min-height: 100vh;
       min-height: calc(100vh - 4em);
     }
+  }
+
+  &.inside {
+    background-attachment: scroll;
+    padding: 0;
   }
 
 
