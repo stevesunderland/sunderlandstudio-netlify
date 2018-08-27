@@ -92,21 +92,21 @@ section.showcase {
       letter-spacing: .2em;
     }
   }
+  span.label {
+    display: inline-block;
+    /*border: 1px solid #fff;*/
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    opacity: 0.6;
+    font-weight: normal;
+    /*padding: 0.5em 1em;*/
+    /*margin-right: 0.5em;*/
+    margin-right: 2em;
+    letter-spacing: .2em;
+  }
 }
 
-span.label {
-  display: inline-block;
-  /*border: 1px solid #fff;*/
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 0.7em;
-  opacity: 0.6;
-  font-weight: normal;
-  /*padding: 0.5em 1em;*/
-  /*margin-right: 0.5em;*/
-  margin-right: 2em;
-  letter-spacing: .2em;
-}
 
 
 // textarea {
