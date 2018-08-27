@@ -1,5 +1,7 @@
 block vars
 	- var pagename = 'home'
+	- var pagetitle = 'Graphic Design & Website Development'
+	- var description = "Sunderland Studio is a full-service website design and development studio based in Los Angeles. We create websites, brand identities and marketing materials for a variety of startups and angencies."
 
 doctype html
 html.no-js(lang="en")
@@ -9,8 +11,8 @@ html.no-js(lang="en")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		link(rel="stylesheet", href="/assets/css/app.css")
 		// link(rel="stylesheet", href="//use.typekit.net/hee8rms.css")
-		title Sunderland Studio
-		meta(name="description" content="")
+		title= 'Sunderland Studio | ' + pagetitle
+		meta(name="description" content=description)
 		block head
 	body
 		include _header
