@@ -20,11 +20,11 @@ block content
 					br
 					a.button(href=data.website target="_blank") Visit the website &rarr;
 
-	.portfolio-content
+	.portfolio-content.wow.fade-in.delay-1
 		.row
 			.column
 				h2= data.title
-	.row.align-justify
+	.row.align-justify.wow.fade-in.delay-2
 		.column.large-7
 			// ul.menu(style="margin-bottom: 1em;")
 			// 	| {% for relation in item.tags %}
@@ -39,11 +39,11 @@ block content
 					p= data.testimonial.quote
 					cite= data.testimonial.title
 
-	.row.column
+	.row.column.wow.fade-in.delay-3
 		if data.website
 			a.button.large.hollow(href=data.website target="_blank") Visit the website &rarr;
 
-	.row
+	.row.wow.fade-in.delay-4
 		.column
 			if data.gallery
 				//- - var start = data.showcase ? 1 : 0
