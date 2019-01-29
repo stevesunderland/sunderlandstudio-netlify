@@ -13,17 +13,17 @@ block content
           //- span.up &uarr; Filter
           //- span.down &darr; Filter
 
-    .row
-      .column
-        ul.menu.portfolio-filters(style='margin-bottom: 1em;')
-          li
-            a(href='#', data-filter='*')
-              | #all
-              sup articles.length
-          for item in tags
-            li
-              a(href='#', data-filter='.'+item)
-                | ##{item}
+    // .row
+    //   .column
+    //     ul.menu.portfolio-filters(style='margin-bottom: 1em;')
+    //       li
+    //         a(href='#', data-filter='*')
+    //           | #all
+    //           sup articles.length
+    //       for item in tags
+    //         li
+    //           a(href='#', data-filter='.'+item)
+    //             | ##{item}
 
   section#portfolio.bg-gray.wow.fade-in.delay-2
     .row.collapse.expanded.small-up-1.medium-up-2.large-up-3.text-center.portfolio-grid

@@ -2,7 +2,7 @@ var Site = {
 	init: function() {
 		Site.carousel();
 		// Site.colorful();
-		Site.portfolio();
+		// Site.portfolio();
 		Site.menu();
 		Site.smoothscroll();
 		if ($('#canvas1').length) {
@@ -137,11 +137,13 @@ var Site = {
 			}
 
 			function resizeItems() {
-				var item = $('.portfolio-item');
-				var height = item.first().height()
-				var width = item.first().width()
+				// var item = $('.portfolio-item');
+				// var width = item.first().width()
+				// var height = item.first().height()
 
-				item.height(height).width(width)
+				// height = width*.66;
+
+				// item.height(height).width(width)
 			}
 
 			var $grid = $('.portfolio-grid');
@@ -164,6 +166,7 @@ var Site = {
 
 			  $grid.isotope({
 					// percentPosition: true,
+					resize: false,
 			    itemSelector: '.portfolio-item',
 			    layoutMode: 'fitRows',
 			    filter: hashFilter || '*'

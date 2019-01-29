@@ -253,6 +253,7 @@ header .menu {
 }
 
 #portfolio {
+	background-color: #000;
 	.column {
 		cursor: pointer;
 		// background-size: 100% auto;
@@ -266,10 +267,11 @@ header .menu {
 	}
 }
 .item {
+	cursor: pointer;
 	width: 100%;
-	padding-bottom: 66%;
+	// padding-bottom: 66%;
 	position: relative;
-	opacity: 0;
+	// opacity: 0;
 	transition: opacity 0.5s;
 	text-align: center;
 	background-color: #000;
@@ -277,6 +279,22 @@ header .menu {
 	&:hover {
 		opacity: 1;
 	  // padding: 1em;
+
+	  	&, .item-inner, .overlay {
+	  		opacity: 1;
+	  	}
+
+	}
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,0.8);
+		opacity: 0;
+		transition: all 0.5s;
+
 
 	}
 	.item-inner {
