@@ -1,0 +1,22 @@
+extends _base
+
+append vars
+	- pagetitle = 'Showcase'
+	- pagename = 'showcase'
+
+block content
+	section#showcase.bg-gray.fade-in.delay-2
+		//- section.showcase(style='background-color:#000')
+			.row.expanded.align-middle
+				.column.text-center
+					p.lead(style="margin: 1em auto;") Over the past 15 years, I've had the opportunity to work with a wide variety of companies and individuals.
+					p.lead(style="margin: 1em auto;") Scroll down to see some of the highlights.
+					h1(style="color: #fff;") &darr;
+		- var showcase = sortShowcase(articles)
+		for item in showcase
+			if item.showcase
+				include _showcase-item
+		section.showcase(style='background-color:#000')
+			.row.expanded.align-middle
+				.column.text-center
+					a.button(href="/portfolio") See all projects &rarr;
