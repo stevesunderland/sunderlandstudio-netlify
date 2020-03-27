@@ -17,11 +17,11 @@ gallery:
   -
     url: "/assets/images/portfolio-concepttoclinic-illustrations_Artboard2.jpg"
     caption: null
-tags: "development,nonprofit,logo,responsive,medical"
+tags: "development,nonprofit,logo,responsive,healthcare"
 showcase:
   image: "/assets/images/showcase-concepttoclinic.jpg"
   title: "AI-powered cancer detection software"
   color: "#464fb9"
-  order: 50
+  order: 120
   tags: "logo,website design,illustration,front-end development"
 ---

@@ -12,10 +12,10 @@ gallery:
     url: "/assets/images/portfolio-drivendata-mockup-1.jpg"
     caption: null
   -
-    url: "/assets/images/portfolio-drivendata-illustrations.jpg"
+    url: "/assets/images/portfolio-drivendata-competitions-large.jpg"
     caption: null
   -
-    url: "/assets/images/portfolio-drivendata-competitions-large.jpg"
+    url: "/assets/images/portfolio-drivendata-illustrations.jpg"
     caption: null
   -
     url: "/assets/images/portfolio-drivendata-profile-large.jpg"

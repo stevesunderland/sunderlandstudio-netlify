@@ -1,3 +1,35 @@
+body.showcase {
+  header {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    a {
+
+      &, &:hover {
+        color: #fff !important;
+        border-bottom-color: #fff;
+
+      }
+    }
+    .menu {
+      a {
+        opacity: 0.5;
+
+        &:after {
+          background-color: #fff;
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+
 section.showcase {
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -8,6 +40,12 @@ section.showcase {
   overflow: hidden;
   // min-height: 100vh;
   padding-top: 420px;
+
+  // &:first-of-type {
+  //   @include breakpoint (large up) {
+  //     padding-top: 8em;
+  //   }
+  // }
 
   @include breakpoint(medium up) {
     background-size: 80% auto;

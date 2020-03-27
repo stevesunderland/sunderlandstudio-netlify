@@ -1,7 +1,7 @@
 ---
 title: "Spaces Magazine"
 description: "Concept design for an architecture magazine."
-date: "2016-05-30T18:05:00-07:00"
+date: ""
 featured: false
 gallery: 
 - 

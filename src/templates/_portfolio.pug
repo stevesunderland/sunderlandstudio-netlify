@@ -3,6 +3,7 @@ extends _base
 block vars
 	- var pagetitle = data.title
 	- var description = data.description
+	- var pagename = data.slug
 
 block content
 
@@ -50,7 +51,7 @@ block content
 				- var start = 0
 				each image, index in data.gallery.slice(start, 999)
 
-					.portfolio-item-image(class= index == 0 ? 'browser' : '' )
+					.portfolio-item-image(class= (index == 0 ? 'browser' : '') + ' portfolio-image-' + index )
 						.bg-gray.loader
 							img(src=image.url)
 						if image.caption
@@ -58,7 +59,7 @@ block content
 
 
 			if data.website
-				a.button.large.hollow(href="{{ item.website }}" target="_blank" style="margin-bottom: 8em;") Visit the website →
+				a.button.large.hollow(href=data.website target="_blank" style="margin-bottom: 8em;") Visit the website →
 
 
 	- var prev = getPreviousArticle(data)

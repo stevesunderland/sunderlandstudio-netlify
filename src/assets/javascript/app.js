@@ -2,7 +2,7 @@ var Site = {
 	init: function() {
 		Site.carousel();
 		// Site.colorful();
-		// Site.portfolio();
+		Site.portfolio();
 		Site.menu();
 		Site.smoothscroll();
 		if ($('#canvas1').length) {
@@ -10,6 +10,15 @@ var Site = {
 		}
     // Site.showcase();
 		Site.tooltip()
+		Site.testimonials()
+	},
+	testimonials: function() {
+		var cards = $("#testimonials .column");
+		for(var i = 0; i < cards.length; i++){
+			var target = Math.floor(Math.random() * cards.length -1) + 1;
+			var target2 = Math.floor(Math.random() * cards.length -1) +1;
+			cards.eq(target).before(cards.eq(target2));
+		}
 	},
 	tooltip: function() {
 		var popover = $('.popover');
@@ -136,16 +145,6 @@ var Site = {
 				}
 			}
 
-			function resizeItems() {
-				// var item = $('.portfolio-item');
-				// var width = item.first().width()
-				// var height = item.first().height()
-
-				// height = width*.66;
-
-				// item.height(height).width(width)
-			}
-
 			var $grid = $('.portfolio-grid');
 			var isIsotopeInit = false;
 
@@ -159,17 +158,18 @@ var Site = {
 			  }
 			  isIsotopeInit = true;
 
-
-				resizeItems()
-
-				// $('')
-
 			  $grid.isotope({
-					// percentPosition: true,
-					resize: false,
 			    itemSelector: '.portfolio-item',
 			    layoutMode: 'fitRows',
-			    filter: hashFilter || '*'
+			    filter: hashFilter || '*',
+			    transitionDuration: 600,
+			    // initLayout: false,
+			    hiddenStyle: {
+					opacity: 0
+				},
+				visibleStyle: {
+					opacity: 1
+				},
 			  });
 
 			  if ( hashFilter ) {
@@ -202,6 +202,13 @@ var Site = {
 			// });
 
 			onHashchange();
+
+			$.extend($.lazyLoadXT, {
+			  forceLoad: true,
+			  oncomplete: function(){
+				$grid.isotope('layout');
+			  }
+			});
 		}
 	},
 	animation: function() {
@@ -340,16 +347,4 @@ var Site = {
 
 $(document).ready(function(){
 	Site.init();
-});
-
-$.extend($.lazyLoadXT, {
-  oncomplete: function(){
-		console.log('lazy load complete!')
-		// window.dispatchEvent(new Event('resize'));
-		setTimeout(function(){
-			// window.dispatchEvent(new Event('resize'));
-			// Site.showcase()
-
-		}, 1000)
-	}
 });

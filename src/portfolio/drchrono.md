@@ -16,5 +16,5 @@ gallery:
   - 
     url: "/assets/images/onpatient-iphone-1.jpg"
     caption: null
-tags: "development,app,print,medical,startup"
+tags: "development,app,print,healthcare,startup"
 ---

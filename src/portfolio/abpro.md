@@ -23,11 +23,11 @@ gallery:
   -
     url: "/assets/images/abpro-labs-logo-1-selected.png"
     caption: null
-tags: "medical,static,responsive,logo"
+tags: "healthcare,static,responsive,logo"
 showcase:
   image: "/assets/images/showcase-abpro.jpg"
   title: "A biotech research startup"
   color: "#520001"
-  order: 30
+  order: 100
   tags: "logo,website design,development,static,cms"
 ---

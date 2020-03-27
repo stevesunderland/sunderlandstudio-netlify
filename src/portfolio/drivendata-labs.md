@@ -22,6 +22,6 @@ showcase:
   image: "/assets/images/showcase-drivendatalabs.jpg"
   title: "A data science consulting group"
   color: "#1b5e88"
-  order: 100
+  order: 80
   tags: "website design,illustration,front-end development,static"
 ---

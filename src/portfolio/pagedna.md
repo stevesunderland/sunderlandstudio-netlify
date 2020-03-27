@@ -19,6 +19,6 @@ showcase:
   image: "/assets/images/showcase-pagedna.jpg"
   title: "A web-to-print automation company"
   color: "#05b5d0"
-  order: 90
+  order: 170
   tags: "website design,development,static,cms"
 ---

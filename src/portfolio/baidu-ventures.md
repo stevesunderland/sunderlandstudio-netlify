@@ -2,7 +2,7 @@
 title: Baidu Ventures
 featured: true
 website: 'https://bv.ai'
-date: "2018-08-26T13:10:00-07:00"
+date: "2020-08-26T13:10:00-07:00"
 description: >-
   Baidu Ventures is an international venture capital firm focused on artificial
   intelligence. This multilingual website uses DatoCMS as a headless CMS and Gulp as a static site generator. 
@@ -14,10 +14,10 @@ gallery:
   - url: /assets/images/portfolio-bv-3.png
 tags: 'static,development,responsive'
 showcase:
-  color: '#4E0001'
+  color: '#620000'
   image: /assets/images/showcase-portfolio-bv-1.jpg
-  order: '1'
-  title: An Artificial Intelligence Venture Capital fund
+  order: 10
+  title: An Artificial Intelligence VC fund
   tags: 'website,design,development,cms,static'
 ---
 

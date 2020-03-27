@@ -16,5 +16,5 @@ gallery:
   - 
     url: "/assets/images/cbt-mock-3.jpg"
     caption: null
-tags: "app,logo"
+tags: "app,logo,healthcare"
 ---

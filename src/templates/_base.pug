@@ -1,5 +1,5 @@
 block vars
-	- var pagename = 'home'
+	- var pagename = ''
 	- var pagetitle = 'Graphic Design & Website Development'
 	- var description = "Sunderland Studio is a full-service website design and development studio based in Los Angeles. We create websites, brand identities and marketing materials for a variety of startups and angencies."
 
@@ -24,7 +24,7 @@ html.no-js(lang="en")
 		meta(name="theme-color", content="#ffffff")
 
 		block head
-	body
+	body(class=pagename)
 		include _header
 
 		block content

@@ -16,6 +16,7 @@ var markdown    = require('gulp-markdown');
 var md          = require('jstransformer')(require('jstransformer-markdown-it'));
 var layout      = require('gulp-layout');
 var responsive = require('gulp-responsive');
+var uglify      = require('gulp-uglify');
 
 
 // Check for --production flag
@@ -46,7 +47,7 @@ var PATHS = {
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.js',
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.autoload.js',
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.bg.js',
-    // 'node_modules/isotope-layout/dist/isotope.pkgd.js',
+    'node_modules/isotope-layout/dist/isotope.pkgd.js',
     // 'node_modules/rellax/rellax.js',
     // 'node_modules/wowjs/dist/wow.js',
     'src/assets/javascript/three.js',
@@ -129,21 +130,23 @@ function backgroundImage(image) {
 
 
 var tags = []
+var tags = ['art', 'development', 'logo', 'healthcare', 'nonprofit', 'print', 'startup', 'static']
 
 gulp.task('tags', function(){
-  tags = []
-  return gulp.src('./src/tags/*.md')
-  .pipe(frontMatter({
-    property: 'metadata',
-    remove: true,
-  }))
-  .pipe(layout(function(file){
-    // console.log(file.metadata.title)
-    var isFeatured = file.metadata.featured
-    if (isFeatured) {
-      tags.push(file.metadata.title)
-    }
-  }))
+  return;
+  // tags = []
+  // return gulp.src('./src/tags/*.md')
+  // .pipe(frontMatter({
+  //   property: 'metadata',
+  //   remove: true,
+  // }))
+  // .pipe(layout(function(file){
+  //   // console.log(file.metadata.title)
+  //   var isFeatured = file.metadata.featured
+  //   if (isFeatured) {
+  //     tags.push(file.metadata.title)
+  //   }
+  // }))
 
 })
 
@@ -277,6 +280,7 @@ gulp.task('javascript', function() {
     .pipe($.sourcemaps.init())
     .pipe($.concat('app.js'))
     .pipe($.if(!isProduction, $.sourcemaps.write()))
+    .pipe(uglify())
     .on('error', onError)
     .pipe(gulp.dest('dist/assets/js'))
     .on('finish', browser.reload);
@@ -359,12 +363,14 @@ gulp.task('server', ['build'], function() {
   // livereload.listen();
   browser.init({
     server: {
-      baseDir: './dist',
+      baseDir: 'dist',
+      serveStatic: ['./dist'],
       serveStaticOptions: {
         extensions: ['html']
       }
     },
     port: PORT,
+    open: false,
   });
 });
 
@@ -380,7 +386,7 @@ function onError(err) {
 gulp.task('default', ['build', 'server'], function() {
   gulp.watch(PATHS.assets, ['copy']);
   // gulp.watch(['src/casestudies/*'], ['build']);
-  gulp.watch(['src/**/*.pug'], ['templates']);
+  gulp.watch(['src/**/*.pug', 'src/**/*.md'], ['templates']);
   // gulp.watch(['src/{layouts,partials,helpers,data}/**/*'], ['pages:reset']);
   gulp.watch(['src/assets/scss/**/{*.scss, *.sass}'], ['sass']);
   gulp.watch(['src/assets/javascript/**/*.js'], ['javascript']);

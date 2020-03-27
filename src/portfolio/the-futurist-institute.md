@@ -1,7 +1,7 @@
 ---
 title: "The Futurist Institute"
 description: "The Futurist Institute is an online learning platform created for one of the world's leading economic futurists. This project involved designing a logo, brand identity and website. I also created a custom web application using Django which functions as a Learning Management System (LMS) and allows the client to sell access to their courses and monitor student progress. "
-date: "2017-11-16T09:42:00-08:00"
+date: "2019-10-29T13:10:00-07:00"
 website: "https://www.futuristinstitute.org"
 featured: true
 gallery:
@@ -23,9 +23,9 @@ gallery:
 tags: "logo,development"
 showcase:
   image: "/assets/images/showcase-futurist-1.jpg"
-  title: "An online learning platform"
+  title: "A forward-thinking online learning platform"
   color: "#10234b"
-  order: 10
+  order: 60
   tags: "logo,website design,django development,stripe e-commerce"
 testimonial:
   title: "Jason Schenker, The Futurist Institute"

@@ -1,5 +1,8 @@
 extends _base
 
+block vars
+	- var pagetitle = 'Graphic Design & Website Development'
+	- var pagename = 'home'
 
 block content
 	section#hero.fade-in.delay-1
@@ -44,24 +47,22 @@ block content
 					p
 						| I can help you make the most of the latest technologies and put them to work for your company.
 
-	section#testimonials.bg-gray
-		.carousel
+	section#testimonials.bg-gray.padding
+		.row.collapse.expanded.small-up-1.medium-up-2.large-up-3.align-center
 			for item in testimonials
-				.slide
-					.row.expanded.align-center
-						.column.medium-8.medium-centered.large-6
-							blockquote
-								p.lead= item.quote
-								cite= item.title
-								//- a(href='{{ url(item.client) }}') {{ item.name }}
+				.column
+					blockquote
+						p.lead= item.quote
+						cite= item.title
+						//- a(href='{{ url(item.client) }}') {{ item.name }}
 
 	section#background
 		.row.expanded.align-middle
-			.column.small-12.large-6.scrollme
+			.column.small-12.large-7.scrollme
 					//- .parallax
 					img.parallax(data-src='/assets/images/sunderland-portrait.jpg' alt='Steve Sunderland portrait' style='width: 100%;')
 			.column.small-12.large-5.large-offset-0
-				h3 Steve Sunderland
+				h3(style="margin-top: 0;") Steve Sunderland
 				p(style="margin-bottom: 2em;") Steve is a Graphic Designer and Web Developer currently living in Los Angeles. He graduated from the Fashion Institute of Technology in New York City with a degree in Communication Design. Over the past decade, Steve has developed design solutions for a variety of companies including artists, startups, agencies and non-profit organizations.
 				a.button.hollow(href='/assets/files/sunderland-resume.pdf' target="_blank")
 						| View my Resume &rarr;

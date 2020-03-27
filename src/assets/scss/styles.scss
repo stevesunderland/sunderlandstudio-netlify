@@ -66,7 +66,7 @@ p.lead {
 @include breakpoint(medium up) {
 	p.lead {
 		font-size: 1.25em;
-		// font-size: 1.25em;
+
 		#hero & {
 			font-size: 1.5em;
 		}
@@ -74,24 +74,28 @@ p.lead {
 }
 
 blockquote {
-	margin-left: 2em;
+	margin-left: 4em;
+	margin-right: 4em;
+	margin-bottom: 4em;
 	border-left: 0;
-	padding-left: 0;
+	padding: 0;
 	p {
 		color: black;
 		position: relative;
 		line-height: 1.75;
-		&:before {
+
+		&:before, &:after {
 			content: "“";
 			font-size: 4em;
 			position: absolute;
+			color: #ddd;
+		}
+		&:before {
 			margin-left: -0.5em;
 			margin-top: -0.375em;
 		}
 		&:after {
 			content: "”";
-			font-size: 4em;
-			position: absolute;
 			margin-left: 0.1em;
 			margin-top: -0.38em;
 		}
@@ -129,8 +133,8 @@ blockquote {
 		color: black;
 		padding: 1em 0;
 		border: none;
-		// border: 2px solid black;
 		border-bottom: 2px solid black;
+
 		&:hover {
 			color: #999;
 			border-color: #999;
@@ -184,7 +188,10 @@ header {
 }
 
 header .menu {
-	// margin-top: 0.25em;
+	text-transform: uppercase;
+	font-size: .75em;
+	letter-spacing: .1em;
+	font-weight: 600;
 }
 
 .menu li {
@@ -193,12 +200,7 @@ header .menu {
 		color: #333;
 		padding: .5em 0;
 		margin: 0 1em;
-		// border-bottom: 0px solid transparent;
 		position: relative;
-		// text-transform: uppercase;
-		// font-size: .8em;
-		// font-weight: 600;
-		// letter-spacing: .1em;
 
 		&:after {
 			content: "";
@@ -215,7 +217,6 @@ header .menu {
 	&:hover a, &.active a {
 		background-color: transparent;
 		color: #000;
-		// border-bottom-color: black;
 
 		&:after {
 			left: 0;
@@ -321,11 +322,6 @@ header .menu {
 	.tags span {
 		color: #fff;
 		opacity: 0.6;
-		// font-size: .85em;
-		// display: inline-block;
-		// padding: 0 0.5em;
-		// text-transform: uppercase;
-		// letter-spacing: .1em;
 	}
 }
 }
@@ -333,15 +329,15 @@ header .menu {
 .portfolio-item-image {
 	margin-top: 5em;
 	margin-bottom: 5em;
+	text-align: center;
+
 	img {
 		width: 100%;
 	}
 
 	&.browser {
-		// border: 4px solid #ddd;
 		border-radius: 3px;
 		background-color: #ddd;
-		// padding-top: 2em;
 		box-shadow: 0 0 4em #999;
 
 		img {
@@ -350,12 +346,40 @@ header .menu {
 	}
 }
 
+.iris-medicine .portfolio-item-image.portfolio-image-1  {
+
+	.bg-gray.loader {
+		background-color: #fff;
+	}
+
+		-webkit-mix-blend-mode: multiply;
+		mix-blend-mode: multiply;
+	img {
+		width: auto;
+		margin: 0 auto;
+
+	}
+}
+
+
+// .isotope-ready, .isotope-ready .isotope-item {
+//     transition-duration: 0.8s;
+// }
+
+// .isotope-ready {
+//     transition-property: height, width;
+// }
+
+// .isotope-ready .isotope-item {
+// 	transition-property: transform, opacity;
+// }
+
 p.caption {
 	color: #999;
 	margin-top: 1em;
 }
 
-/*@media (max-width: 640px) {*/
+
 
 	.portfolio-filters {
 		margin-left: -1em;
@@ -472,28 +496,27 @@ p.caption {
 	#contact {
 		padding: 0 2em;
 		margin-bottom: 3em;
+
 		.button {
 			margin-bottom: 3em;
-			// border: none;
-	// float: left;
+		}
 
-}
-.menu {
-	margin-left: -1em;
-}
-}
-
-@media (min-width: 640px) {
-	#contact {
-		margin-top: 5em;
-		padding: 0 2em;
-		margin-bottom: 8em;
-		.button {
-	  // margin-bottom: 3em;
-	  float: right;
+		.menu {
+			margin-left: -1em;
+		}
 	}
-}
-}
+
+	@media (min-width: 640px) {
+		#contact {
+			margin-top: 5em;
+			padding: 0 2em;
+			margin-bottom: 8em;
+
+			.button {
+				float: right;
+			}
+		}
+	}
 
 #services {
 	padding: 2em 2em;
@@ -524,13 +547,6 @@ p.caption {
 
 .portfolio-content {
 	padding: 0 2em;
-}
-
-@media (min-width: 640px) {
-	.portfolio-content {
-	// padding: 10em 2em;
-
-}
 }
 
 @keyframes fadeIn {
@@ -576,6 +592,10 @@ p.caption {
 #testimonials {
 	position: relative;
 	z-index: 999;
+
+	p.lead {
+		margin-bottom: 1em;
+	}
 }
 
 .popover {
