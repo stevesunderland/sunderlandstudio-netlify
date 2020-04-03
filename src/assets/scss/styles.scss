@@ -74,11 +74,17 @@ p.lead {
 }
 
 blockquote {
-	margin-left: 4em;
-	margin-right: 4em;
+	margin-left: 1em;
+	// margin-right: 1em;
 	margin-bottom: 4em;
 	border-left: 0;
 	padding: 0;
+
+	@include breakpoint(medium up) {
+		margin-left: 4em;
+		margin-right: 4em;
+	}
+
 	p {
 		color: black;
 		position: relative;
@@ -239,6 +245,7 @@ header .menu {
 }
 
 #portfolio .column.lazy-hidden {
+
 	opacity: 1;
 	background-image: url(/static/images/loading.svg);
 	background-size: 5em;
@@ -638,5 +645,12 @@ section.padding {
 
 	img {
 		width: 100%;
+	}
+}
+
+
+#background img {
+	@include breakpoint(small down) {
+		margin-bottom: 2em;
 	}
 }

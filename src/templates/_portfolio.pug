@@ -25,23 +25,23 @@ block content
 		.row
 			.column
 				h2= data.title
-	.row.align-justify.wow.fade-in.delay-2
-		.column.large-7
-			// ul.menu(style="margin-bottom: 1em;")
-			// 	| {% for relation in item.tags %}
-			// 	li(style="display: inline-block;")
-			// 		a(href="/portfolio/#{{ relation.name }}", style="margin-left: 0;") #{{ relation.name }}
+		.row.align-justify.wow.fade-in.delay-2
+			.column.small-12.large-7
+				// ul.menu(style="margin-bottom: 1em;")
+				// 	| {% for relation in item.tags %}
+				// 	li(style="display: inline-block;")
+				// 		a(href="/portfolio/#{{ relation.name }}", style="margin-left: 0;") #{{ relation.name }}
 
-			p.lead!= data.description
-			//- pre!= JSON.stringify(data.description, null, 10)
-		.column.large-5
-			if data.testimonial
-				blockquote
-					p= data.testimonial.quote
-					cite= data.testimonial.title
+				p.lead!= data.description
+				//- pre!= JSON.stringify(data.description, null, 10)
+			.column.small-12.large-5
+				if data.testimonial
+					blockquote
+						p= data.testimonial.quote
+						cite= data.testimonial.title
 
-	.row.column.wow.fade-in.delay-3
-		if data.website
+		.row.column.wow.fade-in.delay-3
+			if data.website
 			a.button.large.hollow(href=data.website target="_blank") Visit the website &rarr;
 
 	.row.wow.fade-in.delay-4
@@ -71,7 +71,7 @@ block content
 				img(src=item.gallery[0].url)
 			h6= item.title
 
-	.row
+	.row.collapse.expanded
 		.column.small-4
 
 			if prev
