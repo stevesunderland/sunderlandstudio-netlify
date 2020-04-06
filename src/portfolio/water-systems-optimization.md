@@ -1,7 +1,7 @@
 ---
 title: 'Water Systems Optimization'
 description: 'WSO specializes in water loss control, advising public water utilities nationwide on supply side efficiency. I created a new website to showcase their services and research. This is a static website based on Webhook CMS.'
-date: '2016-06-05T20:04:00-07:00'
+date_off: '2016-06-05T20:04:00-07:00'
 website: 'http://www.wso.us/'
 featured: false
 gallery:
