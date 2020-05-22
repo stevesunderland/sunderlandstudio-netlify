@@ -1,0 +1,14 @@
+header.fade-in(class=(pagename == 'home' ? 'fade-in' : ''))
+	.row.align-middle
+		.column
+			h1
+				a(href="/") Sunderland Studio
+			ul.menu.float-right.show-for-large
+				li(class=(pagename == 'portfolio' ? 'active' : '')): a(href="/portfolio/") Portfolio
+				li(class=(pagename == 'showcase' ? 'active' : '')): a(href="/showcase/") Showcase
+				li: a(href="/#services") Services
+				li: a(href="/#testimonials") Testimonials
+				li: a(href="/#background") Background
+				li: a(href="mailto:mail@sunderlandstudio.com") Contact
+
+			a(href="#" class="button hollow menu-toggle float-right hide-for-large" style="border-bottom: none;") Menu

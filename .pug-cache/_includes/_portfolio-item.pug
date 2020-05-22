@@ -1,0 +1,11 @@
+.column.portfolio-item(class=(item.tags ? item.tags.split(',').join(' ') : ''))
+	a(href='/portfolio/'+item.slug+'.html')
+		.item
+			img(data-src=backgroundImage(item.gallery[0].url))
+			.overlay
+				.item-inner
+					h6= item.title
+					p.tags
+						if item.tags
+							for tag in item.tags.split(',')
+								span.label= '#' + tag + ' '
