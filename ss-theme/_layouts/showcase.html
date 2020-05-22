@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<section id="showcase" class="bg-gray fade-in delay-2">
+
+</section>
+	{% comment %}- var showcase = sortShowcase(articles){% endcomment %}
+	{% assign showcase = site.portfolio | sort_by: "showcase.order" | reverse %}
+	{% for item in showcase %}
+		{% if item.showcase %}
+			{% include showcase-item.html %}
+		{% endif %}
+	{% endfor %}
+	<section class="showcase" style='background-color:#000'>
+		<div class="row expanded align-middle">
+			<div class="column text-center">
+				<a href="/portfolio" class="button">
+					See all projects &rarr;
+				</a>
+			</div>
+		</div>
+	</section>

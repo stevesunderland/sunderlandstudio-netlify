@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<div class="portfolio-content wow fade-in delay-1">
+	<div class="row">
+		<div class="column">
+			<h2>{{ page.title }}</h2>
+		</div>
+	</div>
+	<div class="row align-justify wow fade-in delay-2">
+		<div class="column small-12 large-7">
+			<p class="lead">
+				{{ page.description | markdownify | replace: "<p>" | replace: "</p>" }}
+			</p>
+		</div>
+		<div class="column small-12 large-5">
+			{% if page.testimonial %}
+				<blockquote>
+					<p>
+						{{ page.testimonial.quote }}
+					</p>
+					<cite>
+						{{ page.testimonial.title }}
+					</cite>
+				</blockquote>
+			{% endif %}
+		</div>
+
+	</div>
+	<div class="row column wow fade-in delay-3">
+		{% if page.website %}
+			<a href="{{ page.website }}" target="_blank" class="button large hollow">
+				Visit the website &rarr;
+			</a>
+		{% endif %}
+	</div>
+
+</div>
+<div class="row wow fade-in delay-4">
+	<div class="column">
+		{% if page.gallery %}
+			{% for image in page.gallery %}
+				<div class="portfolio-item-image {% if forloop.index == 0 %}browser{% endif %} portfolio-image-{{ forloop.index0 }}">
+					<div class="bg-gray loader">
+						<img src="{{ image.url }}" alt="">
+					</div>
+					{% if image.caption %}
+						<p class="caption">
+							&uarr; {{ image.caption }}
+						</p>
+
+					{% endif %}
+				</div>
+			{% endfor %}
+		{% endif %}
+		{% if page.website %}
+			<a href=page.website target="_blank" style="margin-bottom: 8em;" class="button large hollow">
+				Visit the website →
+			</a>
+		{% endif %}
+	</div>
+</div>
+
+
+
+
