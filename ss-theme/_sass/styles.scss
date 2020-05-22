@@ -669,13 +669,13 @@ section.padding {
 }
 
 .isotope-ready, .isotope-ready .isotope-item {
-            transition-duration: 0.8s;
+    transition-duration: 0.8s;
 }
 
 .isotope-ready {
-            transition-property: height, width;
+    transition-property: height, width;
 }
 
 .isotope-ready .isotope-item {
-              transition-property:         transform, opacity;
+      transition-property:         transform, opacity;
 }
