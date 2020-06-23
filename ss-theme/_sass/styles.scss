@@ -2,7 +2,9 @@ body, html {
 	overflow-x: none;
 
 }
-
+body {
+	background: pink !important;
+}
 .row {
 	max-width: 1200px;
 }
@@ -664,18 +666,20 @@ section.padding {
 
 
 
-.isotope-item {
-	transition-duration: 0s;
+
+
+.portfolio-item {
+	transition-duration: 0s !important;
 }
 
-.isotope-ready, .isotope-ready .isotope-item {
+.portfolio-ready, .portfolio-ready .portfolio-item {
     transition-duration: 0.8s;
 }
 
-.isotope-ready {
+.portfolio-ready {
     transition-property: height, width;
 }
 
-.isotope-ready .isotope-item {
-      transition-property:         transform, opacity;
+.portfolio-ready .portfolio-item {
+      transition-property: transform, opacity;
 }
