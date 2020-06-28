@@ -20,7 +20,7 @@ gallery:
   -
     url: "/assets/images/portfolio-futurist-icons-2.jpg"
     caption: null
-tags: "logo,development"
+tags: "logo,design,development,django"
 showcase:
   image: "/assets/images/showcase-futurist-1.jpg"
   title: "A forward-thinking online learning platform"

@@ -23,7 +23,7 @@ gallery:
   -
     url: "/assets/images/portfolio-drivendata-competition-large.jpg"
     caption: null
-tags: "development,startup"
+tags: "design,development,startup"
 testimonial:
   title: "Isaac Slavitt, DrivenData"
   quote: "Steve is a talented designer, but he also brings a strong development and UI/UX skillset to the table — so in addition to layouts and graphic design, he can deliver ready-for-production work. Above all, Steve is flexible, responsive, and fun to work with."

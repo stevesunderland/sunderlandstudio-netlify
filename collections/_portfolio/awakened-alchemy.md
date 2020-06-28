@@ -23,7 +23,7 @@ gallery:
   -
     url: "/assets/images/portfolio-aa-bcard-card-mockup.jpg"
     caption: null
-tags: "development,logo"
+tags: "logo,design,development,shopify"
 showcase:
   image: "/assets/images/showcase-awakened-alchemy.jpg"
   title: "A nootropic supplement company"

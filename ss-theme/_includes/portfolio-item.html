@@ -1,5 +1,5 @@
-{% assign tags = item.tags | split: "," | join: " " | replace: '["', '' | replace: '"]' %}
-{% comment %}<pre>{{ tags }}</pre>{% endcomment %}
+{% assign tags = item.tags | split: "," | join: " " | replace: '["', '' | replace: '"]', ''%}
+
 <div class="column portfolio-item {{ tags }}">
 	<a href="{{ item.url }}">
 		<div class="item">
@@ -14,7 +14,8 @@
 					</h6>
 					<p class="tags">
 						{% if item.tags %}
-							{% for tag in item.tags | split: "," %}
+							{% assign tags = item.tags | replace: '["', '' | replace: '"]', '' | split: "," %}
+							{% for tag in tags | split: "," %}
 								<span class="label">
 									{{ tag }}
 								</span>
