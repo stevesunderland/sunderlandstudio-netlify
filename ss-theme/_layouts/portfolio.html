@@ -15,12 +15,12 @@ layout: default
           <a href="#" style="color: #999;">Filter by:</a>
         </li>
         <li>
-          <a href="href='#', data-filter='*'">all</a>
+          <a href="#" data-filter="*">all</a>
         </li>
         {% assign tags = site.tags | where: "featured", "true" %}
         {% for item in tags %}
           <li>
-            <a href='#', data-filter=".{{ item.title }}">{{ item.title }}</a>
+            <a href="#" data-filter=".{{ item.title }}">{{ item.title }}</a>
           </li>
         {% endfor %}
       </ul>

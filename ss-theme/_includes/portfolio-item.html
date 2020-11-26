@@ -17,7 +17,7 @@
 							{% assign tags = item.tags | replace: '["', '' | replace: '"]', '' | split: "," %}
 							{% for tag in tags | split: "," %}
 								<span class="label">
-									{{ tag }}
+									{{ tag | replace: ',', ' ' }}
 								</span>
 							{% endfor %}
 						{% endif %}
