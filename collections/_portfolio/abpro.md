@@ -23,7 +23,7 @@ gallery:
   -
     url: "/assets/images/abpro-labs-logo-1-selected.png"
     caption: null
-tags: "healthcare,static,responsive,logo"
+tags: "healthcare,design,development,cms,static,responsive,logo"
 showcase:
   image: "/assets/images/showcase-abpro.jpg"
   title: "A biotech research startup"

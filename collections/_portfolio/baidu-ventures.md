@@ -9,7 +9,7 @@ gallery:
   - url: /assets/images/bv-portfolio-2.jpg
   - url: /assets/images/bv-portfolio-1.jpg
   - url: /assets/images/portfolio-bv-3.png
-tags: 'static,design,development,responsive'
+tags: 'static,design,development,responsive,venture captial'
 showcase:
   color: '#620000'
   image: /assets/images/showcase-portfolio-bv-1.jpg

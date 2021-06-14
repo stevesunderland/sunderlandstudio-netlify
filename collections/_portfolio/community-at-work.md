@@ -13,5 +13,5 @@ gallery:
   - 
     url: "/assets/images/community-at-work-2.jpg"
     caption: null
-tags: "static,responsive,logo"
+tags: "static,responsive,logo,design"
 ---

@@ -17,5 +17,5 @@ gallery:
   -
     url: "/assets/images/draftfury-4.jpg"
     caption: null
-tags: "logo,app,startup,responsive"
+tags: "logo,design,startup"
 ---

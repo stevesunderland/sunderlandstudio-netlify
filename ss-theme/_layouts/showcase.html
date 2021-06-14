@@ -5,7 +5,7 @@ layout: default
 
 </section>
 	{% comment %}- var showcase = sortShowcase(articles){% endcomment %}
-	{% assign showcase = site.portfolio | sort_by: "showcase.order" | reverse %}
+	{% assign showcase = site.portfolio  %}
 	{% for item in showcase %}
 		{% if item.showcase %}
 			{% include showcase-item.html %}

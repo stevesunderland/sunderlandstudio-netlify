@@ -1,6 +1,6 @@
 ---
 title: CADOGAN
-featured: false
+featured: true
 website: 'https://cadoganworld.com'
 date: "2018-10-24T13:10:00-07:00"
 description: CADOGAN is a luxury menswear brand based in Los Angeles that specializes in leather jackets. They wanted to redesign an outdated Magento store and upgrade to Shopify, so I created a custom theme that reflects the brand's unique voice and attention to detail.  

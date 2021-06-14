@@ -17,7 +17,7 @@ showcase:
   color: '#520000'
   image: /assets/images/showcase-portfolio-pointcloud-1.jpg
   order: '30'
-  title: A 3D imaging hardware and software startup
+  title: A 3D imaging startup
   tags: 'website,design,development,cms,static'
 ---
 

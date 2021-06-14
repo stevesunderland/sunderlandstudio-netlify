@@ -30,12 +30,21 @@ layout: default
 
 <section id="portfolio" class="bg-gray wow fade-in delay-2">
   <div class="row collapse expanded small-up-1 medium-up-2 large-up-3 text-center portfolio-grid">
-    {% assign portfolio_items = site.portfolio | sort_by: "date" | reverse %}
+    {% assign portfolio_items = site.portfolio %}
     {% for item in portfolio_items %}
       {% if item.gallery %}
         {% include portfolio-item.html %}
       {% endif %}
     {% endfor %}
+  </div>
+</section>
+
+<section class="wow fade-in" style="margin-top: 4em;">
+  <div class="row">
+    <div class="column small-12 large-8">
+      <p class="lead">All projects were designed by Steve unless otherwise noted.<br>All website projects were hand-coded with love by Steve.</p>
+      {% comment %}<a href="/archive" class="button clear" style="color: black;">View project archive &rarr;</a>{% endcomment %}
+    </div>
   </div>
 </section>
 

@@ -9,7 +9,7 @@ gallery:
   - url: /assets/images/atlptn-cover.jpg
   - url: /assets/images/portfolio-atlptn-2.jpg
   - url: /assets/images/portfolio-atlptn-1.jpg
-tags: 'website,design,development,static'
+tags: 'website,design,development,cms,responsive,static'
 showcase:
   color: '#a6311c'
   image: /assets/images/showcase-portfolio-atlptn-1.jpg

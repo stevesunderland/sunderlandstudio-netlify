@@ -2,5 +2,5 @@
 title: "shopify"
 description: ""
 date: null
-featured: false
+featured: true
 ---

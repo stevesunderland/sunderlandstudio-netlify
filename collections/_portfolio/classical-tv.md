@@ -25,7 +25,7 @@ gallery:
   -
     url: "/assets/images/ctv-universal-2.jpg"
     caption: null
-tags: "development,app,responsive"
+tags: "development,app,responsive,roku"
 testimonial:
   title: "Stephen Greco, Classical TV"
   quote: "Steve has always been able to solve the problems that I have brought him in an wide variety of projects, and I think of him as the ideal of a designer who listens to client needs and presents surprising, entertaining, and financially suitable solutions."

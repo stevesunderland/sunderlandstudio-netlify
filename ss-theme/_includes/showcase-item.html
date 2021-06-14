@@ -1,5 +1,5 @@
-<section class="showcase" style="background-color: {{ item.showcase.color }}", data-bg={{ item.showcase.image }}>
-  <div class="row expanded align-middle">
+<section class="showcase" style="background-color: {{ item.showcase.color }}", data-bg="{{ item.showcase.image | replace: '.jpg', '-1440.jpg' }}">
+  <div class="row expanded align-middle wow fade-in">
     <div class="column small-12 large-6"></div>
     <div class="column small-12 large-6">
       <h6>
@@ -14,7 +14,7 @@
       {% endfor %}
       <br>
       <a href="{{ item.url }}" class="button">
-        Explore &rarr;
+        View Project &rarr;
       </a>
     </div>
   </div>

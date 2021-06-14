@@ -15,7 +15,7 @@ showcase:
   color: '#cc7d29'
   image: /assets/images/showcase-portfolio-inkbit-1.jpg
   order: 20
-  title: An industrial 3D printing startup
+  title: An industrial 3D-printing startup
   tags: 'website,design,development,static'
 ---
 

@@ -377,18 +377,20 @@ header .menu {
 	}
 }
 
+.isotope-item {
+	transform: none;
+}
+.isotope-ready, .isotope-ready .isotope-item {
+    transition-duration: 0.8s;
+}
 
-// .isotope-ready, .isotope-ready .isotope-item {
-//     transition-duration: 0.8s;
-// }
+.isotope-ready {
+    transition-property: height, width;
+}
 
-// .isotope-ready {
-//     transition-property: height, width;
-// }
-
-// .isotope-ready .isotope-item {
-// 	transition-property: transform, opacity;
-// }
+.isotope-ready .isotope-item {
+	transition-property: transform, opacity;
+}
 
 p.caption {
 	color: #999;

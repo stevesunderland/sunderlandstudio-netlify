@@ -7,5 +7,5 @@ gallery:
 - 
   url: "/assets/images/ccp-logo.jpg"
   caption: null
-tags: "logo,nonprofit"
+tags: "logo,nonprofit,design"
 ---
