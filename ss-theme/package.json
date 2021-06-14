@@ -32,7 +32,7 @@
     "gulp-util": "^3.0.8",
     "jquery": "^3.2.1",
     "lazyloadxt": "^1.1.0",
-    "pug": "^2.0.0-rc.2",
+    "pug": "^3.0.1",
     "run-sequence": "^1.2.2",
     "slug": "^0.9.1",
     "wowjs": "^1.1.3",
