@@ -675,18 +675,18 @@ section.padding {
 
 
 
-.portfolio-item {
-	transition-duration: 0s !important;
-}
+// .portfolio-item {
+// 	transition-duration: 0s !important;
+// }
 
-.portfolio-ready, .portfolio-ready .portfolio-item {
-    transition-duration: 0.8s;
-}
+// .portfolio-ready, .portfolio-ready .portfolio-item {
+//     transition-duration: 0.8s;
+// }
 
-.portfolio-ready {
-    transition-property: height, width;
-}
+// .portfolio-ready {
+//     transition-property: height, width;
+// }
 
-.portfolio-ready .portfolio-item {
-      transition-property: transform, opacity;
-}
+// .portfolio-ready .portfolio-item {
+//       transition-property: transform, opacity;
+// }

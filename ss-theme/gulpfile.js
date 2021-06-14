@@ -44,8 +44,8 @@ var PATHS = {
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.autoload.js',
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.bg.js',
     'node_modules/isotope-layout/dist/isotope.pkgd.js',
-    'src/assets/javascript/three.js',
-    'src/assets/javascript/app.js'
+    'assets/javascript/three.js',
+    'assets/javascript/app.js'
   ]
 };
 
