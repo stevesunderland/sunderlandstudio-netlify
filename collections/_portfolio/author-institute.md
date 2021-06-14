@@ -18,5 +18,8 @@ showcase:
   order: 20
   title: An online learning platform for aspiring authors
   tags: 'logo,website,design,development,django'
+testimonial:
+  title: "Jason Schenker, The Author Institute"
+  quote: "Steve is a talented, hard-working, and reliable web designer. Steve helped us build an entire custom learning institute and we are so proud of the end result. Steve's combination of creativity, skill, and personality make him an amazing asset to my firm and to the people around him."
 ---
 

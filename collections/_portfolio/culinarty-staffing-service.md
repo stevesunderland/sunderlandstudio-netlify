@@ -1,5 +1,5 @@
 ---
-title: Culianry Staffing Service
+title: Culinary Staffing Service
 featured: true
 website: 'https://culinarystaffing.com'
 date: "2017-11-16T09:42:00-08:00"

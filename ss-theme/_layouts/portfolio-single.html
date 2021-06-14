@@ -5,6 +5,9 @@ layout: default
 	.portfolio-image-0 {
 		border: 1px solid #ddd;
 	}
+	blockquote p, blockquote cite {
+		color: #888;
+	}
 	.pagination p {
 		color: #111;
 		margin-top: 1em;
@@ -35,13 +38,9 @@ layout: default
 		</div>
 		<div class="column small-12 large-5">
 			{% if page.testimonial %}
-				<blockquote>
-					<p>
-						{{ page.testimonial.quote }}
-					</p>
-					<cite>
-						{{ page.testimonial.title }}
-					</cite>
+				<blockquote style="margin-bottom: 0; margin-left: 0;">
+					<p>{{ page.testimonial.quote }}</p>
+					<cite>{{ page.testimonial.title }}</cite>
 				</blockquote>
 			{% endif %}
 		</div>
@@ -49,9 +48,7 @@ layout: default
 	</div>
 	<div class="row column wow fade-in delay-3">
 		{% if page.website and page.website != "" %}
-			<a href="{{ page.website }}" target="_blank" class="button large hollow">
-				Visit the website &rarr;
-			</a>
+			<a href="{{ page.website }}" target="_blank" class="button large hollow">Visit the website &rarr;</a>
 		{% endif %}
 	</div>
 
@@ -66,23 +63,18 @@ layout: default
 						<img src="{{ image_url }}" alt="">
 					</div>
 					{% if image.caption %}
-						<p class="caption">
-							&uarr; {{ image.caption }}
-						</p>
-
+						<p class="caption">&uarr; {{ image.caption }}</p>
 					{% endif %}
 				</div>
 			{% endfor %}
 		{% endif %}
-			<div class="text-center">
-				{% if page.website %}
-					<a href="{{ page.website }}" target="_blank" style="margin-bottom: 2em;" class="button large hollow">
-						Visit the website →
-					</a>
-					<br>
-				{% endif %}
 
-			</div>
+		<div class="text-center">
+			{% if page.website %}
+				<a href="{{ page.website }}" target="_blank" style="margin-bottom: 2em;" class="button large hollow">Visit the website &rarr;</a>
+				<br>
+			{% endif %}
+		</div>
 
 		<div class="pagination" style="margin: 4em 0;">
 			<div class="row align-justify">
@@ -102,13 +94,7 @@ layout: default
 					<div class="button secondary small clear"> &nbsp;</div>
 					<a href="/portfolio">
 						<div class="responsive-embed" style="border: 1px solid #ddd; position: relative; padding-bottom: 66%; margin-bottom: 0;">
-							<div class="text-center" style="
-								position: absolute;
-								top: 50%;
-								left: 50%;
-								transform: translate(-50%, -50%);
-
-							">
+							<div class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
 								<span class="button secondary small clear" style="margin: 0;">&larr;&nbsp;portfolio</span>
 							</div>
 						</div>
@@ -128,10 +114,6 @@ layout: default
 				</div>
 			</div>
 		</div>
-
-		<div class="text-center">
-		</div>
-
 	</div>
 </div>
 
