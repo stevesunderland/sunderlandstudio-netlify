@@ -12,10 +12,10 @@ gallery:
     url: "/assets/images/portfolio-futurist-2.jpg"
     caption: null
   -
-    url: "/assets/images/portfolio-futurist-1.jpg"
+    url: "/assets/images/portfolio-futurist-icons-1.jpg"
     caption: null
   -
-    url: "/assets/images/portfolio-futurist-icons-1.jpg"
+    url: "/assets/images/portfolio-futurist-1.jpg"
     caption: null
   -
     url: "/assets/images/portfolio-futurist-icons-2.jpg"

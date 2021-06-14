@@ -9,8 +9,8 @@ gallery:
   - url: /assets/images/author-institute-cover.jpg
   - url: /assets/images/author-institute-portfolio-1.jpg
   - url: /assets/images/author-institute-portfolio-3A.jpg
-  - url: /assets/images/author-institute-portfolio-4.jpg
   - url: /assets/images/author-institute-portfolio-2.jpg
+  - url: /assets/images/author-institute-portfolio-4.jpg
 tags: 'logo,website,design,development,responsive,django'
 showcase:
   color: '#043b2c'
