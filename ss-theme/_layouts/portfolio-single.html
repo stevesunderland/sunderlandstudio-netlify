@@ -7,8 +7,13 @@ layout: default
 	}
 	.pagination p {
 		color: #111;
-		font-size: 1.5em;
-		margin-bottom: 1em;
+		margin-top: 1em;
+		line-height: 1.2;
+	}
+	@media screen and (min-width: 640px) {
+		.pagination p {
+			font-size: 1.5em;
+		}
 	}
 	.pagination .button {
 		margin-bottom: 0;
@@ -80,7 +85,7 @@ layout: default
 			</div>
 
 		<div class="pagination" style="margin: 4em 0;">
-			<div class="row align-justify align-bottom">
+			<div class="row align-justify">
 				<div class="column small-6 medium-4">
 					{% if page.previous %}
 						{% assign previous = page.previous %}
@@ -88,9 +93,9 @@ layout: default
 						{% assign previous = site.portfolio.last %}
 					{% endif %}
 					<a href="{{ previous.url }}">
-						<div class="button secondary small clear" style="padding-left: 0;">&larr; Previous project</div>
-						<p class="lead">{{ previous.title }}</p>
+						<div class="button secondary small clear" style="padding-left: 0;">&larr; Previous</div>
 						<img data-src="{{ previous.gallery[0].url | replace: '.jpg', '-680.jpg' }}" alt="{{ previous.title }}" style="border: 1px solid #ddd;">
+						<p class="lead">{{ previous.title }}</p>
 					</a>
 				</div>
 				<div class="column show-for-medium small-12 medium-4">
@@ -116,9 +121,9 @@ layout: default
 						{% assign next = site.portfolio.first %}
 					{% endif %}
 					<a href="{{ next.url }}">
-						<div class="button secondary small clear" href="" style="padding-right: 0;">Next Project &rarr;</div>
-						<p class="lead">{{ next.title }}</p>
+						<div class="button secondary small clear" href="" style="padding-right: 0;">Next &rarr;</div>
 						<img data-src="{{ next.gallery[0].url | replace: '.jpg', '-680.jpg' }}" alt="{{ next.title }}" style="border: 1px solid #ddd;">
+						<p class="lead">{{ next.title }}</p>
 					</a>
 				</div>
 			</div>

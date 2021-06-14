@@ -6,7 +6,7 @@
 			{% assign bg_image = item.gallery[0].url | split: '.' %}
 			{% assign bg_string = bg_image[0] | append: '-680.' | append: bg_image[1] %}
 			{% comment %}<img data-src="{{ item.gallery[0].url }}" alt="">{% endcomment %}
-			<img data-src="{{ bg_string }}" alt="">
+			<img data-src="{{ bg_string }}" alt="" width="600" height="400">
 			<div class="overlay">
 				<div class="item-inner">
 					<h6>
