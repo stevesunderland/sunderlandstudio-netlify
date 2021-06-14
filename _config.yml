@@ -51,7 +51,7 @@ collections:
       - pointcloud.md
       - cadogan.md
       - ennabl.md
-      - culinarty-staffing-service.md
+      - culinary-staffing-service.md
       - cdfg.md
       - awakened-alchemy.md
       - author-institute.md
@@ -125,7 +125,9 @@ defaults:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+  # - ss-theme/node_modules/
+  - ss-theme/
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

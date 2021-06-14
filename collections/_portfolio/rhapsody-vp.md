@@ -8,7 +8,7 @@ description: >-
 gallery:
   - url: /assets/images/rhapsody-cover.jpg
   - url: /assets/images/rhapsody-portfolio-1.jpg
-tags: 'website,design,development,static,cms,venture capital'
+tags: 'website,design,development,static,cms,venture-capital'
 showcase:
   color: '#182538'
   image: /assets/images/showcase-rhapsody.jpg

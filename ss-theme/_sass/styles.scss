@@ -2,14 +2,11 @@ body, html {
 	overflow-x: none;
 
 }
-body {
-	background: pink !important;
-}
 .row {
 	max-width: 1200px;
 }
 
-h1, h2, h3, h4, h5, h6, p, .button, cite, .menu, .link, .mobile-menu {
+h1, h2, h3, h4, h5, h6, .h6, p, .button, cite, .menu, .link, .mobile-menu {
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -321,17 +318,18 @@ header .menu {
 		right: 0;
 		transform: translateY(calc(-50%));
 	}
-	h6 {
+	h6, .h6 {
 		font-weight: normal;
 		font-size: 1.5em;
 	  // text-transform: uppercase;
-	  color: #fff;
+	  color: #fff !important;
 	  margin-bottom: -0.5em;
 	  line-height: 1.25;
 	  -webkit-transition: all 0.5s;
 	  transition: all 0.5s;
+	  border-bottom: none;
 	}
-	&:hover h6 {
+	&:hover h6, &:hover .h6 {
 		margin-bottom: 0.5em;
 	}
 	.tags span {
@@ -340,6 +338,12 @@ header .menu {
 		text-transform: uppercase;
 	}
 }
+}
+
+.portfolio-item span.label {
+	color: $white !important;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
 }
 
 .portfolio-item-image {
