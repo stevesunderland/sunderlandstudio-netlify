@@ -169,6 +169,10 @@ blockquote {
 
 header {
 	padding: 20px !important;
+
+	h1, h1 a, a {
+		color: $black;
+	}
 }
 
 #hero {
@@ -308,6 +312,9 @@ header .menu {
 		left: 0;
 		right: 0;
 		transform: translateY(calc(-50%));
+	}
+	img {
+		width: 100%;
 	}
 	h6, .h6 {
 		font-weight: normal;
