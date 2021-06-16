@@ -1,5 +1,5 @@
 ---
-title: MIT CSAIL CDFG
+title: MIT Computational Design & Fabrication Group
 featured: true
 website: 'https://cdfg.mit.edu'
 date: "2017-11-16T09:42:00-08:00"

@@ -76,43 +76,45 @@ layout: default
 			{% endif %}
 		</div>
 
-		<div class="pagination" style="margin: 4em 0;">
-			<div class="row align-justify">
-				<div class="column small-6 medium-4">
-					{% if page.previous %}
-						{% assign previous = page.previous %}
-					{% else %}
-						{% assign previous = site.portfolio.last %}
-					{% endif %}
-					<a href="{{ previous.url }}">
-						<div class="button secondary small clear" style="padding-left: 0;">&larr; Previous</div>
-						<img data-src="{{ previous.gallery[0].url | replace: '.jpg', '-680.jpg' }}" alt="{{ previous.title }}" style="border: 1px solid #ddd;">
-						<p class="lead">{{ previous.title }}</p>
-					</a>
+	</div>
+</div>
+
+
+<div class="pagination" style="margin: 4em 0;">
+	<div class="row expanded align-justify">
+		<div class="column small-6 medium-4">
+			{% if page.previous %}
+				{% assign previous = page.previous %}
+			{% else %}
+				{% assign previous = site.portfolio.last %}
+			{% endif %}
+			<a href="{{ previous.url }}">
+				<div class="button secondary small clear" style="padding-left: 0;">&larr; Previous</div>
+				<img data-src="{{ previous.gallery[0].url | replace: '.jpg', '-680.jpg' }}" alt="{{ previous.title }}" style="border: 1px solid #ddd;">
+				<p class="lead">{{ previous.title }}</p>
+			</a>
+		</div>
+		<div class="column show-for-medium small-12 medium-4">
+			<div class="button secondary small clear"> &nbsp;</div>
+			<a href="/portfolio">
+				<div class="responsive-embed" style="border: 1px solid #ddd; position: relative; padding-bottom: 66%; margin-bottom: 0;">
+					<div class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+						<span class="button secondary small clear" style="margin: 0;">&larr;&nbsp;portfolio</span>
+					</div>
 				</div>
-				<div class="column show-for-medium small-12 medium-4">
-					<div class="button secondary small clear"> &nbsp;</div>
-					<a href="/portfolio">
-						<div class="responsive-embed" style="border: 1px solid #ddd; position: relative; padding-bottom: 66%; margin-bottom: 0;">
-							<div class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-								<span class="button secondary small clear" style="margin: 0;">&larr;&nbsp;portfolio</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="column small-6 medium-4 text-right">
-					{% if page.next %}
-						{% assign next = page.next %}
-					{% else %}
-						{% assign next = site.portfolio.first %}
-					{% endif %}
-					<a href="{{ next.url }}">
-						<div class="button secondary small clear" href="" style="padding-right: 0;">Next &rarr;</div>
-						<img data-src="{{ next.gallery[0].url | replace: '.jpg', '-680.jpg' }}" alt="{{ next.title }}" style="border: 1px solid #ddd;">
-						<p class="lead">{{ next.title }}</p>
-					</a>
-				</div>
-			</div>
+			</a>
+		</div>
+		<div class="column small-6 medium-4 text-right">
+			{% if page.next %}
+				{% assign next = page.next %}
+			{% else %}
+				{% assign next = site.portfolio.first %}
+			{% endif %}
+			<a href="{{ next.url }}">
+				<div class="button secondary small clear" href="" style="padding-right: 0;">Next &rarr;</div>
+				<img data-src="{{ next.gallery[0].url | replace: '.jpg', '-680.jpg' }}" alt="{{ next.title }}" style="border: 1px solid #ddd;">
+				<p class="lead">{{ next.title }}</p>
+			</a>
 		</div>
 	</div>
 </div>

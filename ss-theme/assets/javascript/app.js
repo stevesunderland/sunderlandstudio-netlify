@@ -1,131 +1,15 @@
 var Site = {
 	init: function() {
-		Site.carousel();
-		// Site.colorful();
 		Site.portfolio();
 		Site.menu();
-		Site.smoothscroll();
 		if ($('#canvas1').length) {
 			Site.animation();
 		}
-    // Site.showcase();
-		Site.tooltip()
-		Site.testimonials()
-	},
-	testimonials: function() {
-		var cards = $("#testimonials .column");
-		for(var i = 0; i < cards.length; i++){
-			var target = Math.floor(Math.random() * cards.length -1) + 1;
-			var target2 = Math.floor(Math.random() * cards.length -1) +1;
-			cards.eq(target).before(cards.eq(target2));
-		}
-	},
-	tooltip: function() {
-		var popover = $('.popover');
-
-		window.onmousemove = function (e) {
-		    var x = e.clientX,
-		        y = e.clientY,
-					 	height = popover.height(),
-						width = popover.width()
-
-		    popover.css({ top: (y - height/2) + 'px' })
-		    popover.css({ left: (x - width/2) + 'px' })
-		};
-	},
-  showcase: function(){
-    if ( $('.showcase').length ) {
-      var rellax = new Rellax('.parallax', {
-        speed: -5,
-        center: true,
-      });
-    }
-  },
-	smoothscroll: function() {
-		$('a[href*="#"]:not([href="#"])').click(function() {
-			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-				var target = $(this.hash);
-				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-				if (target.length) {
-					$('html, body').animate({
-						scrollTop: target.offset().top
-					}, 1000);
-					return false;
-				}
-			}
-		});
 	},
 	menu: function() {
 		$(document).on('click', '.menu-toggle, .mobile-menu a', function(){
 			$('.mobile-menu').toggle(0);
 		});
-	},
-	carousel: function() {
-		var carousel = $('.carousel');
-		if ( carousel.length ) {
-			carousel.slick({
-				autoplay: true,
-				autoplaySpeed: 7000,
-				arrows: false,
-				pauseOnHover: false,
-				dots: true
-			});
-		}
-	},
-	colorful: function() {
-		var interval;
-		var colors = ['#ff0000', '#ff8000', '#00ff00', '#0000ff', '#ff00ff'];
-		// var colors = ['#E31606', '#FEBE09', '#55DB12', '#1D3AE1', '#A000FF'];
-		var counter = 0;
-		var speed = 300;
-
-		cycleColors = function(element) {
-
-			function doSomething() {
-				// $(element).animate({ color: colors[counter], 'border-bottom-color': colors[counter] }, speed);
-				$(element).css({ color: colors[counter], 'border-bottom-color': colors[counter] });
-				counter++;
-				if (counter == colors.length) {
-					counter = 0;
-				}
-			};
-			doSomething();
-			interval = setInterval(doSomething, speed);
-		};
-		cycleColorsEnd = function(element) {
-		  	element.css({ color: '', 'border-bottom-color': '#000' });
-		  	clearInterval(interval);
-		};
-		cycleBackground = function(element) {
-			function doSomething() {
-				$(element).css({ 'background-color': colors[counter] });
-				counter++;
-				if (counter == colors.length) {
-					counter = 0;
-				}
-			};
-			doSomething();
-			interval = setInterval(doSomething, speed);
-		};
-		cycleBackgroundEnd = function(element) {
-		  	element.css({ 'background-color': '#000'});
-		  	clearInterval(interval);
-		};
-
-
-
-		$('h1 a, a.button, .mobile-menu ul a').hover(function(){
-			cycleColors($(this));
-		}, function(){
-			cycleColorsEnd($(this));
-		});
-
-		$('.colorful-bg').hover(function(){
-		  	cycleBackground($(this));
-		});
-
-		cycleColors($('.colorful'));
-
 	},
 	portfolio: function() {
 		if ( $('.portfolio-grid').length ) {
@@ -156,8 +40,6 @@ var Site = {
 			  if ( !hashFilter && isIsotopeInit ) {
 			    return;
 			  }
-			  console.info('hashFilter: ' + hashFilter)
-
 			  if (hashFilter == '.background') {
 			  	hashFilter = '*';
 			  }
@@ -169,7 +51,6 @@ var Site = {
 			  }
 
 
-
 			  isIsotopeInit = true;
 
 			  $grid.isotope({
@@ -177,7 +58,6 @@ var Site = {
 			    layoutMode: 'fitRows',
 			    filter: hashFilter || '*',
 			    transitionDuration: 600,
-			    // initLayout: false,
 			    hiddenStyle: {
 					opacity: 0
 				},
@@ -187,7 +67,6 @@ var Site = {
 			  });
 
 			  if ( hashFilter && $('body').hasClass('portfolio') ) {
-			  	// $('.portfolio-filters').slideDown();
 			  	$('.portfolio-filters a[data-filter="'+hashFilter+'"]').parents('li').addClass('active');
 			  	$('.portfolio-filters-toggle').addClass('active');
 			  }
@@ -207,13 +86,6 @@ var Site = {
 				}
 				location.hash = filterHash;
 			});
-
-			// $('.portfolio-filters').slideUp(0);
-			// $('.portfolio-filters-toggle').on('click', function(event){
-			// 	event.preventDefault();
-			// 	$(this).toggleClass('active');
-			// 	$('.portfolio-filters').slideToggle();
-			// });
 
 			onHashchange();
 
@@ -265,67 +137,38 @@ var Site = {
 		  transparent: true,
 		  opacity: 0
 		})
-		var mesh = new THREE.Mesh(geometry, material)
-		mesh.position.set(0, 0, 0)
 
-		var cube = new THREE.EdgesHelper(mesh, 0xffffff);
-		cube.material.linewidth = 2;
-		scene1.add(cube);
+		var line_material = new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 2 } )
 
+		var edges = new THREE.EdgesGeometry( geometry );
+		var mesh = new THREE.LineSegments(edges, line_material);
 		scene1.add(mesh);
 
-		var TILE_SIZE = 1.5;
-
-		var geometry = new THREE.CylinderGeometry(0, TILE_SIZE * 3, TILE_SIZE * 3, 3);
-		var cylinder = new THREE.Mesh(geometry, material);
-		cylinder.position.set(0, 0, 0);
-
-		var triangle = new THREE.EdgesHelper(cylinder, 0xffffff);
-		triangle.material.linewidth = 2;
 
 		var geometry = new THREE.SphereGeometry(4, 1, 1);
-		var sphereGeo = new THREE.Mesh(geometry, material);
-		sphereGeo.position.set(0, 0, 0);
-		scene2.add(sphereGeo);
 
-		var sphere = new THREE.EdgesHelper(sphereGeo, 0xffffff);
-		sphere.material.linewidth = 2;
+		var sphere_geo = new THREE.EdgesGeometry( geometry );
+		var sphere = new THREE.LineSegments(sphere_geo, line_material);
 		scene2.add(sphere);
 
+
 		var geometry = new THREE.CircleGeometry(3.5, 32);
-		var material = new THREE.MeshBasicMaterial({
-		  transparent: true,
-		  opacity: 0,
-		});
-		var circleGeo = new THREE.Mesh(geometry, material);
-		scene3.add(circleGeo);
 
-		var circleGeo2 = new THREE.Mesh(geometry, material);
-		circleGeo2.rotation.x = 90;
-		circleGeo2.rotation.y = 90;
-		scene3.add(circleGeo2);
-
-		var circleGeo3 = new THREE.Mesh(geometry, material);
-		circleGeo3.rotation.x = 90;
-		scene3.add(circleGeo3);
-
-		var circleGeo4 = new THREE.Mesh(geometry, material);
-		scene3.add(circleGeo4);
-
-		var circle1 = new THREE.EdgesHelper(circleGeo, 0xffffff);
-		circle1.material.linewidth = 2;
+		var circle1_edges = new THREE.EdgesGeometry(geometry);
+		var circle1 = new THREE.LineSegments(circle1_edges, new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 2 }));
+		circle1.rotation.x = 90;
+		circle1.rotation.y = 90;
 		scene3.add(circle1);
 
-		var circle2 = new THREE.EdgesHelper(circleGeo2, 0xffffff);
-		circle2.material.linewidth = 2;
+		var circle2 = new THREE.LineSegments(circle1_edges, new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 2 }));
 		scene3.add(circle2);
 
-		var circle3 = new THREE.EdgesHelper(circleGeo3, 0xffffff);
-		circle3.material.linewidth = 2;
+		var circle3 = new THREE.LineSegments(circle1_edges, new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 2 }));
+		circle3.rotation.x = 90;
 		scene3.add(circle3);
 
-		var circle4 = new THREE.EdgesHelper(circleGeo4, 0xffffff);
-		circle4.material.linewidth = 2;
+		// var circle4_edges = new THREE.EdgesGeometry(geometry);
+		var circle4 = new THREE.LineSegments(circle1_edges, new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 2 }));
 		scene3.add(circle4);
 
 		var light = new THREE.AmbientLight(0xffffff, 1);
@@ -340,20 +183,20 @@ var Site = {
 		  mesh.rotation.x += 0.005;
 		  mesh.rotation.y += 0.01;
 
-		  cylinder.rotation.x += 0.005;
-		  cylinder.rotation.y += 0.01;
+		  // cylinder.rotation.x += 0.005;
+		  // cylinder.rotation.y += 0.01;
 
-		  sphereGeo.rotation.x += 0.005;
-		  sphereGeo.rotation.y += 0.01;
+		  sphere.rotation.x += 0.005;
+		  sphere.rotation.y += 0.01;
 
-		  circleGeo.rotation.x += 0.005;
-		  circleGeo.rotation.y += 0.01;
+		  circle1.rotation.x += 0.005;
+		  circle1.rotation.y += 0.01;
 
-		  circleGeo2.rotation.x += 0.005;
-		  circleGeo2.rotation.y += 0.01;
+		  circle2.rotation.x += 0.005;
+		  circle2.rotation.y += 0.01;
 
-		  circleGeo3.rotation.x += 0.005;
-		  circleGeo3.rotation.y += 0.01;
+		  circle3.rotation.x += 0.005;
+		  circle3.rotation.y += 0.01;
 
 		  renderer1.render(scene2, camera);
 		  renderer2.render(scene3, camera);

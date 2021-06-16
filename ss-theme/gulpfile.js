@@ -44,8 +44,20 @@ var PATHS = {
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.autoload.js',
     'node_modules/lazyloadxt/dist/jquery.lazyloadxt.bg.js',
     'node_modules/isotope-layout/dist/isotope.pkgd.js',
-    'assets/javascript/three.js',
+    // 'node_modules/three/build/three.js',
+    // 'assets/javascript/three.js',
     'assets/javascript/app.js'
+  ],
+  three: [
+    'node_modules/three/build/three.js',
+    // 'node_modules/three/src/renderers/WebGLRenderer.js',
+    // 'node_modules/three/src/scene/Scene.js',
+    // 'node_modules/three/src/scene/cameras/OrthographicCamera.js',
+    // 'node_modules/three/src/geometries/Geometries.js',
+    // 'node_modules/three/src/geometries/Materials.js',
+    // 'node_modules/three/src/objects/LineSegments.js',
+    // 'node_modules/three/src/lights/AmbientLight.js',
+
   ]
 };
 
@@ -104,7 +116,20 @@ gulp.task('javascript', function() {
     .pipe(uglify())
     // .on('error', onError)
     .pipe(gulp.dest('../assets/javascript'))
-    .on('finish', browser.reload);
+    // .on('finish', browser.reload);
+});
+
+gulp.task('three', function() {
+
+  return gulp.src(PATHS.three)
+  // return gulp.src('./assets/javascript/three.js')
+    .pipe($.sourcemaps.init())
+    .pipe($.concat('three.min.js'))
+    .pipe($.if(!isProduction, $.sourcemaps.write()))
+    .pipe(uglify())
+    // .on('error', onError)
+    .pipe(gulp.dest('../assets/javascript'))
+    // .on('finish', browser.reload);
 });
 
 // Copy images to the "dist" folder
@@ -162,7 +187,7 @@ gulp.task('build', function(done) {
 
 
 // Build the site, run the server, and watch for file changes
-gulp.task('default', ['build', 'server'], function() {
+gulp.task('watch', [], function() {
   // gulp.watch(PATHS.assets, ['copy']);
   // gulp.watch(['src/casestudies/*'], ['build']);
   // gulp.watch(['src/**/*.pug', 'src/**/*.md'], ['templates']);
