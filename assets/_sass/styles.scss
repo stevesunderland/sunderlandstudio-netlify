@@ -240,30 +240,21 @@ header .menu {
 	padding: 40px;
 }
 
-.slick-dots li {
-	margin: 0;
-	width: 18px;
+// #portfolio .column.lazy-hidden {
 
-	button:before {
-		font-size: 20px;
-	}
-}
+// 	opacity: 1;
+// 	background-image: url(/assets/images/loading.svg);
+// 	background-size: 5em;
+// 	background-position: center;
+// 	background-repeat: no-repeat;
+// }
 
-#portfolio .column.lazy-hidden {
-
-	opacity: 1;
-	background-image: url(/static/images/loading.svg);
-	background-size: 5em;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-.loader {
-	background-image: url(/static/images/loading.svg);
-	background-size: 5em;
-	background-position: center;
-	background-repeat: no-repeat;
-}
+// .loader {
+// 	background-image: url(/assets/images/loading.svg);
+// 	background-size: 5em;
+// 	background-position: center;
+// 	background-repeat: no-repeat;
+// }
 
 #portfolio {
 	background-color: #000;

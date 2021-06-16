@@ -48,7 +48,7 @@ layout: default
 	</div>
 	<div class="row column wow fade-in delay-3">
 		{% if page.website and page.website != "" %}
-			<a href="{{ page.website }}" target="_blank" class="button large hollow">Visit the website &rarr;</a>
+			<a href="{{ page.website }}" rel="noopener" target="_blank" class="button large hollow">Visit the website &rarr;</a>
 		{% endif %}
 	</div>
 
@@ -71,7 +71,7 @@ layout: default
 
 		<div class="text-center">
 			{% if page.website %}
-				<a href="{{ page.website }}" target="_blank" style="margin-bottom: 2em;" class="button large hollow">Visit the website &rarr;</a>
+				<a href="{{ page.website }}" rel="noopener" target="_blank" style="margin-bottom: 2em;" class="button large hollow">Visit the website &rarr;</a>
 				<br>
 			{% endif %}
 		</div>
