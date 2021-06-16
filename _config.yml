@@ -30,7 +30,7 @@ twitter_username: stevesunderland
 github_username:  stevesunderland
 
 # Build settings
-theme: ss-theme
+# theme: ss-theme
 # plugins:
   # - jekyll-pug
   # - jekyll-feed
@@ -128,6 +128,9 @@ defaults:
 exclude:
   # - ss-theme/node_modules/
   - ss-theme/
+  - gulpfile.js
+  - assets/javascript/app.js
+  - assets/_sass/app.scss
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
