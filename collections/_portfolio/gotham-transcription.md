@@ -2,7 +2,6 @@
 title: "Gotham Transcription"
 description: "Gotham Transcription is a boutique transcription service based in Brooklyn, NY. They gave me the creative freedom to create a unique logo inspired by the New York City skyline and sound waves. "
 date: "2016-05-30T18:12:00-07:00"
-website: "http://gothamtranscription.com/"
 featured: true
 gallery:
 -

@@ -1,7 +1,7 @@
 ---
 title: MRB Solutions
 featured: true
-website: 'https://mrbsolutionsit.com'
+website: 'https://www.mrbsolutionsit.com'
 date: "2017-11-16T09:42:00-08:00"
 description: >-
    MRB Solutions provides technology services and support to government organizations. This project involved the design and development of a new website to showcase their services. This website uses Jekyll as a static site generator and Netlify CMS for content management.  

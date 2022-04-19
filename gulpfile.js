@@ -57,7 +57,6 @@ var PATHS = {
     // 'node_modules/three/src/geometries/Materials.js',
     // 'node_modules/three/src/objects/LineSegments.js',
     // 'node_modules/three/src/lights/AmbientLight.js',
-
   ]
 };
 
@@ -119,18 +118,6 @@ gulp.task('javascript', function() {
     // .on('finish', browser.reload);
 });
 
-gulp.task('three', function() {
-
-  return gulp.src(PATHS.three)
-  // return gulp.src('./assets/javascript/three.js')
-    .pipe($.sourcemaps.init())
-    .pipe($.concat('three.min.js'))
-    .pipe($.if(!isProduction, $.sourcemaps.write()))
-    .pipe(uglify())
-    // .on('error', onError)
-    .pipe(gulp.dest('./assets/javascript'))
-    // .on('finish', browser.reload);
-});
 
 // Copy images to the "dist" folder
 // In production, the images are compressed
