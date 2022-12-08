@@ -1,7 +1,7 @@
 ---
 title: Pointcloud
-featured: false
-website: ''
+featured: true
+website: 'https://point.cloud'
 date: "2018-11-28T13:10:00-07:00"
 description: >-
   Pointcloud is creating a 3D imaging platform that enables the future of augmented reality, robotics and autonomous mobility. This project involved the design and development of a new website that includes unique 3D animation that illustrate their story. 
