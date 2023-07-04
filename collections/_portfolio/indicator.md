@@ -3,6 +3,7 @@ title: Indicator
 featured: false
 website: ''
 date: "2016-06-03T18:50:00-07:00"
+short_description: Logo Design, Website Design & Development
 description: >-
    This project is a web application that aggregates data about various medican conditions and current healthcare trials.
 gallery:

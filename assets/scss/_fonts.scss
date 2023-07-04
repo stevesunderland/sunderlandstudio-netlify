@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Ppfraktionmono';
+    src: url('../fonts/PPFraktionMono-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ppfraktionmono';
+    src: url('../fonts/PPFraktionMono-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ppneuemontreal';
+    src: url('../fonts/PPNeueMontreal-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ppneuemontreal';
+    src: url('../fonts/PPNeueMontreal-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ppneuemontreal';
+    src: url('../fonts/PPNeueMontreal-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+svg.icon-arrow-right {
+    height: 0.8em;
+    vertical-align: bottom;
+    path {
+        fill: inherit !important;
+    }
+}

@@ -3,8 +3,9 @@ title: Iris Medicine
 featured: false
 website: ''
 date: "2018-03-19T13:10:00-07:00"
+short_description: Logo Design
 description: >-
-   Iris Medicine is developing medicines that target the root cause of neurodegeneration. They asked for a logo inspired by the winged sandals of the Greek Messenger God Hermes. I also created a static landing page and Powerpoint template. 
+   Iris Medicine is developing medicines that target the root cause of neurodegeneration. They asked for a logo inspired by the winged sandals of the Greek Messenger God Hermes. I also created a static landing page and Powerpoint template.
 gallery:
   - url: /assets/images/portfolio-iris-logo-cover.jpg
   - url: /assets/images/iris-wings-animated.gif

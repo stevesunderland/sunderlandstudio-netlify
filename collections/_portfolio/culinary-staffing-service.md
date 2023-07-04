@@ -3,6 +3,7 @@ title: Culinary Staffing Service
 featured: true
 website: 'https://culinarystaffing.com'
 date: "2017-11-16T09:42:00-08:00"
+short_description: Website Design & Development
 description: >-
    Culinary Staffing Service is a hospitality recruiting and management service based in Los Angeles. This project involved the design and development of a new website to showcase the company's services and streamline their hiring process. This website uses Jekyll as a static site generator and Netlify CMS for content management.
 gallery:

@@ -1,8 +1,9 @@
 ---
 title: "Concept to Clinic"
 description: "This project involved designing a logo and marketing site for an open-source software competition presented by my colleagues at [DrivenData](http://www.drivendata.co/) with the [Bonnie J. Addario Lung Cancer Foundation](http://www.lungcancerfoundation.org). I also implemented the front-end templates for this Django-based web application and created a series of illustrations for the project."
+short_description: Logo Design, Website Design & Development
 date: "2017-08-05T14:07:00-07:00"
-website: "https://concepttoclinic.drivendata.org/home/"
+website: ""
 featured: true
 gallery:
   -

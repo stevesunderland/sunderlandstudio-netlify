@@ -1,5 +1,6 @@
 ---
 title: "The Futurist Institute"
+short_description: Logo Design, Website Design & Django Development
 description: "The Futurist Institute is an online learning platform created for one of the world's leading economic futurists. This project involved designing a logo, brand identity and website. I also created a custom web application using Django which functions as a Learning Management System (LMS) and allows the client to sell access to their courses and monitor student progress. "
 date: "2019-10-29T13:10:00-07:00"
 website: "https://www.futuristinstitute.org"

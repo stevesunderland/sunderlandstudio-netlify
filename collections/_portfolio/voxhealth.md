@@ -1,5 +1,6 @@
 ---
 title: "VoxHealth"
+short_description: Website Design & Development
 description: "VoxHealth is a healthcare startup that takes open-source data from the CDC, visualizes it, and combines the information with personal stories of people living with different healthcare conditions. I designed and developed a responsive marketing site and web application based on their existing PHP framework."
 date: "2016-05-30T18:18:00-07:00"
 website: "http://voxhealth.co/"

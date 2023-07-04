@@ -1,25 +1,5 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: Your awesome title
-email: your-email@example.com
+title: Sunderland Studio
+email: mail@sunderlandstudio.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -46,26 +26,28 @@ collections:
     output: true
     permalink: /:collection/:name
     order:
-      - baidu-ventures.md
-      - the-futurist-institute.md
       - pointcloud.md
+      - the-futurist-institute.md
+      - formic.md
       - cadogan.md
-      - ennabl.md
       - awakened-alchemy.md
       - firmolux.md
+      - author-institute.md
       - culinary-staffing-service.md
       - biomap.md
-      - author-institute.md
-      - cdfg.md
-      - inkbit.md
+      - phxlabs.md
       - drivendata.md
+      - cdfg.md
+      - ennabl.md
+      - inkbit.md
       - palmetto-bands.md
       - atlptn.md
       - rhapsody-vp.md
       - drivendata-labs.md
       - verdafresh.md
-      - formic.md
+      - viralogic.md
       - simon-watson-arts.md
+      - baidu-ventures.md
       - readvisor.md
       - mrb-solutions.md
       - iris-medicine.md
@@ -133,7 +115,7 @@ exclude:
   - ss-theme/
   - gulpfile.js
   - assets/javascript/app.js
-  - assets/_sass/app.scss
+  # - assets/_sass/app.scss
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
@@ -144,3 +126,8 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+
+sass:
+  sass_dir: assets/scss
+  style: compressed

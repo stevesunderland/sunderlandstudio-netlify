@@ -1,74 +1,65 @@
-<style>
-	#contact .menu {
-		font-weight: 600;
-	}
-	#contact .menu img {
-		display: inline-block;
-		height: 1.5em;
-		width: auto;
-		margin-right: 0.5em;
-	}
-</style>
-<section id="contact">
-	<div class="row">
-		<div class="column">
-			<h2 class="float-left" style="margin-top: 0;">
-				Let's work together!
-			</h2>
-			<a href="mailto:mail@sunderlandstudio.com" target="_blank" class="button large hollow colorful float-right">Contact Me</a>
+<footer id="contact">
+	<div class="panel bg-black">
+		<div class="row expanded align-middle">
+			<div class="column small-12 medium-expand">
+				<h2 style="margin-top: 0;">
+					Let&rsquo;s work together!
+				</h2>
+			</div>
+			<div class="column shrink">
+				<a href="mailto:mail@sunderlandstudio.com" class="button hollow large">
+					{% comment %}
+						<img data-src="/assets/images/icon-mail.svg" alt="" height="24" width="24">
+					{% endcomment %}
+					Get in touch {% include icon-arrow-right.svg %}
+				</a>
+			</div>
+		</div>
+		<div class="row expanded">
+			<div class="column">
+				<ul class="menu vertical medium-horizontal align-">
+					<li>
+						<a href="mailto:mail@sunderlandstudio.com">
+							<img data-src="/assets/images/icon-mail.svg" alt="" height="24" width="24"> Email
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/stevesunderland" target="_blank" rel="noreferrer">
+							<img data-src="/assets/images/icon-linkedin.svg" alt="" height="24" width="24"> LinkedIn
+						</a>
+					</li>
+					<li>
+						<a href="/assets/files/sunderland-resume.pdf" target="_blank" rel="noreferrer">
+							<img data-src="/assets/images/icon-document.svg" alt="" height="24" width="24"> Resume
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="column">
-			<ul class="menu">
-				<li>
-					<a href="mailto:mail@sunderlandstudio.com">
-						<img data-src="/assets/images/icon-mail.svg" alt="" height="24" width="24"> Email
-					</a>
-				</li>
-				<li>
-					<a href="http://www.linkedin.com/in/stevesunderland" target="_blank" rel="noreferrer">
-						<img data-src="/assets/images/icon-linkedin.svg" alt="" height="24" width="24"> LinkedIn
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</section>
-
+</footer>
+{% comment %} Mobile Menu {% endcomment %}
 <div class="mobile-menu">
 	<div class="row column">
 		<h1>
-			<a href="/">
-				Sunderland Studio
-			</a>
+			<a href="/">Sunderland Studio</a>
 		</h1>
-		<a href="#" class="button hollow float-right menu-toggle"></a> Close
+		<a href="#" class="button hollow float-right menu-toggle">Close</a>
 		<ul>
 			<li>
-				<a href="/portfolio">
-					Portfolio
-				</a>
+				<a href="/portfolio">Portfolio</a>
 			</li>
 			<li>
-				<a href="/#services">
-					Services
-				</a>
+				<a href="/#services">Services</a>
 			</li>
 			<li>
-				<a href="/#testimonials">
-					Testimonials
-				</a>
+				<a href="/#testimonials">Testimonials</a>
 			</li>
 			<li>
-				<a href="/#background">
-					Background
-				</a>
+				<a href="/#background">Background</a>
 			</li>
 			<li>
-				<a href="mailto:mail@sunderlandstudio.com">
-					Contact
-				</a>
+				<a href="mailto:mail@sunderlandstudio.com" target="blank">Contact</a>
 			</li>
 		</ul>
 	</div>

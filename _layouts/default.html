@@ -1,13 +1,14 @@
-{% assign version = "0.0.1" %}
+{% assign version = "0.0.3" %}
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible", content="ie=edge">
 		<meta name="viewport", content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet", href="/assets/css/app.min.css?v={{ version }}">
+		<link rel="stylesheet", href="/assets/scss/app.css?v={{ version }}">
 		<title>Sunderland Studio | {{ page.title }}</title>
-		<meta name="description" content="Steve Sunderland is a graphic designer and web developer based in Los Angeles.">
+		{% comment %} <meta name="view-transition" content="same-origin" /> {% endcomment %}
+		<meta name="description" content="Steve Sunderland is a graphic designer and web developer.">
 		<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
 	    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
 	    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
@@ -16,14 +17,7 @@
 	    <meta name="msapplication-TileColor" content="#000000">
 	    <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
 	    <meta name="theme-color" content="#ffffff">
-		<style>
-			body, html {
-				overflow-x: hidden;
-			}
-		</style>
 	</head>
-
-		{% comment %}block head{% endcomment %}
 	<body class="{{ page.title | slugify }}">
 		{% include header.html %}
 		{{ content }}

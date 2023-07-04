@@ -1,0 +1,52 @@
+---
+---
+
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&display=swap');
+
+@import 'fonts';
+
+// $font-family: 'Instrument Sans';
+$font-family: 'Ppneuemontreal';
+
+
+$primary-color: null;
+$secondary-color: null;
+$success-color: null;
+$warning-color: null;
+$alert-color: null;
+$-zf-size: null;
+$-zf-bp-value: null;
+$-zf-bp-value: null;
+
+
+@import 'settings';
+@import "../../node_modules/foundation-sites/scss/foundation";
+
+
+@include foundation-global-styles;
+@include foundation-flex-classes;
+@include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-visibility-classes;
+@include foundation-responsive-embed;
+@include foundation-menu;
+@include foundation-float-classes;
+
+.mono {
+	font-family: 'Ppfraktionmono', 'Courier New', Courier, monospace;
+}
+
+@import 'global';
+@import 'typography';
+@import 'animation';
+@import 'header';
+@import 'footer';
+@import 'pagination';
+@import 'portfolio';
+@import 'showcase';
+

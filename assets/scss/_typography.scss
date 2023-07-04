@@ -1,0 +1,175 @@
+h1 {
+	font-size: 1.5em;
+	display: inline-block;
+	margin: 0;
+	font-weight: bold;
+	line-height: 1;
+
+	@include breakpoint(medium up) {
+		font-size: 2em;
+	}
+
+	a {
+		border-bottom: 4px solid black;
+		color: black;
+		transition: all 0.3s;
+
+		&:hover, &:active, &:focus {
+			color: black;
+			opacity: 0.5;
+		}
+	}
+}
+
+
+h2 {
+	font-size: 3em;
+	line-height: 1;
+	font-weight: bold;
+	margin: 1em 0 0.5em;
+	max-width: 1000px;
+
+	&.h6 {
+		// font-family: $font-family-monospace;
+		@extend .mono;
+		margin-bottom: rem-calc(40);
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: .05em;
+		font-size: 0.9em;
+		color: $dark-gray;
+	}
+}
+
+@include breakpoint(medium up) {
+	h2 {
+		font-size: 5em;
+	}
+}
+
+h3 {
+	font-size: 2em;
+	font-weight: bold;
+	display: inline-block;
+	margin: 1em 0;
+	// border-bottom: 2px solid black;
+}
+p {
+	letter-spacing: 0.025em;
+}
+p.caption {
+	color: #999;
+	margin-top: 1em;
+}
+p.lead {
+	font-size: 1.125em;
+	max-width: 880px;
+	margin-bottom: 2em;
+
+	a {
+		color: inherit;
+		text-decoration: underline;
+	}
+}
+
+@include breakpoint(medium up) {
+	p.lead {
+		font-size: 1.25em;
+
+		#hero & {
+			font-size: 1.5em;
+		}
+	}
+}
+
+blockquote {
+	// margin-left: 1em;
+	// margin-right: 1em;
+	margin-bottom: 4em;
+	border-left: 0;
+	padding: 0;
+
+	@include breakpoint(medium up) {
+		// margin-left: 4em;
+		// margin-right: 4em;
+		// margin-right: 0 !important;
+	}
+	.quote {
+		font-size: 5em;
+		color: $dark-gray;
+		color: $black;
+		line-height: 1;
+		display: block;
+		margin-bottom: rem-calc(-20);
+	}
+	p {
+		color: black;
+		position: relative;
+		// line-height: 1.75;
+	}
+	cite {
+
+		@extend .mono;
+		// font-weight: bold;
+		text-transform: uppercase;
+
+		font-style: normal;
+		// color: black;
+		color: $dark-gray;
+		// text-transform: uppercase;
+		font-weight: 700;
+		font-size: 0.9em;
+
+		&:before {
+			display: none;
+		}
+		a {
+			color: inherit;
+			border-bottom: 2px solid black;
+		}
+	}
+}
+
+.button {
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: .05em;
+	transition: all 0.3s;
+	border-radius: 0;
+	padding: 1em;
+	background-color: black;
+
+
+	@extend .mono;
+	font-weight: 700;
+
+	&:hover {
+		background-color: $dark-gray;
+	}
+
+	&.hollow {
+		color: black;
+		padding: 0.75em 0;
+		border: none;
+		border-bottom: 2px solid black;
+
+		&:hover {
+			color: #999;
+			border-color: #999;
+		}
+
+		&.small {
+			border: none;
+		}
+	}
+}
+
+.link {
+	color: #000;
+	font-size: .8em;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	img {
+		margin-top: 1em;
+	}
+}

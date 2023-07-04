@@ -1,0 +1,258 @@
+body, html {
+	overflow-x: none;
+	scroll-behavior: smooth;
+
+	// @media (prefers-color-scheme: dark) {
+	// 	background-color: $black;
+	// 	color: $white;
+	// }
+}
+
+#hero {
+	padding: 20px !important;
+	padding-top: 0;
+
+	// @media (prefers-color-scheme: dark) {
+	// 	background-color: $black;
+	// 	color: $white;
+	// }
+
+	h2 {
+		@include breakpoint(small down) {
+			font-size: 2.5em;;
+		}
+	}
+
+	p {
+		br {
+			@include breakpoint(medium down) {
+				display: none;
+			}
+		}
+	}
+}
+
+@include breakpoint(medium up) {
+	header, #hero {
+		padding: 40px !important;
+	}
+}
+
+.bg-gray {
+	background-color: $light-gray;
+}
+
+.bg-black {
+	background-color: $black;
+	.button, * {
+		color: $white;
+		border-color: $white;
+	}
+}
+
+.cover {
+	background-size: cover;
+}
+
+.menu li {
+	display: inline-block;
+
+	a {
+		@extend .mono;
+		color: #333;
+		padding: .5em 0;
+		margin: 0 1em;
+		position: relative;
+		font-weight: 700;
+		font-size: 1.25em;
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 100%;
+			height: 2px;
+			background-color: $black;
+			transition: all 0.5s;
+
+		}
+	}
+	&:hover a, &.active a {
+		background-color: transparent;
+		color: #000;
+
+		&:after {
+			left: 0;
+			right: 0;
+		}
+	}
+}
+
+
+
+.mobile-menu {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: black;
+	padding: 1.25em 1em 1em;
+	opacity: 0;
+	transition: opacity 0.2s;
+
+
+	.menu-active & {
+		display: block;
+		opacity: 1;
+	}
+
+	a {
+		color: $white;
+		border-bottom-color: $white;
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+
+	ul {
+		margin-left: 0;
+		font-size: 2.5em;
+		font-weight: bold;
+		line-height: 1.5;
+		margin-top: 1em;
+	}
+
+	.button.menu-toggle {
+		color: $white;
+		border-color: transparent;
+		padding-top: 0.25em;
+
+		.menu-active & {
+			color: $white;
+		}
+	}
+}
+
+@media (min-width: 640px) {
+	.mobile-menu {
+		padding: 2.5em;
+
+		ul {
+			font-size: 4em;
+		}
+	}
+}
+
+@media (min-width: 380px) {
+	.mobile-menu ul {
+		font-size: 3em;
+	}
+}
+
+#background {
+	h3 {
+		margin-top: 0;
+	}
+
+	p {
+		margin-bottom: 2em;
+	}
+
+	img {
+		margin-right: 4em;
+
+		@include breakpoint(medium down) {
+			margin-bottom: 2em;
+			margin-right: 0;
+		}
+	}
+
+	.column {
+		@include breakpoint(large up) {
+			padding-left: 4em;
+		}
+
+		&.large-5 {
+			padding-right: 4em;
+		}
+	}
+}
+
+#services {
+	padding: 2em 2em;
+
+	@include breakpoint(medium up) {
+		padding: 10em 2em;
+	}
+
+	h3 {
+		border-bottom: 0;
+
+		small {
+			@extend .mono;
+			display: block;
+			text-transform: uppercase;
+			font-size: 0.5em;
+			margin-bottom: 1em;
+			letter-spacing: .1em;
+			font-weight: 700;
+		}
+	}
+
+	.column {
+		@include breakpoint(small down) {
+			margin-top: 4em;
+		}
+	}
+
+	canvas {
+		margin: 0 auto;
+	}
+
+}
+
+
+#testimonials {
+	position: relative;
+	z-index: 999;
+
+	p.lead {
+		margin-bottom: 1em;
+	}
+}
+
+
+.button.menu-toggle {
+	padding-top: 0.5em;
+	border-bottom: 0;
+}
+
+
+section.padding {
+	padding: 4em 2em;
+
+	img {
+		width: 100%;
+	}
+}
+
+.viralogic .portfolio-image-1 {
+	object {
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+}
+
+#list {
+	.project-row {
+		border-top: 1px solid $black;
+		padding-top: 0.75em;
+		padding-bottom: 0.75em;
+	}
+}

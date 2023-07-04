@@ -100,6 +100,7 @@ gulp.task('sass', function() {
   .pipe(rename('app.min.css'))
   .pipe(minifycss)
   .pipe($.if(!isProduction, $.sourcemaps.write()))
+  .pipe($.sourcemaps.write())
   .pipe(gulp.dest('./assets/css'))
   // .pipe(browser.reload({ stream: true }));
 });
@@ -111,7 +112,7 @@ gulp.task('javascript', function() {
   return gulp.src(PATHS.javascript)
     .pipe($.sourcemaps.init())
     .pipe($.concat('app.min.js'))
-    .pipe($.if(!isProduction, $.sourcemaps.write()))
+    .pipe($.sourcemaps.write())
     .pipe(uglify())
     // .on('error', onError)
     .pipe(gulp.dest('./assets/javascript'))
