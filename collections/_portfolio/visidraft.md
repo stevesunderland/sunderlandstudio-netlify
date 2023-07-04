@@ -1,5 +1,6 @@
 ---
 title: "Visidraft"
+short_description: Logo Design, App Design, Website Design & Development
 description: "I designed a new identity, website and user interface for an augmented reality app that allows architects and contractors to visualize their construction projects in real time. "
 date: "2016-05-30T18:17:00-07:00"
 featured: false

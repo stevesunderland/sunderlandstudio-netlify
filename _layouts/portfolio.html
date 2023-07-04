@@ -10,9 +10,9 @@ layout: default
   </div>
   <div class="row">
     <div class="column">
-      <ul class="menu portfolio-filters" style='margin-bottom: 1em;'>
+      <ul class="menu portfolio-filters">
         <li>
-          <a href="#" style="color: #999;">Filter by:</a>
+          <a href="#">Filter by:</a>
         </li>
         <li>
           <a href="#" data-filter="*">all</a>
@@ -29,7 +29,7 @@ layout: default
 </section>
 
 <section id="portfolio" class="bg-gray wow fade-in delay-2">
-  <div class="row collapse expanded small-up-1 medium-up-2 large-up-3 text-center portfolio-grid">
+  <div class="row collapse expanded small-up-1 medium-up-2 large-up-3 portfolio-grid">
     {% assign portfolio_items = site.portfolio %}
     {% for item in portfolio_items %}
       {% if item.gallery %}
@@ -42,7 +42,7 @@ layout: default
 <section class="wow fade-in" style="margin-top: 4em;">
   <div class="row">
     <div class="column small-12 large-8">
-      <p class="lead">All projects were designed by Steve unless otherwise noted.<br>All website projects were hand-coded with love by Steve.</p>
+      <p class="lead">All projects were designed by Steve unless otherwise noted.<br>All website projects were hand-coded by Steve.</p>
       {% comment %}<a href="/archive" class="button clear" style="color: black;">View project archive &rarr;</a>{% endcomment %}
     </div>
   </div>

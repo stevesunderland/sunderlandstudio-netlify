@@ -1,21 +1,12 @@
 var $           = require('gulp-load-plugins')();
-var browser     = require('browser-sync');
 var gulp        = require('gulp');
 var rimraf      = require('rimraf');
 var sequence    = require('run-sequence');
 var fs          = require('fs')
 var slug        = require('slug')
-var data        = require('gulp-data');
-var pug         = require('gulp-pug');
 var rename      = require('gulp-rename');
 var imagemin    = require('gulp-imagemin');
-var cleanCSS    = require('gulp-clean-css');
-var frontMatter = require('gulp-front-matter');
-var marked      = require('gulp-marked');
-var markdown    = require('gulp-markdown');
-var md          = require('jstransformer')(require('jstransformer-markdown-it'));
-var layout      = require('gulp-layout');
-var responsive = require('gulp-responsive');
+var responsive  = require('gulp-responsive');
 var uglify      = require('gulp-uglify');
 
 
@@ -30,13 +21,6 @@ var COMPATIBILITY = ['last 2 versions', 'ie >= 9'];
 
 // File paths to various assets are defined here.
 var PATHS = {
-  assets: [
-    'src/assets/**/*',
-    '!src/assets/{img,javascript,scss}/**/*'
-  ],
-  sass: [
-    'node_modules/foundation-sites/scss',
-  ],
   javascript: [
     'node_modules/jquery/dist/jquery.js',
     // 'node_modules/slick-carousel/slick/slick.js',
@@ -81,29 +65,6 @@ function backgroundImage(image) {
 	return string
 }
 
-
-// Compile Sass into CSS
-// In production, the CSS is compressed
-gulp.task('sass', function() {
-
-  var minifycss = $.if(isProduction, cleanCSS());
-
-  return gulp.src('assets/_sass/app.scss')
-  .pipe($.sourcemaps.init())
-  .pipe($.sass({
-    includePaths: PATHS.sass
-  })
-  .on('error', $.sass.logError))
-  .pipe($.autoprefixer({
-    browsers: COMPATIBILITY
-  }))
-  .pipe(rename('app.min.css'))
-  .pipe(minifycss)
-  .pipe($.if(!isProduction, $.sourcemaps.write()))
-  .pipe(gulp.dest('./assets/css'))
-  // .pipe(browser.reload({ stream: true }));
-});
-
 // Combine JavaScript into one file
 // In production, the file is minified
 gulp.task('javascript', function() {
@@ -111,32 +72,12 @@ gulp.task('javascript', function() {
   return gulp.src(PATHS.javascript)
     .pipe($.sourcemaps.init())
     .pipe($.concat('app.min.js'))
-    .pipe($.if(!isProduction, $.sourcemaps.write()))
+    .pipe($.sourcemaps.write())
     .pipe(uglify())
     // .on('error', onError)
     .pipe(gulp.dest('./assets/javascript'))
     // .on('finish', browser.reload);
 });
-
-
-// Copy images to the "dist" folder
-// In production, the images are compressed
-// gulp.task('images', function() {
-//   var maybeImagemin = $.if(isProduction, imagemin({
-//     progressive: true,
-//     svgoPlugins: [
-//       {removeViewBox: false},
-//       {cleanupIDs: false}
-//     ]
-//   }));
-//
-//   return gulp.src('src/assets/img/**/*')
-//   // .pipe(maybeImagemin)
-//   .pipe(gulp.dest('dist/assets/img'))
-//   .on('finish', browser.reload);
-// });
-
-
 
 gulp.task('resizeImages', function () {
   return gulp.src('src/assets/images/*')
@@ -161,13 +102,9 @@ gulp.task('resizeImages', function () {
     .pipe(gulp.dest('../assets/images'));
 });
 
-
-
-
-
 // Build the "dist" folder by running all of the above tasks
-gulp.task('build', function(done) {
-  sequence('clean', ['templates', 'sass', 'javascript', 'copy', 'admin', 'resizeImages'], done);
+gulp.task('default', function(done) {
+  sequence('javascript', [], done);
 });
 
 

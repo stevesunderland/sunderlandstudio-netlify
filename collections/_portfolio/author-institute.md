@@ -3,8 +3,9 @@ title: The Author Institute
 featured: true
 website: 'https://www.authorinstitute.org'
 date: "2017-11-16T09:42:00-08:00"
+short_description: Website Design & Django Development
 description: >-
-   The Author Institute is an online learning platform for aspiring writers. This project involved logo and branding, website design, and the development of a custom Django application. 
+   The Author Institute is an online learning platform for aspiring writers. This project involved logo and branding, website design, and the development of a custom Django application.
 gallery:
   - url: /assets/images/author-institute-cover.jpg
   - url: /assets/images/author-institute-portfolio-1.jpg

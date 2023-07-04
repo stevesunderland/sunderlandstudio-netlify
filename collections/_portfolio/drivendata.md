@@ -1,5 +1,6 @@
 ---
 title: "DrivenData"
+short_description: Website Design & Development
 description: "DrivenData is a startup based out of the Harvard Innovation Lab that seeks to create social impact through crowdsourced data analysis competitions. I started working with DrivenData on a redesign of their competition platform. I've since worked with them on a number of projects including a new website for their consulting services and this redesign of their competition site. "
 date: "2018-02-14T13:03:00-08:00"
 website: "http://www.drivendata.org"

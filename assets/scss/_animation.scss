@@ -1,0 +1,30 @@
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+.fade-in {
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.delay-1 {
+	-webkit-animation-delay: 0.25s;
+	animation-delay: 0.25s;
+}
+
+.delay-2 {
+	-webkit-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
+
+.delay-3 {
+	-webkit-animation-delay: 0.75s;
+	animation-delay: 0.75s;
+}
+.delay-4 {
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+}

@@ -1,124 +1,99 @@
 ---
 layout: default
 ---
-<style>
-	.portfolio-image-0 {
-		border: 1px solid #ddd;
-	}
-	blockquote p, blockquote cite {
-		color: #666;
-	}
-	.pagination p {
-		color: #111;
-		margin-top: 1em;
-		line-height: 1.2;
-	}
-	@media screen and (min-width: 640px) {
-		.pagination p {
-			font-size: 1.5em;
-		}
-	}
-	.pagination .button {
-		margin-bottom: 0;
-	}
 
-</style>
 <div class="portfolio-content wow fade-in delay-1">
-	<div class="row">
-		<div class="column">
-			<a href="/portfolio" class="button clear secondary" style="padding-left: 0; margin-top: 2em; margin-bottom: 2em;">&larr; portfolio</a>
-			<h2 style="margin-top: 0;">{{ page.title }}</h2>
-		</div>
-	</div>
-	<div class="row align-justify wow fade-in delay-2">
-		<div class="column small-12 large-7">
-			<p class="lead">
-				{{ page.description | markdownify | replace: "<p>" | replace: "</p>" }}
-			</p>
-		</div>
-		<div class="column small-12 large-5">
-			{% if page.testimonial %}
-				<blockquote style="margin-bottom: 0; margin-left: 0;">
-					<p>{{ page.testimonial.quote }}</p>
-					<cite>{{ page.testimonial.title }}</cite>
-				</blockquote>
-			{% endif %}
-		</div>
-
-	</div>
-	<div class="row column wow fade-in delay-3">
-		{% if page.website and page.website != "" %}
-			<a href="{{ page.website }}" rel="noopener" target="_blank" class="button large hollow">Visit the website &rarr;</a>
-		{% endif %}
-	</div>
-
-</div>
-<div class="row wow fade-in delay-4">
-	<div class="column">
-		{% if page.gallery %}
-			{% for image in page.gallery %}
-				<div class="portfolio-item-image {% if forloop.index == 0 %}browser{% endif %} portfolio-image-{{ forloop.index0 }}">
-					<div class="bg-gray loader">
-						{% assign image_url = image.url | replace: '.jpg', '-original.jpg' %}
-						<img src="{{ image_url }}" alt="">
-					</div>
-					{% if image.caption %}
-						<p class="caption">&uarr; {{ image.caption }}</p>
-					{% endif %}
-				</div>
-			{% endfor %}
-		{% endif %}
-
-		<div class="text-center">
-			{% if page.website %}
-				<a href="{{ page.website }}" rel="noopener" target="_blank" style="margin-bottom: 2em;" class="button large hollow">Visit the website &rarr;</a>
-				<br>
-			{% endif %}
-		</div>
-
-	</div>
+  <div class="row title-row">
+    <div class="column">
+      <a href="/portfolio">&larr; portfolio</a>
+      <h2>{{ page.title }}</h2>
+      {% comment %} <h6 class="mono">{{ page.short_description }}</h6> {% endcomment %}
+    </div>
+  </div>
+  <div class="row align-justify wow fade-in delay-2">
+    <div class="column small-12 large-7">
+      <p class="lead">{{ page.description | markdownify | replace: "<p>" | replace: "</p>" }}</p>
+    </div>
+    <div class="column small-12 large-5">
+      {% if page.testimonial %}
+        <blockquote style="margin-left: 0;">
+          <p><span>&ldquo;</span>{{ page.testimonial.quote }}&rdquo;</p>
+          <cite>&mdash; {{ page.testimonial.title }}</cite>
+        </blockquote>
+      {% endif %}
+    </div>
+  </div>
+  <div class="row column wow fade-in delay-3">
+    {% if page.website and page.website != "" %}
+      <a href="{{ page.website }}" rel="noopener" target="_blank" class="button large hollow">Visit the website {% include icon-arrow-right.svg %}</a>
+    {% endif %}
+  </div>
 </div>
 
+<div class="row align-center wow fade-in delay-4">
+  <div class="column {% if page.legacy == true  %}small-12 large-8{% endif %}">
+    {% if page.gallery %}
+      {% for image in page.gallery %}
+        <div class="portfolio-item-image {% if forloop.index == 0 %}browser{% endif %} portfolio-image-{{ forloop.index0 }}">
+          <div class="loader">
+            {% if image.url contains 'svg' %}
+              {% comment %} <img src="{{ image.url  }}" alt=""> {% endcomment %}
+              <object data="{{ image.url  }}" type="image/svg+xml"></object>
+            {% else %}
+              {% assign image_url = image.url | replace: '.jpg', '-original.jpg' %}
+              <img src="{{ image_url }}" alt="">
+            {% endif %}
+          </div>
+          {% if image.caption %}
+            <p class="caption">&uarr; {{ image.caption }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
 
-<div class="pagination" style="margin: 4em 0;">
-	<div class="row align-justify">
-		<div class="column small-6 medium-4">
-			{% if page.previous %}
-				{% assign previous = page.previous %}
-			{% else %}
-				{% assign previous = site.portfolio.last %}
-			{% endif %}
-			<a href="{{ previous.url }}">
-				<div class="button secondary small clear" style="padding-left: 0;">&larr; Previous</div>
-				<img data-src="{{ previous.gallery[0].url | replace: '.jpg', '-680.jpg' }}" alt="{{ previous.title }}" style="border: 1px solid #ddd;">
-				<p class="lead">{{ previous.title }}</p>
-			</a>
-		</div>
-		<div class="column show-for-medium small-12 medium-4">
-			<div class="button secondary small clear"> &nbsp;</div>
-			<a href="/portfolio">
-				<div class="responsive-embed" style="border: 1px solid #ddd; position: relative; padding-bottom: 66%; margin-bottom: 0;">
-					<div class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-						<span class="button secondary small clear" style="margin: 0;">&larr;&nbsp;portfolio</span>
-					</div>
-				</div>
-			</a>
-		</div>
-		<div class="column small-6 medium-4 text-right">
-			{% if page.next %}
-				{% assign next = page.next %}
-			{% else %}
-				{% assign next = site.portfolio.first %}
-			{% endif %}
-			<a href="{{ next.url }}">
-				<div class="button secondary small clear" href="" style="padding-right: 0;">Next &rarr;</div>
-				<img data-src="{{ next.gallery[0].url | replace: '.jpg', '-680.jpg' }}" alt="{{ next.title }}" style="border: 1px solid #ddd;">
-				<p class="lead">{{ next.title }}</p>
-			</a>
-		</div>
-	</div>
+    <div class="text-center">
+      {% if page.website and page.website != "" %}
+        <a href="{{ page.website }}" rel="noopener" target="_blank" style="margin-bottom: 2em;" class="button large hollow">Visit the website {% include icon-arrow-right.svg %}</a>
+        <br>
+      {% endif %}
+    </div>
+  </div>
 </div>
 
-
-
-
+<div class="pagination">
+  <div class="row align-justify">
+    <div class="column small-6 medium-4">
+      {% if page.previous %}
+        {% assign previous = page.previous %}
+      {% else %}
+        {% assign previous = site.portfolio.last %}
+      {% endif %}
+      <a href="{{ previous.url }}">
+        <img data-src="{{ previous.gallery[0].url | replace: '.jpg', '-680.jpg' }}" alt="{{ previous.title }}">
+        <div class="button secondary clear mono">&larr; Previous</div>
+        <p class="lead">{{ previous.title }}</p>
+      </a>
+    </div>
+    <div class="column show-for-medium small-12 medium-4">
+      <a href="/portfolio">
+        <div class="responsive-embed">
+          <div class="text-center">
+            <span class="button secondary clear mono">&uarr;&nbsp;portfolio</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column small-6 medium-4 text-right">
+      {% if page.next %}
+        {% assign next = page.next %}
+      {% else %}
+        {% assign next = site.portfolio.first %}
+      {% endif %}
+      <a href="{{ next.url }}">
+        <img data-src="{{ next.gallery[0].url | replace: '.jpg', '-680.jpg' }}" alt="{{ next.title }}">
+        <div class="button secondary clear mono">Next {% include icon-arrow-right.svg %}</div>
+        <p class="lead">{{ next.title }}</p>
+      </a>
+    </div>
+  </div>
+</div>

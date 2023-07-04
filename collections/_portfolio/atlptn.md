@@ -3,8 +3,9 @@ title: Atlanta Peleton
 featured: false
 website: 'https://atlptn.com'
 date: "2018-03-21T13:10:00-07:00"
+short_description: Website Design & Development
 description: >-
-   ATLPTN is a community for amateur and professional bike racing in the greater Atlanta area. The website features pages for each of their rides with route maps and elevation charts that are automatically generated from GPX files. 
+   ATLPTN is a community for amateur and professional bike racing in the greater Atlanta area. The website features pages for each of their rides with route maps and elevation charts that are automatically generated from GPX files.
 gallery:
   - url: /assets/images/atlptn-cover.jpg
   - url: /assets/images/portfolio-atlptn-2.jpg

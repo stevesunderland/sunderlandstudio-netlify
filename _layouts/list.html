@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="row column">
+    <h2>Project List</h2>
+</div>
+<section id="list">
+    <div class="row">
+        <div class="column">
+            {% assign portfolio = site.portfolio | sort: 'title' %}
+            {% for item in portfolio %}
+                <div class="row collapse project-row">
+                    <div class="column"><strong class="">{{ item.title }}</strong></div>
+                    <div class="column">
+                        {% if item.website != "" %}
+                            <a href="{{ item.website }}">{{ item.website }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,8 +1,10 @@
 ---
 title: "Classical TV"
 description: "I was initially contracted by Classical TV to create magazine-style graphics for their web-based editorials. This quickly evolved into an evaluation of their branding and web design. I developed several apps for internet-connected TV including the Roku, Google, Yahoo and LG Smart TV platforms. I also prototyped a new responsive website that will deliver their extensive content library to all browsers and devices."
+short_description: Roku App Design & Development
 date: "2016-05-30T18:14:00-07:00"
 featured: true
+legacy: true
 gallery:
   -
     url: "/assets/images/ctv-logo.jpg"

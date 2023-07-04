@@ -1,9 +1,11 @@
 ---
 title: "Sugar Bee Catering"
+short_description: Logo Design, Website Design & Development
 description: "An elegant website for a gourmet catering company in Westchester, NY. This project involved the design and development of the website, in addition to a new logo."
 date: "2016-05-30T18:10:00-07:00"
 website: "http://sugarbeecatering.com/"
 featured: false
+legacy: true
 gallery:
 -
   url: "/assets/images/sugarbee.jpg"

@@ -1,0 +1,41 @@
+header {
+	padding: 20px !important;
+	h1 {
+		float: left;
+	}
+	h1, h1 a, a {
+		color: $black;
+	}
+	.menu {
+		text-transform: uppercase;
+		font-size: .7em;
+		letter-spacing: .05em;
+		font-weight: 600;
+	}
+
+	.button.menu-toggle {
+		@include breakpoint(medium down) {
+			padding-top: 0.4em;
+			padding-bottom: 0.4em;
+		}
+	}
+
+	// @media (prefers-color-scheme: dark) {
+	// 	background: black;
+
+	// 	.menu a, h1 a {
+	// 		color: $white;
+	// 		border-bottom-color: $white;
+
+	// 		&:hover {
+	// 			color: $medium-gray;
+	// 		}
+	// 	}
+	// 	h1 a {
+	// 		border-bottom-color: $white;
+	// 	}
+
+	// 	background-color: $black;
+	// }
+
+}

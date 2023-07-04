@@ -1,5 +1,6 @@
 ---
 title: "Simon Watson Arts"
+short_description: Logo Design, Website Design & Development
 description: "Website design, development, branding and logo design for Simon Watson, a renowned curator and art advisor based in New York City and São Paulo."
 date: "2016-05-31T13:01:00-07:00"
 website: "http://simonwatsonarts.com/"

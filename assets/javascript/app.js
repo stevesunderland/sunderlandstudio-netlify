@@ -2,30 +2,28 @@ var Site = {
 	init: function() {
 		Site.portfolio();
 		Site.menu();
+		Site.testimonials()
+
+		if ($('.testimonial-column').length) {
+			Site.testimonials()
+		}
+
 		if ($('#canvas1').length) {
 			Site.animation();
 		}
-		Site.smoothscroll()
 	},
-	smoothscroll: function() {
-		$('a[href*="#"]:not([href="#"])').click(function() {
-			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-				var target = $(this.hash);
-				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-				if (target.length) {
-					setTimeout(function(){
-						$('html, body').animate({
-							scrollTop: target.offset().top
-						}, 1000);
-						return false;
-					}, 1000)
-				}
-			}
-		});
+	testimonials: function() {
+		var cards = $(".testimonial-column");
+		for(var i = 0; i < cards.length; i++){
+			var target = Math.floor(Math.random() * cards.length -1) + 1;
+			var target2 = Math.floor(Math.random() * cards.length -1) +1;
+			cards.eq(target).before(cards.eq(target2));
+		}
 	},
 	menu: function() {
 		$(document).on('click', '.menu-toggle, .mobile-menu a', function(){
-			$('.mobile-menu').toggle(0);
+			// $('.mobile-menu').toggle(0);
+			$('body').toggleClass('menu-active')
 		});
 	},
 	portfolio: function() {
@@ -76,7 +74,7 @@ var Site = {
 			    itemSelector: '.portfolio-item',
 			    layoutMode: 'fitRows',
 			    filter: hashFilter || '*',
-			    transitionDuration: 600,
+			    transitionDuration: 0,
 			    hiddenStyle: {
 					opacity: 0
 				},
@@ -89,6 +87,10 @@ var Site = {
 			  	$('.portfolio-filters a[data-filter="'+hashFilter+'"]').parents('li').addClass('active');
 			  	$('.portfolio-filters-toggle').addClass('active');
 			  }
+
+			  setTimeout(function(){
+				$grid.isotope({ transitionDuration: 600 })
+			  }, 500);
 			}
 
 			$('.portfolio-filters a').on( 'click', function(event) {
@@ -121,6 +123,8 @@ var Site = {
 		}
 	},
 	animation: function() {
+
+		console.log('site.animation')
 		var canvas1 = document.getElementById('canvas1'),
 			canvas2 = document.getElementById('canvas2'),
 			canvas3 = document.getElementById('canvas3')
@@ -157,7 +161,15 @@ var Site = {
 		  opacity: 0
 		})
 
-		var line_material = new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 2 } )
+
+		// var $color1 = 0x00FFFF;
+		// var $color2 = 0xFF00FF;
+		// var $color3 = 0xFFFF00;
+
+		var $color1, $color2, $color3 = 0xFFFFFF;
+
+		// var line_material = new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 2 } )
+		var line_material = new THREE.LineBasicMaterial( { color: $color3, linewidth: 2 } )
 
 		var edges = new THREE.EdgesGeometry( geometry );
 		var mesh = new THREE.LineSegments(edges, line_material);
@@ -165,29 +177,30 @@ var Site = {
 
 
 		var geometry = new THREE.SphereGeometry(4, 1, 1);
+		var line_material2 = new THREE.LineBasicMaterial( { color: $color1, linewidth: 2 } )
 
 		var sphere_geo = new THREE.EdgesGeometry( geometry );
-		var sphere = new THREE.LineSegments(sphere_geo, line_material);
+		var sphere = new THREE.LineSegments(sphere_geo, line_material2);
 		scene2.add(sphere);
 
 
 		var geometry = new THREE.CircleGeometry(3.5, 32);
 
 		var circle1_edges = new THREE.EdgesGeometry(geometry);
-		var circle1 = new THREE.LineSegments(circle1_edges, new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 2 }));
+		var circle1 = new THREE.LineSegments(circle1_edges, new THREE.LineBasicMaterial( { color: $color2, linewidth: 2 }));
 		circle1.rotation.x = 90;
 		circle1.rotation.y = 90;
 		scene3.add(circle1);
 
-		var circle2 = new THREE.LineSegments(circle1_edges, new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 2 }));
+		var circle2 = new THREE.LineSegments(circle1_edges, new THREE.LineBasicMaterial( { color: $color2, linewidth: 2 }));
 		scene3.add(circle2);
 
-		var circle3 = new THREE.LineSegments(circle1_edges, new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 2 }));
+		var circle3 = new THREE.LineSegments(circle1_edges, new THREE.LineBasicMaterial( { color: $color2, linewidth: 2 }));
 		circle3.rotation.x = 90;
 		scene3.add(circle3);
 
 		// var circle4_edges = new THREE.EdgesGeometry(geometry);
-		var circle4 = new THREE.LineSegments(circle1_edges, new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 2 }));
+		var circle4 = new THREE.LineSegments(circle1_edges, new THREE.LineBasicMaterial( { color: $color2, linewidth: 2 }));
 		scene3.add(circle4);
 
 		var light = new THREE.AmbientLight(0xffffff, 1);

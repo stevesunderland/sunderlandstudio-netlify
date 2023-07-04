@@ -1,0 +1,62 @@
+.pagination {
+	margin: 4em 0;
+
+	img {
+		border: 1px solid $light-gray;
+		margin-bottom: 0.25em;
+		transition: all 0.3s;
+	}
+
+	a {
+		&:hover {
+			img {
+				filter: brightness(70%);
+			}
+			.responsive-embed {
+				.button {
+					color: $black;
+				}
+			}
+		}
+	}
+
+	.button {
+		padding-left: 0;
+		padding-right: 0;
+		margin-bottom: 0;
+	}
+
+	.responsive-embed {
+		border: 1px solid $light-gray;
+		position: relative;
+		padding-bottom: 66%;
+		margin-bottom: 0;
+		background: $light-gray;
+		transition: all 0.3s;
+
+		&:hover {
+			background: $medium-gray;
+		}
+
+		.text-center {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			.button {
+				margin: 0;
+			}
+		}
+	}
+
+	p {
+		color: #111;
+		margin-top: 0;
+		line-height: 1.2;
+
+		@include breakpoint(medium up) {
+			font-size: 1.5em;
+		}
+	}
+}

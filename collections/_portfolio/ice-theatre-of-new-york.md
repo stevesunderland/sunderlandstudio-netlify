@@ -1,5 +1,6 @@
 ---
 title: "Ice Theatre of New York"
+short_description: Website Design & Development
 description: "I first started working with the Ice Theatre of New York (affectionately known as ITNY) in 2004 when I created a new website for them. 10 years later when they needed an update, they turned to me to update the design of the site and overhaul some of the content. I was able to use the same CMS that I implemented for them a decade ago, while creating a clean new responsive website with full screen video and e-commerce features."
 date: "2016-05-30T18:21:00-07:00"
 website: "http://icetheatre.org"

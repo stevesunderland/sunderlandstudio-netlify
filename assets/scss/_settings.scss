@@ -60,7 +60,7 @@
 //  55. Top Bar
 //  56. Xy Grid
 
-@import 'util/util';
+@import '../../node_modules/foundation-sites/scss/util/util';
 
 // 1. Global
 // ---------
@@ -77,12 +77,15 @@ $foundation-palette: (
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
+$dark-gray: #767676;
+// $black: #0a0a0a;
+$black: #000;
 $white: #fff;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+// $body-font-family: 'Instrument Sans', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+// $body-font-family: 'Geologica', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: $font-family, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -121,7 +124,7 @@ $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
   small: 20px,
-  medium: 80px,
+  medium: 40px,
 );
 $grid-column-align-edge: true;
 $grid-column-alias: 'columns';

@@ -3,6 +3,7 @@ title: Zamba Cloud
 featured: false
 website: https://zamba.drivendata.org
 date: "2016-06-04T18:50:00-07:00"
+short_description: Website Design & Development
 description: >-
    Project Zamba is an open source software tool that uses machine learning to identify wildlife from camera trap footage. I was responsible for the front-end design and implementation of the user interface, marketing and documentation pages. This project was developed by DrivenData.
 gallery:

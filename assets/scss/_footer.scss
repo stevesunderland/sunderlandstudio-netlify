@@ -1,0 +1,75 @@
+#contact {
+	padding: 0;
+	margin-bottom: 0;
+	padding-top: 4em !important;
+
+	@include breakpoint(medium up) {
+		margin-top: 5em;
+		padding: 0;
+
+		.button {
+			float: right;
+		}
+	}
+
+	.panel {
+		padding: 4em 3em;
+
+		@include breakpoint(medium up) {
+			padding: 5em;
+
+		}
+	}
+
+	.button {
+		margin-bottom: 0;
+
+		&.large.hollow {
+			border-bottom: 2px solid $white;
+
+			&:hover {
+				color: $dark-gray;
+				border-bottom-color: $dark-gray;
+			}
+		}
+
+		@include breakpoint(small down) {
+			margin-bottom: 4em;
+			margin-top: 2em;
+		}
+	}
+
+	.menu {
+		margin-left: -1em;
+		font-weight: 600;
+
+		img {
+			display: inline-block;
+			height: 1.5em;
+			width: auto;
+			margin-right: 0.125em;
+			transform: translateY(-1px);
+		}
+
+		li {
+			@include breakpoint(small down) {
+				margin-bottom: 1em;
+			}
+		}
+
+		a {
+			opacity: 0.7;
+			font-size: 1em;
+			transition: opacity 0.2s;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	a {
+		color: $white;
+		text-transform: uppercase;
+	}
+}

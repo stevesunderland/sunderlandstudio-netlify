@@ -1,23 +1,17 @@
 {% assign tags = item.tags | split: "," | join: " " | replace: '["', '' | replace: '"]', '' | replace: "-", " " %}
-<div class="column item portfolio-item {{ tags }}">
-	<a href="{{ item.url }}">
-		<div class="item">
-			{% assign bg_image = item.gallery[0].url | split: '.' %}
-			{% assign bg_string = bg_image[0] | append: '-680.' | append: bg_image[1] %}
-			<img data-src="{{ bg_string }}" alt="" width="600" height="400">
-			<div class="overlay">
-				<div class="item-inner">
-					<h3 class="h6">{{ item.title }}</h3>
-					<p class="tags">
-						{% if item.tags %}
-							{% assign tags = item.tags | replace: '["', '' | replace: '"]', '' | split: "," %}
-							{% for tag in tags | split: "," %}
-								<span class="label">{{ tag | replace: ',', ' ' }}</span>
-							{% endfor %}
-						{% endif %}
-					</p>
-				</div>
-			</div>
-		</div>
-	</a>
+<div class="column small-12 medium-6 large-4 portfolio-item {{ tags }}">
+  <div class="item fade-in delay-{{ forloop.index }}">
+    {% assign bg_image = item.gallery[0].url | split: '.' %}
+    {% assign bg_string = bg_image[0] | append: '-680.' | append: bg_image[1] %}
+
+    <a href="{{ item.url }}" aria-label="{{ item.title  }}">
+      <img data-src="{{ bg_string }}" alt="" width="600" height="400">
+    </a>
+    <div class="overlay">
+      <div class="item-inner">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.short_description | default: "Website Design & Development" }}</p>
+      </div>
+    </div>
+  </div>
 </div>
