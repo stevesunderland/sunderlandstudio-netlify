@@ -115,6 +115,8 @@ exclude:
   - ss-theme/
   - gulpfile.js
   - assets/javascript/app.js
+  - package.json
+  - package-lock.json
   # - assets/_sass/app.scss
 #   - .sass-cache/
 #   - .jekyll-cache/
