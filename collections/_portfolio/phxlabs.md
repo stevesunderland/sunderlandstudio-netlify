@@ -9,6 +9,6 @@ description: 'Phoenix Labs is a game development studio based in Vancouver BC. T
 gallery:
   - url: /assets/images/phxlabs-poster.jpg
   - url: /assets/images/phxlabs-1.jpg
-tags: 'logo,design,healthcare'
+tags: 'development'
 ---
 
