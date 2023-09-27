@@ -1,0 +1,5 @@
+<url>
+    <loc>{{ site.url }}{{ page.url | remove: "index" | remove: ".html" }}</loc>
+    {% if page.sitemap.lastmod %}<lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>{% elsif page.date %}<lastmod>{{ page.date | date_to_xmlschema }}</lastmod>{% else %}<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>{% endif %}
+    <priority>{% if page.sitemap.priority %}{{ page.sitemap.priority }}{% elsif include.priority %}{{ include.priority }}{% else %}1{% endif %}</priority>
+</url>
