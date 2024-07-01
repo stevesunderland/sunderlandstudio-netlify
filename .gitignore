@@ -6,3 +6,4 @@ vendor
 ss-theme/node_modules/
 node_modules/
 .vscode
+.DS_Store

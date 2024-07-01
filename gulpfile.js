@@ -79,8 +79,8 @@ gulp.task('javascript', function() {
     // .on('finish', browser.reload);
 });
 
-gulp.task('resizeImages', function () {
-  return gulp.src('src/assets/images/*')
+gulp.task('images', function () {
+  return gulp.src('assets/newimages/*')
     .pipe($.responsive({
       '*': [{
         width: 680,
@@ -96,10 +96,10 @@ gulp.task('resizeImages', function () {
       progressive: true,
       withMetadata: false,
       withoutEnlargement: false,
-      format: 'jpeg',
+      format: 'jpg',
       silent: true,
     }))
-    .pipe(gulp.dest('../assets/images'));
+    .pipe(gulp.dest('assets/images'));
 });
 
 // Build the "dist" folder by running all of the above tasks
