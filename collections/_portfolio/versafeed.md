@@ -15,9 +15,9 @@ gallery:
   - url: /assets/images/portfolio-versafeed-4.jpg
 tags: 'logo,website,design,development,static,ecommerce'
 showcase:
-  color: '#1b2438'
+  color: '#2c1356'
   image: /assets/images/showcase-portfolio-versafeed-1.jpg
   order: 20
-  title: TKTKTKT
+  title: An e-commerce data feed solution
   tags: 'logo,website,design,development,static'
 ---
