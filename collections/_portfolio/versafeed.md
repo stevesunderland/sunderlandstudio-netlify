@@ -15,7 +15,7 @@ gallery:
   - url: /assets/images/portfolio-versafeed-4.jpg
 tags: 'logo,website,design,development,static,ecommerce'
 showcase:
-  color: '#2c1356'
+  color: '#30125a'
   image: /assets/images/showcase-portfolio-versafeed-1.jpg
   order: 20
   title: An e-commerce data feed solution

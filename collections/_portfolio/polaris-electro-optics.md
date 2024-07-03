@@ -12,7 +12,7 @@ gallery:
 #   - url: /assets/images/portfolio-polaris-2.jpg
 tags: 'website,design,development,static'
 showcase:
-  color: '#02222b'
+  color: '#02232c'
   image: /assets/images/showcase-portfolio-polaris.jpg
   order: 20
   title: An advanced photonics technology startup
