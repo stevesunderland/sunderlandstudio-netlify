@@ -11,10 +11,10 @@ gallery:
 #   - url: /assets/images/portfolio-polaris-1.jpg
 #   - url: /assets/images/portfolio-polaris-2.jpg
 tags: 'website,design,development,static'
-# showcase:
-#   color: '#1b2438'
-#   image: /assets/images/showcase-polaris.jpg
-#   order: 20
-#   title: TKTKTKT
-#   tags: 'website,design,development,static'
+showcase:
+  color: '#02222b'
+  image: /assets/images/showcase-portfolio-polaris.jpg
+  order: 20
+  title: An advanced photonics technology startup
+  tags: 'website,design,development,static'
 ---
