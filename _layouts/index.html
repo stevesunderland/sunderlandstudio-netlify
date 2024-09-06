@@ -72,7 +72,7 @@ layout: default
       <div class="column testimonial-column">
         <blockquote>
           <span class="quote">&ldquo;</span>
-          <p class="lead">{{ item.quote }}</p>
+          {{ item.quote | markdownify }}
           <cite clas="">{{ item.title }}</cite>
         </blockquote>
       </div>

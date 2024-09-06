@@ -220,8 +220,16 @@ body, html {
 	position: relative;
 	z-index: 999;
 
-	p.lead {
+	p {
+		@extend .lead;
 		margin-bottom: 1em;
+
+		em {
+			font-style: normal;
+			// font-weight: 600;
+			// background-color: rgba(yellow, 0.5);
+			// background-color: rgba(black, 0.05);
+		}
 	}
 }
 
