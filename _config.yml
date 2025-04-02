@@ -26,9 +26,10 @@ collections:
     output: true
     permalink: /:collection/:name
     order:
+      - aquavis.md
       - pointcloud.md
-      - the-futurist-institute.md
       - formic.md
+      - the-futurist-institute.md
       - versafeed.md
       - awakened-alchemy.md
       - firmolux.md
